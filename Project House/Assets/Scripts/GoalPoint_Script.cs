@@ -19,12 +19,14 @@ public class GoalPoint_Script : MonoBehaviour
     [SerializeField] Transform goalD;
     
     [SerializeField] Transform goalE;
+
+    [SerializeField] Transform goalF;
     
 
     // Start is called before the first frame update
     void Start()
     {
-
+        changeGoalRand();
     }
 
     // Update is called once per frame
@@ -47,30 +49,41 @@ public class GoalPoint_Script : MonoBehaviour
 
     public void changeGoalRand()
     {
-        int  num = Random.Range(0, 4);
+        int  num = Random.Range(0, 5);
         if(num == 0)
         {
+            currGoal = goalA;
             currGoal.position = goalA.position;
         }
 
         if (num == 1)
         {
+            currGoal = goalB;
             currGoal.position = goalB.position;
         }
 
         if (num == 2)
         {
+            currGoal = goalC;
             currGoal.position = goalC.position;
         }
 
         if (num == 3)
         {
+            currGoal = goalD;
             currGoal.position = goalD.position;
         }
 
         if (num == 4)
         {
-            currGoal.position = goalD.position;
+            currGoal = goalE;
+            currGoal.position = goalE.position;
+        }
+
+        if(num == 5)
+        {
+            currGoal = goalF;
+            currGoal.position = goalF.position;
         }
     }
 }
