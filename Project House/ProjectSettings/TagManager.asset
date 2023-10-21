@@ -44,3 +44,6 @@ TagManager:
   - name: Obstacles
     uniqueID: 1660235443
     locked: 0
+  - name: Decor
+    uniqueID: 1359992917
+    locked: 0

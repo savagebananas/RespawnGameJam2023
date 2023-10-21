@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: SS_purpleWallCorners_6
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -274090655, guid: 066d5036870f12c48950820bf9a1f368, type: 3}
+  m_Sprite: {fileID: 711038103, guid: faf889e9dd028e04e876e70b1d24bc36, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
