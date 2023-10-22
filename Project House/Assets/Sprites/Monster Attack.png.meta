@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e5a28b25cf2ad62478e6d24e61df212a
+guid: ce94b8bae1459ad459eb39995af428fc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,190 +123,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Monster Walking_0
+      name: Monster Attack_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 64
-        height: 64
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db5480e603dd25f44839a405f9a1b01b
-      internalID: 457161154
+      spriteID: 9fdb323c513fc3449b47b83f9f30b751
+      internalID: -1267866036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monster Walking_1
+      name: Monster Attack_1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 64
-        height: 64
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7421c6a26bb2784489339be354ca474
-      internalID: -227315476
+      spriteID: 8f16dcf12c66b0648978467af0c8ec58
+      internalID: 1549010061
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monster Walking_2
+      name: Monster Attack_2
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 64
-        height: 64
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 605bdc8a21489b344868d30e5df1c739
-      internalID: 1492309981
+      spriteID: dc7a9eaf61ebace449a8a1fe32c46c2b
+      internalID: -2127245032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monster Walking_3
+      name: Monster Attack_3
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 64
-        height: 64
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5ee819298ddccd42891074cb59730d2
-      internalID: -652513481
+      spriteID: 8f17d029d94b8064eaa681785e999276
+      internalID: -900017210
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monster Walking_4
+      name: Monster Attack_4
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 64
-        height: 64
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bff348f8bbb83a47b7672dd675f2968
-      internalID: 629463104
+      spriteID: b482c97aa3b39564190c960313603959
+      internalID: -1304089263
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Monster Walking_5
+      name: Monster Attack_5
       rect:
         serializedVersion: 2
         x: 320
         y: 0
         width: 64
-        height: 64
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a7db4498b4931441a9ac0faabda11b8
-      internalID: -1873666429
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Monster Walking_6
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 64
-        height: 64
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c7c2cdc0362c474c98291214af5780e
-      internalID: 1660962584
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Monster Walking_7
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 0
-        width: 64
-        height: 64
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dced1cc0a05a3874d802492bbeb284ff
-      internalID: -68663319
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Monster Walking_8
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 64
-        height: 64
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 65a5f7a0f7a65d34ba4ccde74bd11a26
-      internalID: 439347834
+      spriteID: 99590dfab6cc41141a29e4d9e84fb903
+      internalID: 346067589
       vertices: []
       indices: 
       edges: []
@@ -322,15 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Monster Walking_0: 457161154
-      Monster Walking_1: -227315476
-      Monster Walking_2: 1492309981
-      Monster Walking_3: -652513481
-      Monster Walking_4: 629463104
-      Monster Walking_5: -1873666429
-      Monster Walking_6: 1660962584
-      Monster Walking_7: -68663319
-      Monster Walking_8: 439347834
+      Monster Attack_0: -1267866036
+      Monster Attack_1: 1549010061
+      Monster Attack_2: -2127245032
+      Monster Attack_3: -900017210
+      Monster Attack_4: -1304089263
+      Monster Attack_5: 346067589
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
