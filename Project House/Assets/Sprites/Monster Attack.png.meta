@@ -126,19 +126,19 @@ TextureImporter:
       name: Monster Attack_0
       rect:
         serializedVersion: 2
-        x: 11
+        x: 0
         y: 0
-        width: 53
+        width: 64
         height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f90c00035aa9a04eb64d159e329817d
-      internalID: -1395058047
+      spriteID: 9fdb323c513fc3449b47b83f9f30b751
+      internalID: -1267866036
       vertices: []
       indices: 
       edges: []
@@ -147,19 +147,19 @@ TextureImporter:
       name: Monster Attack_1
       rect:
         serializedVersion: 2
-        x: 74
+        x: 64
         y: 0
-        width: 54
-        height: 59
+        width: 64
+        height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c97fec08b94d9624db64444bae5eddf7
-      internalID: -54803372
+      spriteID: 8f16dcf12c66b0648978467af0c8ec58
+      internalID: 1549010061
       vertices: []
       indices: 
       edges: []
@@ -168,19 +168,19 @@ TextureImporter:
       name: Monster Attack_2
       rect:
         serializedVersion: 2
-        x: 137
+        x: 128
         y: 0
-        width: 55
-        height: 58
+        width: 64
+        height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e260df2510c8aae4491522cf1cf9ab9d
-      internalID: 1451788594
+      spriteID: dc7a9eaf61ebace449a8a1fe32c46c2b
+      internalID: -2127245032
       vertices: []
       indices: 
       edges: []
@@ -189,19 +189,19 @@ TextureImporter:
       name: Monster Attack_3
       rect:
         serializedVersion: 2
-        x: 161
-        y: 55
-        width: 6
-        height: 4
+        x: 192
+        y: 0
+        width: 64
+        height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8b0e429aa46ce44c9b76e4c9218618a
-      internalID: 1689892950
+      spriteID: 8f17d029d94b8064eaa681785e999276
+      internalID: -900017210
       vertices: []
       indices: 
       edges: []
@@ -210,19 +210,19 @@ TextureImporter:
       name: Monster Attack_4
       rect:
         serializedVersion: 2
-        x: 197
+        x: 256
         y: 0
-        width: 59
-        height: 54
+        width: 64
+        height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb773ce26354fb6428b3952b7cc8e54f
-      internalID: 254717068
+      spriteID: b482c97aa3b39564190c960313603959
+      internalID: -1304089263
       vertices: []
       indices: 
       edges: []
@@ -231,61 +231,19 @@ TextureImporter:
       name: Monster Attack_5
       rect:
         serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5fc741e9f30814a45a098c6829517ce2
-      internalID: 1164876965
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Monster Attack_6
-      rect:
-        serializedVersion: 2
-        x: 271
-        y: 41
-        width: 13
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f13615fade6a85d429c0c57c764437f2
-      internalID: 847761795
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Monster Attack_7
-      rect:
-        serializedVersion: 2
         x: 320
         y: 0
         width: 64
-        height: 52
+        height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdb10dba8e5a171488e7c1fa63d0d518
-      internalID: -2134692803
+      spriteID: 99590dfab6cc41141a29e4d9e84fb903
+      internalID: 346067589
       vertices: []
       indices: 
       edges: []
@@ -301,14 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Monster Attack_0: -1395058047
-      Monster Attack_1: -54803372
-      Monster Attack_2: 1451788594
-      Monster Attack_3: 1689892950
-      Monster Attack_4: 254717068
-      Monster Attack_5: 1164876965
-      Monster Attack_6: 847761795
-      Monster Attack_7: -2134692803
+      Monster Attack_0: -1267866036
+      Monster Attack_1: 1549010061
+      Monster Attack_2: -2127245032
+      Monster Attack_3: -900017210
+      Monster Attack_4: -1304089263
+      Monster Attack_5: 346067589
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
