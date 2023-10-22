@@ -10,7 +10,7 @@ public class Wolf : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator> ()
+        anim = GetComponent<Animator> ();
     }
 
     // Update is called once per frame
