@@ -800,7 +800,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACQn+thkAcmcQIAACYFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFtVE1z2jAQ/SuMzg1jgwlxb61DSA9JmJBOLr7I9hprkCWPJAdIhv/elSxjl/bE8nbf7tsP+YswoRvIjVRrxYonWQD5PiHWJt8mg/MRjnQnxZZ9Qh/zzgpT2SDqYl6pYRLx0NK0rMEolv8QO26DAwRbwUqp6lWxg0RqoxEuKdeALiWNZQuEvibkiD83saWc0JotrfWJVhxMzmjmIAyoIbQPDKZ3URzHd7eLuSd08a3IOa0bKKz4gRaFnjdfTOfLhQsV2JqPCqbhbGGrSc6Z9tqIOTWu94Q2usXOMKBgFHt1gqJpZCkVsF1lrPQx/6UsNRivV9HTPVM4tS4x+Sm7UdZU7zuJH5S3ttRt5JR1OZ/+cd+Ezl0qWT/2ZcPAljAVy/ev9JRTbUajHsP3g/TQDepA+Z5mHN4rEM9yrWQrCnQa1Vpqq2F2P/y9dJZUkO8HvJN6BbbNfxbm12R7OLvmjwlndeamH3XAlks3cXcOoHA/v1CwOxbtUyBqVfzW8EZ346vyjgemtEGX71JYeZlslQ0lKzcz201rEqkEONiLbkBQbk4bTGOuN3jlG5W98jxQ+358ce/rn8UVxcFDfBBcuTbycFmWruThCXT10hrOBAyireMZ55RIIboDG8+kp21bVdJ8RNu1rPj7tEhZ3C0yms2XQON4sVzehPM8gyyMonB+G+JDI+72mMA+Kd90Qv14cGtiSC7wzvrPymStaOOOvVD0sGaftRyNnIlSbnMFIF66DBfhoLAIvs1iVTAc0BaMYcLtm3ylhMt8D0V6SZS6TldHo2g6ZElJwz6ksUhKEvcdSYmFL7e8UfDB4GCL98nO5PwHUEsDBBQAAAgIAACQn+vy/gu9bQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrRSWoqFaVJikrF5aqKlpam5ua6hcXJSapKhiYmhsZmhpYWZUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACQn+thkAcmcQIAACYFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACQn+vy/gu9bQAAAHgAAAAJACQAAAAAAAAAAAAAAL4CAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAdgMAAAAA
+    dataString: UEsDBBQAAAgIAACQn+tRHpp/cAIAACcFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1zmzAQ/SsenRsPBH+E3lriOD0k8cTt5MJFoMVoLCRGErGdjP97VwIMdduT12/f7r79EJ+ES1NDbpVea86eFAPydUKcTb5MBucjHOlOyS3/gJ7zxpktHYl6ziu1XCEeujCjKrCa59/kTjhygGAjeaF0tWI7SJSxBuGCCgPo0sq6aInQ54Qc8ecmdiEntG6XzvpAKw4mZzRzkBb0QO2JwfRuFsfx3WIedQEtv5G5oFUNzIkfwmZhFxfNp9Fy7qkSW+tYwTS8nbtqSghuOm3Enmrfe0Jr02BnSGCcYq9eUDQNFoiUwHelddLH8S9FYcB2ejU93XONU2sTk++qHWVFzb6V+E5F40otZl5Zm/PpL/dN6N2FVtVjXzYMXAlb8nz/Sk85NXY06jF8P0gP/aAOVOxpJuCtBPms1lo1kqHT6saFNgZu74e/l86SEvL9gLdSr8Cm/sfCujW5Hs6++WMieJX56c9aYCuUn7g/B9C4nx8o2B+L6VIg6lT8MvCT7sZX1TkeuDYWXV2X0snLVKMdlaz8zFw3jU2UlqDHGWqQVNjTBvPY6xVe+f4f9UDdA+qqd77+XVyFeHjgB8GVa6MOl22ZUh2ewJQvjRVcwjBq53jGQSVKyvbCxi31YdtGFzQfhe0azv68LVKwu3lGs2gJNI7ny+VNGOUZZOFsFkaLEF8a8cfHJfZJxaYV2o0H1yaH5BIPrf+uTNaa1v7amaaHNf+olBmYXBZqm2sA+dJmuAgHjUXwcbIV4zigLVjLpV84+UyJUPkeWHpJlPpOV0eraTpkSUnN35V1SEoS/yFJiYMvx7zR8M7h4Ir3yc7k/BtQSwMEFAAACAgAAJCf6/L+C71tAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tFJaioVpUmKSsXlqoqWlqbm5rqFxclJqkqGJiaGxmaGlhZlSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAJCf61Eemn9wAgAAJwUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAJCf6/L+C71tAAAAeAAAAAkAJAAAAAAAAAAAAAAAvQIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAAB1AwAAAAA=
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -828,11 +828,43 @@ MonoBehaviour:
     _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
     _AreaColors:
     - {r: 0, g: 0, b: 0, a: 0}
-  tagNames: []
+  tagNames:
+  - Basic Ground
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  - 24
+  - 25
+  - 26
+  - 27
+  - 28
+  - 29
+  - 30
+  - 31
   heuristic: 2
   heuristicScale: 1
   threadCount: 1
-  maxFrameTime: 1
+  maxFrameTime: 10
   batchGraphUpdates: 0
   graphUpdateBatchingInterval: 0.2
   euclideanEmbedding:
@@ -1135,10 +1167,10 @@ GameObject:
   m_Component:
   - component: {fileID: 787033301}
   - component: {fileID: 787033303}
-  - component: {fileID: 787033302}
   - component: {fileID: 787033304}
   - component: {fileID: 787033306}
   - component: {fileID: 787033305}
+  - component: {fileID: 787033307}
   m_Layer: 0
   m_Name: Builder
   m_TagString: Untagged
@@ -1162,41 +1194,6 @@ Transform:
   - {fileID: 722947998}
   m_Father: {fileID: 852303995}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &787033302
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787033300}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.010064006, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.24
 --- !u!50 &787033303
 Rigidbody2D:
   serializedVersion: 4
@@ -1308,6 +1305,41 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
+--- !u!58 &787033307
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787033300}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &787975945
 GameObject:
   m_ObjectHideFlags: 0
