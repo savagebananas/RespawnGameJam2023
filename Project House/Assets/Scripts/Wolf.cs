@@ -65,5 +65,14 @@ public class Wolf : MonoBehaviour
         GetComponent<AIDestinationSetter>().target = builder.transform;
     }
 
+    void OnCollisionEnter2D(Collision2D collision){
+        //if colides with player stun player
+        if(collision.transform.tag.Equals("builder") == true)
+        {
+            Builder.Die();
+        }
+
+    }
+
     
 }

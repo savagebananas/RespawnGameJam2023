@@ -141,4 +141,11 @@ public class Builder : MonoBehaviour
         this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
     }
 
+    public void Die()
+    {
+        //Show death animation
+        //play some sound
+        //change scene to death screen
+    }
+
 }

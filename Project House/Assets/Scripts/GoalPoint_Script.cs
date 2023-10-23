@@ -36,7 +36,7 @@ public class GoalPoint_Script : MonoBehaviour
         
         if(currGoal.position.x - player.transform.position.x < 0.5 && currGoal.position.y - player.transform.position.y < 0.5)
         {
-            changeGoalRand();
+            //spend 5 seconds fixing this one and then set that goal to null
         }
 
         if(currGoal == null)
