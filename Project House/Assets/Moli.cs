@@ -6,6 +6,7 @@ public class Moli : MonoBehaviour
 {
     [SerializeField] public GameObject moli;
     [SerializeField] Wolf wolf;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,8 @@ public class Moli : MonoBehaviour
         
     }
 
-    void OnCollisionEnter2D(Collision2D collision){
+    void OnCollisionEnter2D(Collision2D collision)
+    {
         //if colides with player stun player
         if(collision.transform.tag.Equals("builder") == true)
         {
@@ -26,7 +28,7 @@ public class Moli : MonoBehaviour
         }
 
         //if colides with monster stun monster
-        if(collision.transform.tag.Equals("Enemy") == true)
+        if(collision.gameObject.CompareTag("Enemy"))
         {
             wolf.Burn();
         }

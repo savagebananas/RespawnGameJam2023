@@ -6,9 +6,11 @@ using Pathfinding;
 public class Wolf : MonoBehaviour
 {
     [SerializeField] GameObject builder;
+    [SerializeField] GameObject wolf;
     Rigidbody2D rb;
     Animator anim;
     Vector3 lastPos;
+
     public float freezeTime = 3f;
     // Start is called before the first frame update
     void Start()
@@ -36,26 +38,28 @@ public class Wolf : MonoBehaviour
 
     public void Stun()
     {
-        this.FreezePosition();
+        StartCoroutine(FreezePosition());
     }
 
     IEnumerator FreezePosition()
     {
-        this.GetComponent<AIDestinationSetter>().target = null;
+        this.GetComponent<AIDestinationSetter>().target = rb.transform;
         yield return new WaitForSeconds(freezeTime);
         this.GetComponent<AIDestinationSetter>().target = builder.transform;
     }
 
     public void Burn()
     {
-        this.fireFright();
+        
+       StartCoroutine(fireFright());
         
     }
 
     IEnumerator fireFright()
     {
-        this.GetComponent<AIDestinationSetter>().target = null;
+        Debug.Log("Hit hit hit hit hit hti hit");
+        GetComponent<AIDestinationSetter>().target = rb.transform;
         yield return new WaitForSeconds(freezeTime * 3);
-        this.GetComponent<AIDestinationSetter>().target = builder.transform;
+        GetComponent<AIDestinationSetter>().target = builder.transform;
     }
 }
