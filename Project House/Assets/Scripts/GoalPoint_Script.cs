@@ -34,7 +34,7 @@ public class GoalPoint_Script : MonoBehaviour
     {
         goalblock.position = currGoal.position;
         
-        if(currGoal.position.x - player.transform.position.x < 1 && currGoal.position.y - player.transform.position.y < 1)
+        if(currGoal.position.x - player.transform.position.x < 0.5 && currGoal.position.y - player.transform.position.y < 0.5)
         {
             changeGoalRand();
         }
