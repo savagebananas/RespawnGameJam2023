@@ -7,6 +7,7 @@ public class Wolf : MonoBehaviour
     Rigidbody2D rb;
     Animator anim;
     Vector3 lastPos;
+    public float freezeTime = 3f;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,18 @@ public class Wolf : MonoBehaviour
     {
         var dispacement = transform.position - lastPos;
         lastPos = transform.position;
-        Debug.Log("Moving");
         return dispacement.magnitude > 0.001;
+    }
+
+    public void Stun()
+    {
+        this.FreezePosition();
+    }
+
+    IEnumerator FreezePosition()
+    {
+        this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        yield return new WaitForSeconds(freezeTime);
+        this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
     }
 }
