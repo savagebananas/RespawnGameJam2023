@@ -10,10 +10,8 @@ public class DragItem : MonoBehaviour
     private static Color noColl = new Color(0, 0, 255, 0.4f);
     private static Color coll = new Color(255, 0, 0, 0.4f);
     SpriteRenderer sr;
-    private bool isColl = false;
     private bool dragging = true;
     private int collcount = 0;
-    private static string itemName = "RealItem";
     public GameObject item;
     // Start is called before the first frame update
     void Start()
@@ -39,9 +37,7 @@ public class DragItem : MonoBehaviour
         if (collcount == 0) return false;
         return true;
     }
-    static void setItemName(string str) {
-        itemName = str;
-    }
+
 
     // Update is called once per frame
     void Update()
