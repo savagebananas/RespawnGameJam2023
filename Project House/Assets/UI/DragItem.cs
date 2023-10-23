@@ -13,6 +13,7 @@ public class DragItem : MonoBehaviour
     private bool dragging = true;
     private int collcount = 0;
     public GameObject item;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,8 +31,8 @@ public class DragItem : MonoBehaviour
     void OnMouseDown() {
         if (!isColliding()) {
             dragging = false;
-            Instantiate(item, transform);
-            Destroy(this);
+            Instantiate(item, Camera.main.ScreenToWorldPoint(Input.mousePosition) + new Vector3(0, 0, 10), Quaternion.identity);
+            Destroy(this.gameObject);
         }
     }
     bool isColliding() {
