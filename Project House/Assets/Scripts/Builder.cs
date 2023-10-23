@@ -163,4 +163,16 @@ public class Builder : MonoBehaviour
         return dispacement > 0.01;
     }
 
+    public void Stun()
+    {
+        this.FreezePosition();
+    }
+
+    IEnumerator FreezePosition()
+    {
+        this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        yield return new WaitForSeconds(freezeTime);
+        this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+    }
+
 }
