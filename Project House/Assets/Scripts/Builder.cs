@@ -7,159 +7,125 @@ public class Builder : MonoBehaviour
 
     [SerializeField] Rigidbody2D rb;
     [SerializeField]Animator anim;
-    Vector3 lastPos;
+    private SpriteRenderer sprite;
     public float freezeTime = 3f;
+
+    Vector3 lastPos;
+    private float angle;
+    private float timer = 0.1f;
+    
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        lastPos = transform.position;
         rb = GetComponent<Rigidbody2D>();
         anim = transform.GetChild(0).GetComponent<Animator> ();
-
-        anim.SetBool("upLeft", false);
-        anim.SetBool("upRight", false);
-        anim.SetBool("upUp", false);
-        anim.SetBool("downLeft", false);
-        anim.SetBool("downRight", false);
-        anim.SetBool("downDown", false);
-        anim.SetBool("leftLeft", false);
-        anim.SetBool("rightRight", false);
+        sprite = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        
+        anim.SetBool("up", false);
+        anim.SetBool("down", false);
+        anim.SetBool("side", false);
+        anim.SetBool("idle", false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //up and left
-        if(charMovedUp() && charMovedLeft())
+        var x = transform.position.x - lastPos.x;
+        var y = transform.position.y - lastPos.y;
+        angle = Mathf.Atan2(y, x) * Mathf.Rad2Deg;
+        Debug.Log("Angle: " + angle + "degrees");
+
+        //Up
+        if (angle >= 45 && angle <= 135)
         {
-            anim.SetBool("upLeft", true);
-            anim.SetBool("upRight", false);
-            anim.SetBool("upUp", false);
-            anim.SetBool("downLeft", false);
-            anim.SetBool("downRight", false);
-            anim.SetBool("downDown", false);
-            anim.SetBool("leftLeft", false);
-            anim.SetBool("rightRight", false);
+            anim.SetBool("up", true);
+            anim.SetBool("down", false);
+            anim.SetBool("side", false);
+            anim.SetBool("idle", false);
+        }
+        //Down
+        if (angle >= -135 && angle <= -45)
+        {
+            anim.SetBool("up", false);
+            anim.SetBool("down", true);
+            anim.SetBool("side", true);
+            anim.SetBool("idle", false);
         }
 
-        //up and right
-           else  if(charMovedUp() && charMovedRight())
+        //Left
+        if (angle >= 135 && angle <= 180 || angle > -180 && angle <= -135)
         {
-            anim.SetBool("upLeft", false);
-            anim.SetBool("upRight", true);
-            anim.SetBool("upUp", false);
-            anim.SetBool("downLeft", false);
-            anim.SetBool("downRight", false);
-            anim.SetBool("downDown", false);
-            anim.SetBool("leftLeft", false);
-            anim.SetBool("rightRight", false);
+            anim.SetBool("up", false);
+            anim.SetBool("down", false);
+            anim.SetBool("side", true);
+            anim.SetBool("idle", false);
+            sprite.flipX = true;
+        }
+        //Right
+        if (angle <= 45 && angle >= 0 || angle <= 0 && angle >= -45)
+        {
+            anim.SetBool("up", false);
+            anim.SetBool("down", false);
+            anim.SetBool("side", true);
+            anim.SetBool("idle", false);
+            sprite.flipX = false;
         }
 
-        //just up
-           else if(charMovedUp())
+        //StartCoroutine(setlastPos());
+        if (timer <= 0)
         {
-            anim.SetBool("upLeft", false);
-            anim.SetBool("upRight", false);
-            anim.SetBool("upUp", true);
-            anim.SetBool("downLeft", false);
-            anim.SetBool("downRight", false);
-            anim.SetBool("downDown", false);
-            anim.SetBool("leftLeft", false);
-            anim.SetBool("rightRight", false);
+            lastPos = transform.position;
+            timer = 0.5f;
         }
+        else
+        {
+            timer -= Time.deltaTime;
+        }
+    }
 
-        //down and left
-          else  if(charMovedDown() && charMovedLeft())
-        {
-            anim.SetBool("upLeft", false);
-            anim.SetBool("upRight", false);
-            anim.SetBool("upUp", false);
-            anim.SetBool("downLeft", true);
-            anim.SetBool("downRight", false);
-            anim.SetBool("downDown", false);
-            anim.SetBool("leftLeft", false);
-            anim.SetBool("rightRight", false);
-        }
+    private void LateUpdate()
+    {
+        //var directionVector = transform.position - lastPos;
 
-        //down and right
-           else if(charMovedDown() && charMovedRight())
-        {
-            anim.SetBool("upLeft", false);
-            anim.SetBool("upRight", false);
-            anim.SetBool("upUp", false);
-            anim.SetBool("downLeft", false);
-            anim.SetBool("downRight", true);
-            anim.SetBool("downDown", false);
-            anim.SetBool("leftLeft", false);
-            anim.SetBool("rightRight", false);
-        }
+    }
 
-        //down
-           else if(charMovedDown())
-        {
-            anim.SetBool("upLeft", false);
-            anim.SetBool("upRight", false);
-            anim.SetBool("upUp", false);
-            anim.SetBool("downLeft", false);
-            anim.SetBool("downRight", false);
-            anim.SetBool("downDown", true);
-            anim.SetBool("leftLeft", false);
-            anim.SetBool("rightRight", false);
-        }
+    IEnumerator setlastPos()
+    {
+        yield return new WaitForSeconds(0.04f);
+        lastPos = transform.position;
 
-        //left
-          else  if(charMovedLeft())
-        {
-            anim.SetBool("upLeft", false);
-            anim.SetBool("upRight", false);
-            anim.SetBool("upUp", false);
-            anim.SetBool("downLeft", false);
-            anim.SetBool("downRight", false);
-            anim.SetBool("downDown", false);
-            anim.SetBool("leftLeft", true);
-            anim.SetBool("rightRight", false);
-        }
-
-        //right
-          else  if(charMovedRight())
-        {
-            anim.SetBool("upLeft", false);
-            anim.SetBool("upRight", false);
-            anim.SetBool("upUp", false);
-            anim.SetBool("downLeft", false);
-            anim.SetBool("downRight", false);
-            anim.SetBool("downDown", false);
-            anim.SetBool("leftLeft", false);
-            anim.SetBool("rightRight", true);
-        }
+    }
+    private void resetAnimatorBools()
+    {
+        anim.SetBool("side", false);
+        anim.SetBool("up", false);
+        anim.SetBool("down", false);
+        anim.SetBool("idle", false);
     }
 
     private bool charMovedUp()
     {
         var dispacement = transform.position.y - lastPos.y;
-        lastPos = transform.position;
         return dispacement > 0.01;
     }
 
     private bool charMovedDown()
     {
         var dispacement = transform.position.y - lastPos.y;
-        lastPos = transform.position;
         return dispacement < 0.01;
     }
 
     private bool charMovedLeft()
     {
         var dispacement = transform.position.x - lastPos.x;
-        lastPos = transform.position;
         return dispacement < 0.01;
     }
 
     private bool charMovedRight()
     {
         var dispacement = transform.position.x - lastPos.x;
-        lastPos = transform.position;
         return dispacement > 0.01;
     }
 
