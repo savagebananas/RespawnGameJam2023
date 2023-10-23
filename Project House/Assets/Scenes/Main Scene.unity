@@ -1950,7 +1950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 5
-  radius: 0.36
+  radius: 0.42
   height: 0.01
   canMove: 1
   maxSpeed: 1.76
@@ -2077,6 +2077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09805dc6062f5bd46a0f93a15f12e5b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 787033303}
   freezeTime: 3
 --- !u!1 &787975945
 GameObject:
