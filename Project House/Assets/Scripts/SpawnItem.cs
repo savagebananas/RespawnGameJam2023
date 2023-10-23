@@ -14,12 +14,12 @@ public class SpawnItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (selectedItem!=null) {
+        if (transparentItem!=null) {
             Instantiate(transparentItem);
-            selectedItem = null;
+            transparentItem = null;
         }
     }
     public void setItem(GameObject item) {
-        selectedItem = item;
+        transparentItem = item;
     }
 }
