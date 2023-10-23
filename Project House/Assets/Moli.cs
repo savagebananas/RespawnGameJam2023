@@ -49,7 +49,7 @@ public class Moli : MonoBehaviour
         yield return new WaitForSeconds(lifespan);
         if(moli != null)
         {
-            Destroy(moli)
+            Destroy(moli);
         }
     }
 }
