@@ -6,6 +6,7 @@ public class Moli : MonoBehaviour
 {
     [SerializeField] public GameObject moli;
     [SerializeField] Wolf wolf;
+    [SerializeField] float lifespan = 5f;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,11 @@ public class Moli : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void OnEnable()
+    {
+        StartCoroutine(Lifespan());
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -35,5 +41,15 @@ public class Moli : MonoBehaviour
 
         Destroy(moli);
 
+    }
+
+    IEnumerator Lifespan()
+    {
+        
+        yield return new WaitForSeconds(lifespan);
+        if(moli != null)
+        {
+            Destroy(moli);
+        }
     }
 }

@@ -29,6 +29,8 @@ public class Wolf : MonoBehaviour
         }
     }
 
+    
+
     private bool charMoved()
     {
         var dispacement = transform.position - lastPos;
@@ -62,4 +64,6 @@ public class Wolf : MonoBehaviour
         yield return new WaitForSeconds(freezeTime * 3);
         GetComponent<AIDestinationSetter>().target = builder.transform;
     }
+
+    
 }
