@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class Wolf : MonoBehaviour
 {
+    [SerializeField] GameObject builder;
     Rigidbody2D rb;
     Animator anim;
     Vector3 lastPos;
@@ -39,8 +41,21 @@ public class Wolf : MonoBehaviour
 
     IEnumerator FreezePosition()
     {
-        this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        this.GetComponent<AIDestinationSetter>().target = null;
         yield return new WaitForSeconds(freezeTime);
-        this.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        this.GetComponent<AIDestinationSetter>().target = builder.transform;
+    }
+
+    public void Burn()
+    {
+        this.fireFright();
+        
+    }
+
+    IEnumerator fireFright()
+    {
+        this.GetComponent<AIDestinationSetter>().target = null;
+        yield return new WaitForSeconds(freezeTime * 3);
+        this.GetComponent<AIDestinationSetter>().target = builder.transform;
     }
 }
