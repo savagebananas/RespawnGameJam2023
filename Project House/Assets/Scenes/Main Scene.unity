@@ -993,7 +993,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 3.8046875
+  orthographic size: 3.9453125
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1372,6 +1372,7 @@ MonoBehaviour:
   barel: {fileID: 627128452}
   speed: 10
   hasMoved: 0
+  wolf: {fileID: 0}
 --- !u!50 &627128454
 Rigidbody2D:
   serializedVersion: 4
@@ -1550,7 +1551,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.3
+  m_Intensity: 0.35
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: b32ef56255d80f51
@@ -24386,6 +24387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 477e810177eed78468fd5422bebfd0b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  freezeTime: 3
 --- !u!212 &1829535610
 SpriteRenderer:
   m_ObjectHideFlags: 0
