@@ -31,6 +31,7 @@ public class DragItem : MonoBehaviour
         if (!isColliding()) {
             dragging = false;
             Instantiate(item, transform);
+            Destroy(this);
         }
     }
     bool isColliding() {
