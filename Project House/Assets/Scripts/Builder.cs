@@ -5,7 +5,7 @@ using UnityEngine;
 public class Builder : MonoBehaviour
 {
 
-   [SerializeField] Rigidbody2D rb;
+    [SerializeField] Rigidbody2D rb;
     [SerializeField]Animator anim;
     Vector3 lastPos;
     public float freezeTime = 3f;
