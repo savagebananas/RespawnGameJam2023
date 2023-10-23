@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a5ff2d66b37e8804aaecdca2057b4a28
+guid: 66d3eaa97362a8a4095f3761a1f8f037
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,70 +121,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: SS_chandelier_0
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 0
-        width: 22
-        height: 52
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6d6ada8b88492b9439b6b197551facb1
-      internalID: 1394634684
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SS_chandelier_1
-      rect:
-        serializedVersion: 2
-        x: 37
-        y: 0
-        width: 22
-        height: 52
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 45be0db7f10a9c54dbbb80370ac921df
-      internalID: 1959675034
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SS_chandelier_2
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 0
-        width: 22
-        height: 52
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 32a3170874f65d445ac9ebd3d91e0f92
-      internalID: -702497924
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -195,10 +132,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      SS_chandelier_0: 1394634684
-      SS_chandelier_1: 1959675034
-      SS_chandelier_2: -702497924
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
