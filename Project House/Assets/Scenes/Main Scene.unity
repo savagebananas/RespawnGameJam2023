@@ -927,7 +927,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a66ec017c46ab5b4d8393d031bdce6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragSpeed: 0.2
 --- !u!1001 &521407365
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1950,7 +1949,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 5
-  radius: 0.42
+  radius: 0.44
   height: 0.01
   canMove: 1
   maxSpeed: 1.76
@@ -1973,7 +1972,7 @@ MonoBehaviour:
   maxAcceleration: -2.5
   rotationSpeed: 360
   slowdownDistance: 0.6
-  pickNextWaypointDist: 0.59
+  pickNextWaypointDist: 0.24
   endReachedDistance: 0.2
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
