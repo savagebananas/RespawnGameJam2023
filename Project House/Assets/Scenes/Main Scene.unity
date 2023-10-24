@@ -1748,7 +1748,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 3.203125
+  orthographic size: 3.34375
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2914,8 +2914,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.008249998, y: -0.0044498444, z: 0}
-    m_Extent: {x: 5.5006504, y: 5.50005, z: 0}
+    m_Center: {x: -0.002300024, y: 0.004450083, z: 0}
+    m_Extent: {x: 5.5008, y: 5.50465, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3432,7 +3432,7 @@ MonoBehaviour:
   rotationSpeed: 360
   slowdownDistance: 0.6
   pickNextWaypointDist: 0.24
-  endReachedDistance: 0.2
+  endReachedDistance: 0
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 1
@@ -26561,7 +26561,7 @@ Transform:
   m_GameObject: {fileID: 1829535598}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.54, y: 6.87, z: 0}
+  m_LocalPosition: {x: 22.25, y: 6.87, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -27296,16 +27296,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796946ea01d7da749981328d85e66312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currGoal: {fileID: 1498598523}
+  currGoal: {fileID: 0}
   player: {fileID: 787033300}
-  goalPoint: {fileID: 0}
+  goalPoint: {fileID: 1498598523}
   goalA: {fileID: 1498598523}
   goalB: {fileID: 486461751}
   goalC: {fileID: 312121508}
   goalD: {fileID: 87381662}
   goalE: {fileID: 36113790}
   goalF: {fileID: 1263941060}
-  timeToFix: 5
+  isFixing: 0
 --- !u!1 &1993329712
 GameObject:
   m_ObjectHideFlags: 0
