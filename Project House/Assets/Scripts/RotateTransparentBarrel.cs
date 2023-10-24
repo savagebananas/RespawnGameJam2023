@@ -16,6 +16,7 @@ public class RotateTransparentBarrel : MonoBehaviour
         upBarrel = transform.GetChild(1).gameObject;
         rightBarrel.SetActive(true);
         upBarrel.gameObject.SetActive(false);
+        PlayerManager.mouseDragging = true;
     }
     void Update()
     {

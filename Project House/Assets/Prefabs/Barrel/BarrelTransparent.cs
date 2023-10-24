@@ -51,7 +51,8 @@ public class BarrelTransparent : MonoBehaviour
             barrel.isMovingUp = isMovingUp;
             barrel.isMovingLeft = isMovingLeft;
             barrel.isMovingRight = isMovingRight;
-            Destroy(this.gameObject);
+            PlayerManager.mouseDragging = false;
+            Destroy(transform.parent.gameObject);
         }
     }
     bool isColliding()
