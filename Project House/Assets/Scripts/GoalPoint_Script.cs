@@ -10,7 +10,7 @@ public class GoalPoint_Script : MonoBehaviour
 
 
     [SerializeField] GameObject player;
-    [SerializeField] Transform goalblock;
+    [SerializeField] Transform goalPoint;
     [SerializeField] Transform goalA;
 
     [SerializeField] Transform goalB;
@@ -30,12 +30,14 @@ public class GoalPoint_Script : MonoBehaviour
     void Start()
     {
         changeGoalRand();
-        goalblock.position = currGoal.position;
+        goalPoint.position = currGoal.position;
     }
 
     // Update is called once per frame
     void Update()
     {
+        goalPoint.position = currGoal.position;
+        
         if(currGoal.position.x - player.transform.position.x < 0.5 && currGoal.position.y - player.transform.position.y < 0.5)
         {
             Fix();
