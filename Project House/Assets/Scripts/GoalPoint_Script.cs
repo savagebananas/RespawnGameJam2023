@@ -36,15 +36,11 @@ public class GoalPoint_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(currGoal == null)
-        {
-            //changeGoalRand();
-        }
-        
         if(currGoal.position.x - player.transform.position.x < 0.5 && currGoal.position.y - player.transform.position.y < 0.5)
         {
             Fix();
         }
+
 
         
         //if bell in range set that to current goal
@@ -53,6 +49,13 @@ public class GoalPoint_Script : MonoBehaviour
 
     public void changeGoalRand()
     {
+
+        if(goalA == null && goalB == null && goalC == null && goalD == null && goalE == null && goalF == null)
+       {
+           Debug.Log("YOU WIN");
+           return;
+       }
+
         int  num = Random.Range(0, 5);
         if(num == 0)
         {
@@ -127,49 +130,42 @@ public class GoalPoint_Script : MonoBehaviour
     public void Fix()
     {
         //start animation of repairs
-        StartCoroutine(Fixing());
-
-
-        if(currGoal.position == goalA.position && goalA != null)
-        {
-            goalA = null;
-        }
-        else if(currGoal.position == goalB.position && goalB != null)
-        {
-            goalB = null;
-            return;
-        }
-        else if(currGoal.position == goalC.position && goalC != null)
-        {
-            goalC = null;
-            return;
-        }
-        else if(currGoal.position == goalD.position && goalD  != null)
-        {
-            goalD = null;
-            return;
-        }
-        else if(currGoal.position == goalE.position && goalE  != null)
-        {
-            goalE = null;
-            return;
-        }
-        else if(currGoal.position == goalF.position && goalF != null)
-        {
-            goalF = null;
-            return;
-        }
-        
-        changeGoalRand();
-
-    //    if(goalA == null && goalB == null && goalC == null && goalD == null && goalE == null && goalF == null)
-    //    {
-    //        Debug.Log("YOU WIN");
-    //    }
+        //StartCoroutine(Fixing());
     }
 
     IEnumerator Fixing()
     {
         yield return new WaitForSeconds(timeToFix);
+        RemoveTask();
+    }
+
+    public void RemoveTask()
+    {
+        if(goalA != null && currGoal.position == goalA.position)
+        {
+            goalA = null;
+        }
+        else if( goalB != null && currGoal.position == goalB.position)
+        {
+            goalB = null;
+        }
+        else if(goalC != null && currGoal.position == goalC.position)
+        {
+            goalC = null;
+        }
+        else if(goalD  != null && currGoal.position == goalD.position)
+        {
+            goalD = null;
+        }
+        else if(goalE  != null && currGoal.position == goalE.position)
+        {
+            goalE = null;
+        }
+        else if(goalF != null && currGoal.position == goalF.position)
+        {
+            goalF = null;
+        }
+        
+        changeGoalRand();
     }
 }
