@@ -25,7 +25,12 @@ public class DraggableFurniture : MonoBehaviour
         if(mouseIsOver && !PlayerManager.mouseDragging) {
             Vector3 t = transform.position;
             Instantiate(transparentItem, t, Quaternion.identity);
+            PlayerManager.mouseDragging = true;
+            return;
+        }
+        if (PlayerManager.mouseDragging) {
             PlayerManager.mouseDragging = false;
         }
+
     }
 }
