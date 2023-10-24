@@ -30,7 +30,7 @@ public class Barrel : MonoBehaviour
 
                 transform.Rotate(new Vector3(0, 0, 90 *Time.deltaTime));
             }
-            if(Input.GetKeyDown(KeyCode.A))// de set left
+            if(Input.GetKeyDown(KeyCode.A))// do set left
             {
                 rb.velocity = new Vector2(-speed,0);
                 hasMoved = true;
