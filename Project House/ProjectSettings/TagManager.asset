@@ -49,6 +49,3 @@ TagManager:
   - name: Decor
     uniqueID: 1359992917
     locked: 0
-  - name: Transparent
-    uniqueID: 2823693885
-    locked: 0
