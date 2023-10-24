@@ -5,8 +5,8 @@ using UnityEngine;
 public class SpawnGhost : MonoBehaviour
 {
     // Start is called before the first frame update
-    public static Vector2 size;
     public GameObject ghost;
+    public int index;
     public static Vector3[][] positions = new Vector3[1][];
     void Start()
     {
@@ -19,12 +19,19 @@ public class SpawnGhost : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time>0.01&&Mathf.Abs(Time.time%10) < 0.01) {
-            Instantiate(ghost, getRandomPosition(), Quaternion.identity);
+        if (Time.time>0.01&&Mathf.Abs(Time.time%10) < 0.05) {
+            GameObject obj = Instantiate(ghost, getRandomPosition(), Quaternion.identity);
+            obj.GetComponent<GhostMovement>().setIndex(index);
         }
     }
     private Vector3 getRandomPosition() {
-        int index = Random.Range(0, positions.Length);
+        int temp = index;
+        //while (temp==index) {
+            //index = Random.Range(0, positions.Length);
+        //}
         return positions[index][0];
+    }
+    public static Vector3[] getVectors(int i) {
+        return positions[i];
     }
 }
