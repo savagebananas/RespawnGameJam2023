@@ -62,7 +62,7 @@ public class Wolf : MonoBehaviour
         Debug.Log("Hit hit hit hit hit hti hit");
         GetComponent<AIDestinationSetter>().target = rb.transform;
         yield return new WaitForSeconds(freezeTime * 3);
-        GetComponent<AIDestinationSetter>().target = builder.transform;
+        GetComponent<AIDestinationSetter>().target = rb.transform;
     }
 
     void OnCollisionEnter2D(Collision2D collision){
@@ -72,6 +72,29 @@ public class Wolf : MonoBehaviour
             builder.Die();
         }
 
+        if(collision .transform.tag.Equals("Barrier") == true)
+        {
+            StartCoroutine(WolfBreak(collision));
+        }
+
+    }
+
+    IEnumerator WolfBreak(Collision2D collision)
+    {
+        //stop movement
+        GetComponent<AIDestinationSetter>().target = rb.transform;
+
+        //change animation
+
+        //deal damage to object
+
+        //timer for amount of time it takes to destroy
+        yield return new WaitForSeconds(5.0f); 
+
+        //stop animation
+
+        //continue movement
+        GetComponent<AIDestinationSetter>().target = rb.transform;
     }
 
     
