@@ -5,7 +5,7 @@ using Pathfinding;
 
 public class Wolf : MonoBehaviour
 {
-    [SerializeField] GameObject builder;
+    [SerializeField] Builder builder;
     [SerializeField] GameObject wolf;
     Rigidbody2D rb;
     Animator anim;
@@ -69,7 +69,7 @@ public class Wolf : MonoBehaviour
         //if colides with player stun player
         if(collision.transform.tag.Equals("builder") == true)
         {
-            Builder.Die();
+            builder.Die();
         }
 
     }
