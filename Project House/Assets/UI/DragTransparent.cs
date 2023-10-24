@@ -5,7 +5,7 @@ using UnityEngine;
 //Make a new gameobject with the same sprite as the item you want to 
 //drag into the game(do not use the same game object)
 //Once you attatch this script you must attatch the prefab gameobject as the value of the variable item
-public class DragItem : MonoBehaviour
+public class DragTransparent : MonoBehaviour
 {
     private static Color noColl = new Color(0, 0, 255, 0.4f);
     private static Color coll = new Color(255, 0, 0, 0.4f);
