@@ -35,7 +35,6 @@ public class Builder : MonoBehaviour
         var x = transform.position.x - lastPos.x;
         var y = transform.position.y - lastPos.y;
         angle = Mathf.Atan2(y, x) * Mathf.Rad2Deg;
-        Debug.Log("Angle: " + angle + "degrees");
 
         //Up
         if (angle >= 45 && angle <= 135)
