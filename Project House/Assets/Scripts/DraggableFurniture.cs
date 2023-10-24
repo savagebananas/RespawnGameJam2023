@@ -25,12 +25,15 @@ public class DraggableFurniture : MonoBehaviour
         if(mouseIsOver && !PlayerManager.mouseDragging) {
             Vector3 t = transform.position;
             Instantiate(transparentItem, t, Quaternion.identity);
-            PlayerManager.mouseDragging = true;
+            StartCoroutine(DestroySelf());
             return;
         }
-        if (PlayerManager.mouseDragging) {
-            PlayerManager.mouseDragging = false;
-        }
+    }
+
+    IEnumerator DestroySelf()
+    {
+        yield return new WaitForSeconds(0.01f);
+        Destroy(this.gameObject);
 
     }
 }
