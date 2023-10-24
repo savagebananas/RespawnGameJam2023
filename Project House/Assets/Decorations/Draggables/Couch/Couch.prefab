@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2589222010818829847}
   - component: {fileID: 5114250823583780763}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3946187055041436704}
   - component: {fileID: 3312632467238660592}
   - component: {fileID: 5392995073695648737}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Couch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
