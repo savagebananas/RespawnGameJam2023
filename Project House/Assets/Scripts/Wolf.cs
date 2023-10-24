@@ -17,7 +17,7 @@ public class Wolf : MonoBehaviour
     {
         lastPos = transform.position;
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator> ();
+         anim = transform.GetChild(0).GetComponent<Animator> ();
     }
 
     // Update is called once per frame
