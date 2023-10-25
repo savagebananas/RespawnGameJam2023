@@ -15,7 +15,7 @@ public class DraggableFurniture : MonoBehaviour
         AstarPath.active.Scan();
         if (!hasBeenDragged) {
             gameObject.tag = "Untagged";
-            gameObject.layer = 6;
+            gameObject.layer = 6;        
         }
         if (hasBeenDragged) {
             gameObject.tag = "breakable";

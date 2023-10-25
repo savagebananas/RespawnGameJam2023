@@ -26,6 +26,8 @@ public class Wolf : MonoBehaviour
     private Collider2D breakable;
     private float flipXtimer = 0.1f;
     private float angle;
+    private bool shouldBreak;
+    private bool isBreaking = false;
 
     void Start()
     {
@@ -102,12 +104,42 @@ public class Wolf : MonoBehaviour
             if (!isIdle) isAttacking = true;
             collision.gameObject.GetComponent<DraggableFurniture>().isBreaking = true;
             breakable = collision.collider;
-            StartCoroutine(WolfBreak(collision));
+            bool shouldBreak = false;
+            if (!isBreaking) StartCoroutine(WolfBreak(collision));
+
+            RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, builder.transform.position-transform.position);
+            foreach (RaycastHit2D hit in hits) {
+                if (hit.collider==collision.collider) {
+                    shouldBreak = true;
+                    break;
+                }
+            }
+            
+            if (!shouldBreak) {
+                float angle = Vector3.Angle(collision.gameObject.transform.position-transform.position, builder.transform.position-transform.position);
+                if (angle<90f) {
+                    shouldBreak = true;
+                }
+            }
+            if (!shouldBreak) StartCoroutine(stopBreaking(collision));
+
         }
     }
+    
+    IEnumerator stopBreaking(Collision2D collision) {
+        GetComponent<AIDestinationSetter>().target = builder.transform;
+        collision.gameObject.layer = 6;
+        AstarPath.active.Scan();
+        isAttacking = false;
+        isBreaking = false;
+        yield return new WaitForSeconds(0.5f);
+        collision.gameObject.layer = 0;
+    }
+
 
     IEnumerator WolfBreak(Collision2D collision)
     {
+        isBreaking = true;
         //stop movement
         GetComponent<AIDestinationSetter>().target = rb.transform;
         yield return new WaitForSeconds(5.0f); 
@@ -118,6 +150,7 @@ public class Wolf : MonoBehaviour
         GetComponent<AIDestinationSetter>().target = builder.transform;
 
         isAttacking = false;
+        isBreaking = false;
     }
 
     public void wolfMove()
@@ -142,7 +175,7 @@ public class Wolf : MonoBehaviour
             }
             else
             {
-                if (breakable != null && breakable.tag.Equals("obstacle")) Destroy(breakable.gameObject);
+                if (breakable != null && breakable.tag.Equals("breakable")) Destroy(breakable.gameObject);
                 //continue movement
                 GetComponent<AIDestinationSetter>().target = builder.transform;
                 isAttacking = false;
