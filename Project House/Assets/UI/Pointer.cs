@@ -14,6 +14,7 @@ public class Pointer : MonoBehaviour
     public float height = 0;
     private SpriteRenderer sr;
     public GameObject targetObject;
+    private Color col;
     void Start()
     {
         Debug.Log(Screen.width);
@@ -22,6 +23,7 @@ public class Pointer : MonoBehaviour
         else target = targetObject.transform;
         pointerTransform = transform;
         sr = GetComponent<SpriteRenderer>();
+        col = sr.color;
     }
 
     // Update is called once per frame
@@ -35,19 +37,19 @@ public class Pointer : MonoBehaviour
         //float angle = Vector3.SignedAngle(dir, new Vector3(1, 0, 0), new Vector3(0, 0, 1));
         var angle = Mathf.Rad2Deg*Mathf.Atan2(dir.y, dir.x);
         targetScreenPoint = Camera.main.WorldToScreenPoint(targetPos);
-        isOffScreen = ((targetScreenPoint.x)<=-width || (targetScreenPoint.x)>= (Screen.width+width) || (targetScreenPoint.y)<=(1/4*Screen.height)-height || (targetScreenPoint.y)>=(Screen.height+height));
+        isOffScreen = ((targetScreenPoint.x)<=-width || (targetScreenPoint.x)>= (Screen.width+width) || (targetScreenPoint.y)<=Screen.height/7-height || (targetScreenPoint.y)>=(Screen.height+height));
         if (isOffScreen) {
-            sr.color = new Color(255, 255, 255, 1f);
+            sr.color = new Color(col.r, col.b, col.g, 1f);
             Vector3 capScreenPoint = targetScreenPoint;
-            if (capScreenPoint.x <= 0f+border) capScreenPoint.x = border;
+            if (capScreenPoint.x <= border) capScreenPoint.x = border;
             if (capScreenPoint.x>=Screen.width-border) capScreenPoint.x = Screen.width-border;
-            if (capScreenPoint.y <= 0f+border) capScreenPoint.y = border+(1/4*Screen.height);
+            if (capScreenPoint.y <= border+Screen.height/7) capScreenPoint.y = border+Screen.height/7;
             if (capScreenPoint.y>=Screen.height-border) capScreenPoint.y = Screen.height-border;
             Vector3 pointWorldPos = Camera.main.ScreenToWorldPoint(capScreenPoint);
             pointerTransform.position = pointWorldPos;
  
         } else {
-            sr.color = new Color(0, 0, 0, 0f);
+            sr.color = new Color(col.r, col.g, col.b, 0f);
         }
         pointerTransform.rotation = Quaternion.Euler(0, 0, angle -90);
 
