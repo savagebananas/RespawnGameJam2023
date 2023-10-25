@@ -23,6 +23,7 @@ public class MoveTransparentFurniture : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
     void OnTriggerEnter2D(Collider2D collider) {
+        if (collider.gameObject.tag=="phone") return;
         sr.color = coll;
         collcount++;
     }

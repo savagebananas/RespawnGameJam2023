@@ -92,12 +92,12 @@ public class Wolf : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision){
         //if colides with player stun player
-        if(collision.transform.tag.Equals("builder") == true)
+        if(collision.gameObject.tag.Equals("builder") == true)
         {
             builder.Die();
         }
 
-        if(collision.transform.tag.Equals("obstacles") == true)
+        if(collision.gameObject.tag.Equals("obstacles") == true)
         {
             if (!isIdle) isAttacking = true;
             breakable = collision.collider;
