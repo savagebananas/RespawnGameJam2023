@@ -549,6 +549,7 @@ public class GoalPoint_Script : MonoBehaviour
 
         else if(currGoal == sixthGoal){
             sixthGoalDone = true;
+            currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
 
             if (firstGoalDone == false)
             {
