@@ -38,6 +38,10 @@ public class GoalPoint_Script : MonoBehaviour
     Transform sixthGoal;
 
     public bool isFixing;
+    public float timeRemaining = 5.0f;
+    public bool isRinging;
+
+    RaycastHit2D hit;
     
 
     // Start is called before the first frame update
@@ -48,6 +52,7 @@ public class GoalPoint_Script : MonoBehaviour
         player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
         goalPoint = currGoal;
         goalPoint.position = currGoal.position;
+        isRinging = false;
 
         //test
         //currGoal = goalF;
@@ -69,27 +74,39 @@ public class GoalPoint_Script : MonoBehaviour
         //if goal value = null set it to new one
         if(Input.GetMouseButtonDown(0)){
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if(Physics.Raycast(ray, out hit, 100)){
-                if(hit.transform.tag.Equals("phone") == true){
-                    float timeRemaining = 5.0f;
-                    //phone ring sound effect
-                    //phone ring animation
-                    while(timeRemaining > 0){
-                        if(Mathf.Abs(hit.transform.position.x - player.transform.position.x) < 5 
-                        && Mathf.Abs(hit.transform.position.y - player.transform.position.y) < 5 ){
-                            //figure out which phone it is
-                            //set currGoal to that task 
-                            //set ai to walk there
-                        }
-                        //make time increase
-                        timeRemaining-=Time.deltaTime;
-                    }
-                    
-                }
+            Debug.Log("Step 1");
+            hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+            if(hit.collider != null){
+                Debug.Log("Step 2");
+            }
+            if(hit.collider == null){
+                Debug.Log(" null Step 2");
             }
             
+            if(hit.transform.tag.Equals("phone") == true){
+                Debug.Log("Step 3");
+                float timeRemaining = 5.0f;
+                //phone ring sound effect
+                //phone ring animation
+                
+                isRinging = true;
+            }
+        }
+
+        if (isRinging && timeRemaining > 0){
+            Debug.Log("Step 4");
+                    if(Mathf.Abs(hit.transform.position.x - player.transform.position.x) < 5 
+                    && Mathf.Abs(hit.transform.position.y - player.transform.position.y) < 5 ){
+                        //figure out which phone it is
+                        //set currGoal to that task 
+                        //set ai to walk there
+                    }
+                    //make time increase
+                    timeRemaining-=Time.deltaTime;
+                }
+        else{
+            isRinging = false;
+            timeRemaining = 5.0f;
         }
     }
 
