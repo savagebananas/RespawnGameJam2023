@@ -50,7 +50,7 @@ public class GoalPoint_Script : MonoBehaviour
         isFixing = false;
         changeGoalRand();
         player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
-        goalPoint = currGoal;
+        //goalPoint = currGoal;
         goalPoint.position = currGoal.position;
         isRinging = false;
 
@@ -349,27 +349,28 @@ public class GoalPoint_Script : MonoBehaviour
             Debug.Log("First task done");
             
             firstGoalDone = true;
-            //currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
+            currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
 
             if(secondGoalDone == false){
-            currGoal.position = secondGoal.position;
-            currGoal = secondGoal;
+                currGoal = secondGoal;
+                currGoal.position = secondGoal.position;
+            
             }
             else if(thirdGoalDone == false){
-            currGoal.position = thirdGoal.position;
-            currGoal = thirdGoal;
+                currGoal = thirdGoal;
+                currGoal.position = thirdGoal.position;
             }
             else if(fourthGoalDone == false){
-                currGoal.position = fourthGoal.position;
                 currGoal = fourthGoal;
+                currGoal.position = fourthGoal.position;
             }
             else if(fifthGoalDone == false){
-                currGoal.position = fifthGoal.position;
                 currGoal = fifthGoal;
+                currGoal.position = fifthGoal.position;
             }
             else if(sixthGoalDone == false){
-                currGoal.position = sixthGoal.position;
                 currGoal = sixthGoal;
+                currGoal.position = sixthGoal.position;
             }
             else{
                 YouWin();
@@ -384,30 +385,30 @@ public class GoalPoint_Script : MonoBehaviour
             Debug.Log("Second task done");
             
             secondGoalDone = true;
-            //currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
+            currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
             if(firstGoalDone == false){
-            currGoal.position = firstGoal.position;
-            currGoal = firstGoal;
+                currGoal = firstGoal;
+                currGoal.position = firstGoal.position;
             }
             else if(secondGoalDone == false){
-            currGoal.position = secondGoal.position;
-            currGoal = secondGoal;
+                currGoal = secondGoal;
+                currGoal.position = secondGoal.position;
             }
             else if(thirdGoalDone == false){
-            currGoal.position = thirdGoal.position;
-            currGoal = thirdGoal;
+                currGoal = thirdGoal;
+                currGoal.position = thirdGoal.position;
             }
             else if(fourthGoalDone == false){
-                currGoal.position = fourthGoal.position;
                 currGoal = fourthGoal;
+                currGoal.position = fourthGoal.position;
             }
             else if(fifthGoalDone == false){
-                currGoal.position = fifthGoal.position;
                 currGoal = fifthGoal;
+                currGoal.position = fifthGoal.position;
             }
             else if(sixthGoalDone == false){
-                currGoal.position = sixthGoal.position;
                 currGoal = sixthGoal;
+                currGoal.position = sixthGoal.position;
             }
             else{
                 YouWin();
@@ -422,30 +423,30 @@ public class GoalPoint_Script : MonoBehaviour
             Debug.Log("Third task done");
             
             thirdGoalDone = true;
-            //currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
+            currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
             if(firstGoalDone == false){
-            currGoal.position = firstGoal.position;
-            currGoal = firstGoal;
+                currGoal = firstGoal;
+                currGoal.position = firstGoal.position;
             }
             else if(secondGoalDone == false){
-            currGoal.position = secondGoal.position;
-            currGoal = secondGoal;
+                currGoal = secondGoal;
+                currGoal.position = secondGoal.position;
             }
             else if(thirdGoalDone == false){
-            currGoal.position = thirdGoal.position;
-            currGoal = thirdGoal;
+                currGoal = thirdGoal;
+                currGoal.position = thirdGoal.position;
             }
             else if(fourthGoalDone == false){
-                currGoal.position = fourthGoal.position;
                 currGoal = fourthGoal;
+                currGoal.position = fourthGoal.position;
             }
             else if(fifthGoalDone == false){
-                currGoal.position = fifthGoal.position;
                 currGoal = fifthGoal;
+                currGoal.position = fifthGoal.position;
             }
             else if(sixthGoalDone == false){
-                currGoal.position = sixthGoal.position;
                 currGoal = sixthGoal;
+                currGoal.position = sixthGoal.position;
             }
             else{
                 YouWin();
@@ -460,32 +461,39 @@ public class GoalPoint_Script : MonoBehaviour
             Debug.Log("Fourth task done");
             
             fourthGoalDone = true;
-            //currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
-            if(firstGoalDone == false){
-            currGoal.position = firstGoal.position;
-            currGoal = firstGoal;
+            currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
+            if (firstGoalDone == false)
+            {
+                currGoal = firstGoal;
+                currGoal.position = firstGoal.position;
             }
-            else if(secondGoalDone == false){
-            currGoal.position = secondGoal.position;
-            currGoal = secondGoal;
+            else if (secondGoalDone == false)
+            {
+                currGoal = secondGoal;
+                currGoal.position = secondGoal.position;
             }
-            else if(thirdGoalDone == false){
-            currGoal.position = thirdGoal.position;
-            currGoal = thirdGoal;
+            else if (thirdGoalDone == false)
+            {
+                currGoal = thirdGoal;
+                currGoal.position = thirdGoal.position;
             }
-            else if(fourthGoalDone == false){
-                currGoal.position = fourthGoal.position;
+            else if (fourthGoalDone == false)
+            {
                 currGoal = fourthGoal;
+                currGoal.position = fourthGoal.position;
             }
-            else if(fifthGoalDone == false){
-                currGoal.position = fifthGoal.position;
+            else if (fifthGoalDone == false)
+            {
                 currGoal = fifthGoal;
+                currGoal.position = fifthGoal.position;
             }
-            else if(sixthGoalDone == false){
-                currGoal.position = sixthGoal.position;
+            else if (sixthGoalDone == false)
+            {
                 currGoal = sixthGoal;
+                currGoal.position = sixthGoal.position;
             }
-            else{
+            else
+            {
                 YouWin();
             }
 
@@ -498,32 +506,39 @@ public class GoalPoint_Script : MonoBehaviour
             Debug.Log("Fifth task done");
             
             fifthGoalDone = true;
-            //currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
-            if(firstGoalDone == false){
-            currGoal.position = firstGoal.position;
-            currGoal = firstGoal;
+            currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
+            if (firstGoalDone == false)
+            {
+                currGoal = firstGoal;
+                currGoal.position = firstGoal.position;
             }
-            else if(secondGoalDone == false){
-            currGoal.position = secondGoal.position;
-            currGoal = secondGoal;
+            else if (secondGoalDone == false)
+            {
+                currGoal = secondGoal;
+                currGoal.position = secondGoal.position;
             }
-            else if(thirdGoalDone == false){
-            currGoal.position = thirdGoal.position;
-            currGoal = thirdGoal;
+            else if (thirdGoalDone == false)
+            {
+                currGoal = thirdGoal;
+                currGoal.position = thirdGoal.position;
             }
-            else if(fourthGoalDone == false){
-                currGoal.position = fourthGoal.position;
+            else if (fourthGoalDone == false)
+            {
                 currGoal = fourthGoal;
+                currGoal.position = fourthGoal.position;
             }
-            else if(fifthGoalDone == false){
-                currGoal.position = fifthGoal.position;
+            else if (fifthGoalDone == false)
+            {
                 currGoal = fifthGoal;
+                currGoal.position = fifthGoal.position;
             }
-            else if(sixthGoalDone == false){
-                currGoal.position = sixthGoal.position;
+            else if (sixthGoalDone == false)
+            {
                 currGoal = sixthGoal;
+                currGoal.position = sixthGoal.position;
             }
-            else{
+            else
+            {
                 YouWin();
             }
 
@@ -535,31 +550,38 @@ public class GoalPoint_Script : MonoBehaviour
         else if(currGoal == sixthGoal){
             sixthGoalDone = true;
 
-            if(firstGoalDone == false){
-            currGoal.position = firstGoal.position;
-            currGoal = firstGoal;
+            if (firstGoalDone == false)
+            {
+                currGoal = firstGoal;
+                currGoal.position = firstGoal.position;
             }
-            else if(secondGoalDone == false){
-            currGoal.position = secondGoal.position;
-            currGoal = secondGoal;
+            else if (secondGoalDone == false)
+            {
+                currGoal = secondGoal;
+                currGoal.position = secondGoal.position;
             }
-            else if(thirdGoalDone == false){
-            currGoal.position = thirdGoal.position;
-            currGoal = thirdGoal;
+            else if (thirdGoalDone == false)
+            {
+                currGoal = thirdGoal;
+                currGoal.position = thirdGoal.position;
             }
-            else if(fourthGoal == false){
-                currGoal.position = fourthGoal.position;
+            else if (fourthGoalDone == false)
+            {
                 currGoal = fourthGoal;
+                currGoal.position = fourthGoal.position;
             }
-            else if(fifthGoalDone == false){
-                currGoal.position = fifthGoal.position;
+            else if (fifthGoalDone == false)
+            {
                 currGoal = fifthGoal;
+                currGoal.position = fifthGoal.position;
             }
-            else if(sixthGoalDone == false){
-                currGoal.position = sixthGoal.position;
+            else if (sixthGoalDone == false)
+            {
                 currGoal = sixthGoal;
+                currGoal.position = sixthGoal.position;
             }
-            else{
+            else
+            {
                 YouWin();
             }
         }

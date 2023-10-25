@@ -6,12 +6,6 @@ public class Task : MonoBehaviour
 {
     public GameObject taskText;
 
-    private void Start()
-    {
-        //test
-        fixTask();
-    }
-
     public void fixTask()
     {
         gameObject.transform.GetChild(0).gameObject.SetActive(true);
