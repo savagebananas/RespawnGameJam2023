@@ -97,6 +97,7 @@ public class GoalPoint_Script : MonoBehaviour
             Debug.Log("Step 4");
                     if(Mathf.Abs(hit.transform.position.x - player.transform.position.x) < 5 
                     && Mathf.Abs(hit.transform.position.y - player.transform.position.y) < 5 ){
+                       Debug.Log("step 5");
                         //figure out which phone it is
                         //set currGoal to that task 
                         //set ai to walk there
