@@ -7,6 +7,7 @@ public class DraggableFurniture : MonoBehaviour
 {
     private bool mouseIsOver;
     public bool hasBeenDragged;
+    public bool isBreaking = false;
     public GameObject transparentItem;
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,7 @@ public class DraggableFurniture : MonoBehaviour
         mouseIsOver = true;
     }
     void OnMouseDown() {
-        if(mouseIsOver && !PlayerManager.mouseDragging) {
+        if(mouseIsOver && !PlayerManager.mouseDragging&&!isBreaking) {
             Vector3 t = transform.position;
             Instantiate(transparentItem, t, Quaternion.identity);
             StartCoroutine(DestroySelf());
