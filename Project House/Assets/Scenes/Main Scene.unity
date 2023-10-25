@@ -1584,8 +1584,6 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!61 &381527191
 BoxCollider2D:
---- !u!1 &400241203
-GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1629,12 +1627,18 @@ GameObject:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &400241203
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400241204}
   - component: {fileID: 400241205}
   m_Layer: 0
-  m_Name: BlueCarpet
+  m_Name: 
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2359,7 +2363,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 3.15625
+  orthographic size: 3.34375
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3232,10 +3236,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00060009956, y: -0.0013999939, z: 0}
-    m_Extent: {x: 5.5080004, y: 5.5027, z: 0}
-    m_Center: {x: -0.0050997734, y: -0.005400181, z: 0}
-    m_Extent: {x: 5.5021, y: 5.5039, z: 0}
+    m_Center: {x: -0.0021500587, y: 0.00075006485, z: 0}
+    m_Extent: {x: 5.50275, y: 5.50725, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -18760,6 +18762,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PumpkinShelf (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 231576467693419325, guid: fa10bcbd94d9cb046b43b1300ae03c85, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5168762709940457076, guid: fa10bcbd94d9cb046b43b1300ae03c85, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.91
@@ -18799,6 +18805,14 @@ PrefabInstance:
     - target: {fileID: 5168762709940457076, guid: fa10bcbd94d9cb046b43b1300ae03c85, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6355277532534693108, guid: fa10bcbd94d9cb046b43b1300ae03c85, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8960603672624524934, guid: fa10bcbd94d9cb046b43b1300ae03c85, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24815,11 +24829,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1628986093}
-  - component: {fileID: 1628986095}
   - component: {fileID: 1628986094}
   m_Layer: 0
   m_Name: Phone
-  m_TagString: Untagged
+  m_TagString: phone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24875,21 +24888,6 @@ CircleCollider2D:
   m_Offset: {x: 5.929177, y: 0}
   serializedVersion: 2
   m_Radius: 21.2387
---- !u!114 &1628986095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628986092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62031e2491868e442ad5ae5e9ebf681f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  phone: {fileID: 1628986092}
-  connectedTask: {fileID: 87381661}
-  builder: {fileID: 787033300}
 --- !u!1 &1704737975
 GameObject:
   m_ObjectHideFlags: 0
@@ -38097,6 +38095,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 656845816}
     m_Modifications:
+    - target: {fileID: 2018021916045063612, guid: 38401baac2195d44993e47e2366cba5d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5711168774246744227, guid: 38401baac2195d44993e47e2366cba5d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7582085306462808605, guid: 38401baac2195d44993e47e2366cba5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.7733688
@@ -38140,6 +38146,10 @@ PrefabInstance:
     - target: {fileID: 8485480534401295779, guid: 38401baac2195d44993e47e2366cba5d, type: 3}
       propertyPath: m_Name
       value: SkullShelf (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485480534401295779, guid: 38401baac2195d44993e47e2366cba5d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

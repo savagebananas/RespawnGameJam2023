@@ -61,6 +61,9 @@ public class GoalPoint_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(firstGoalDone && secondGoalDone && thirdGoalDone && fourthGoalDone && fifthGoalDone && sixthGoalDone){
+            YouWin();
+        }
         goalPoint.position = currGoal.position;
         
         if(Mathf.Abs(currGoal.position.x - player.transform.position.x) < 0.5 && Mathf.Abs(currGoal.position.y - player.transform.position.y) < 0.5 && isFixing == false)
@@ -95,11 +98,63 @@ public class GoalPoint_Script : MonoBehaviour
 
         if (isRinging && timeRemaining > 0){
             Debug.Log("Step 4");
-                    if(Mathf.Abs(hit.transform.position.x - player.transform.position.x) < 5 
-                    && Mathf.Abs(hit.transform.position.y - player.transform.position.y) < 5 ){
+                    if(Mathf.Abs(hit.transform.position.x - player.transform.position.x) < 25 
+                    && Mathf.Abs(hit.transform.position.y - player.transform.position.y) < 25 ){
                        Debug.Log("step 5");
                         //figure out which phone it is
+                        float distanceToTaskOne = Mathf.Abs((hit.transform.position.x - firstGoal.transform.position.x) + (hit.transform.position.y - firstGoal.transform.position.y));
+                        float distanceToTaskTwo = Mathf.Abs((hit.transform.position.x - secondGoal.transform.position.x) + (hit.transform.position.y - secondGoal.transform.position.y));
+                        float distanceToTaskThree = Mathf.Abs((hit.transform.position.x - thirdGoal.transform.position.x) + (hit.transform.position.y - thirdGoal.transform.position.y));
+                        float distanceToTaskFour = Mathf.Abs((hit.transform.position.x - fourthGoal.transform.position.x) + (hit.transform.position.y - fourthGoal.transform.position.y));
+                        float distanceToTaskFive = Mathf.Abs((hit.transform.position.x - fifthGoal.transform.position.x) + (hit.transform.position.y - fifthGoal.transform.position.y));
+                        float distanceToTaskSix = Mathf.Abs((hit.transform.position.x - sixthGoal.transform.position.x) + (hit.transform.position.y - sixthGoal.transform.position.y));
+
+                        float minDistance = distanceToTaskOne;
+                        if(distanceToTaskTwo < minDistance){
+                            minDistance = distanceToTaskTwo;
+                        }
+                        if(distanceToTaskThree < minDistance){
+                            minDistance = distanceToTaskThree;
+                        }
+                        if(distanceToTaskFour < minDistance){
+                            minDistance = distanceToTaskFour;
+                        }
+                        if(distanceToTaskFive < minDistance){
+                            minDistance = distanceToTaskFive;
+                        }
+                        if(distanceToTaskSix < minDistance){
+                            minDistance = distanceToTaskSix;
+                        }
+
+                        if(minDistance == distanceToTaskOne){
+                            currGoal = firstGoal;
+                            currGoal.position = firstGoal.position;
+                        }
+                        if(minDistance == distanceToTaskTwo){
+                            currGoal = secondGoal;
+                            currGoal.position = secondGoal.position;
+                        }
+                        if(minDistance == distanceToTaskThree){
+                            currGoal = thirdGoal;
+                            currGoal.position = thirdGoal.position;
+                        }
+                        if(minDistance == distanceToTaskFour){
+                            currGoal = fourthGoal;
+                            currGoal.position = fourthGoal.position;
+                        }
+                        if(minDistance == distanceToTaskFive){
+                            currGoal = fifthGoal;
+                            currGoal.position = fifthGoal.position;
+                        }
+                        if(minDistance == distanceToTaskSix){
+                            currGoal = sixthGoal;
+                            currGoal.position = sixthGoal.position;
+                        }
+
+
                         //set currGoal to that task 
+                        player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
+                        
                         //set ai to walk there
                     }
                     //make time increase
@@ -291,6 +346,8 @@ public class GoalPoint_Script : MonoBehaviour
 
         if(currGoal == firstGoal){
             Debug.Log("First task done");
+            
+            firstGoalDone = true;
             //currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
 
             if(secondGoalDone == false){
@@ -301,7 +358,7 @@ public class GoalPoint_Script : MonoBehaviour
             currGoal.position = thirdGoal.position;
             currGoal = thirdGoal;
             }
-            else if(fourthGoal == false){
+            else if(fourthGoalDone == false){
                 currGoal.position = fourthGoal.position;
                 currGoal = fourthGoal;
             }
@@ -319,15 +376,19 @@ public class GoalPoint_Script : MonoBehaviour
 
             player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
             isFixing = false;
-            firstGoalDone = true;
             yield break;
         }
 
         else if(currGoal == secondGoal){
             Debug.Log("Second task done");
-            //currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
             
-            if(secondGoalDone == false){
+            secondGoalDone = true;
+            //currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
+            if(firstGoalDone == false){
+            currGoal.position = firstGoal.position;
+            currGoal = firstGoal;
+            }
+            else if(secondGoalDone == false){
             currGoal.position = secondGoal.position;
             currGoal = secondGoal;
             }
@@ -335,7 +396,7 @@ public class GoalPoint_Script : MonoBehaviour
             currGoal.position = thirdGoal.position;
             currGoal = thirdGoal;
             }
-            else if(fourthGoal == false){
+            else if(fourthGoalDone == false){
                 currGoal.position = fourthGoal.position;
                 currGoal = fourthGoal;
             }
@@ -353,15 +414,19 @@ public class GoalPoint_Script : MonoBehaviour
 
             player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
             isFixing = false;
-            secondGoalDone = true;
             yield break;
         }
 
         else if(currGoal == thirdGoal){
             Debug.Log("Third task done");
-            //currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
             
-            if(secondGoalDone == false){
+            thirdGoalDone = true;
+            //currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
+            if(firstGoalDone == false){
+            currGoal.position = firstGoal.position;
+            currGoal = firstGoal;
+            }
+            else if(secondGoalDone == false){
             currGoal.position = secondGoal.position;
             currGoal = secondGoal;
             }
@@ -369,7 +434,7 @@ public class GoalPoint_Script : MonoBehaviour
             currGoal.position = thirdGoal.position;
             currGoal = thirdGoal;
             }
-            else if(fourthGoal == false){
+            else if(fourthGoalDone == false){
                 currGoal.position = fourthGoal.position;
                 currGoal = fourthGoal;
             }
@@ -387,15 +452,19 @@ public class GoalPoint_Script : MonoBehaviour
 
             player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
             isFixing = false;
-            thirdGoalDone = true;
             yield break;
         }
 
         else if(currGoal == fourthGoal){
             Debug.Log("Fourth task done");
-            //currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
             
-            if(secondGoalDone == false){
+            fourthGoalDone = true;
+            //currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
+            if(firstGoalDone == false){
+            currGoal.position = firstGoal.position;
+            currGoal = firstGoal;
+            }
+            else if(secondGoalDone == false){
             currGoal.position = secondGoal.position;
             currGoal = secondGoal;
             }
@@ -403,7 +472,7 @@ public class GoalPoint_Script : MonoBehaviour
             currGoal.position = thirdGoal.position;
             currGoal = thirdGoal;
             }
-            else if(fourthGoal == false){
+            else if(fourthGoalDone == false){
                 currGoal.position = fourthGoal.position;
                 currGoal = fourthGoal;
             }
@@ -421,15 +490,19 @@ public class GoalPoint_Script : MonoBehaviour
 
             player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
             isFixing = false;
-            fourthGoalDone = true;
             yield break;
         }
 
         else if(currGoal == fifthGoal){
             Debug.Log("Fifth task done");
-            //currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
             
-            if(secondGoalDone == false){
+            fifthGoalDone = true;
+            //currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
+            if(firstGoalDone == false){
+            currGoal.position = firstGoal.position;
+            currGoal = firstGoal;
+            }
+            else if(secondGoalDone == false){
             currGoal.position = secondGoal.position;
             currGoal = secondGoal;
             }
@@ -437,7 +510,7 @@ public class GoalPoint_Script : MonoBehaviour
             currGoal.position = thirdGoal.position;
             currGoal = thirdGoal;
             }
-            else if(fourthGoal == false){
+            else if(fourthGoalDone == false){
                 currGoal.position = fourthGoal.position;
                 currGoal = fourthGoal;
             }
@@ -455,12 +528,17 @@ public class GoalPoint_Script : MonoBehaviour
 
             player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
             isFixing = false;
-            fifthGoalDone = true;
             yield break;
         }
 
         else if(currGoal == sixthGoal){
-            if(secondGoalDone == false){
+            sixthGoalDone = true;
+
+            if(firstGoalDone == false){
+            currGoal.position = firstGoal.position;
+            currGoal = firstGoal;
+            }
+            else if(secondGoalDone == false){
             currGoal.position = secondGoal.position;
             currGoal = secondGoal;
             }
