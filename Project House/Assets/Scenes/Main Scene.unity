@@ -2363,7 +2363,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 3.34375
+  orthographic size: 3.15625
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3236,10 +3236,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0021500587, y: 0.00075006485, z: 0}
-    m_Extent: {x: 5.50275, y: 5.50725, z: 0}
-    m_Center: {x: -0.007799864, y: 0.0018999577, z: 0}
-    m_Extent: {x: 5.4990997, y: 5.5010996, z: 0}
+    m_Center: {x: 0.00605011, y: 0.006449938, z: 0}
+    m_Extent: {x: 5.49935, y: 5.4986496, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3852,7 +3850,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.000000029802322, y: -0.22131252}
+  m_Offset: {x: 0.005136013, y: -0.19178057}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3863,7 +3861,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.37495548, y: 0.16293108}
+  m_Size: {x: 0.24141884, y: 0.10386717}
   m_EdgeRadius: 0
 --- !u!114 &787033313
 MonoBehaviour:
