@@ -19,13 +19,17 @@ public class PhoneRing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetMouseButtonDown(0)){ // if left button pressed...
+            Ray ray = GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+        if (Physics.Raycast(ray, out hit)){
+        // the object identified by hit.transform was clicked
+        // do whatever you want
 
-    }
-
-    void OnMouseDown()
-    {
         this.GetComponent<CircleCollider2D>().enabled = true;
         StartCoroutine(Ring());
+    }
+  }
     }
 
     IEnumerator Ring()
