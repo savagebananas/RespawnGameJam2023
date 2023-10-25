@@ -68,6 +68,7 @@ public class GoalPoint_Script : MonoBehaviour
         
         if(Mathf.Abs(currGoal.position.x - player.transform.position.x) < 0.5 && Mathf.Abs(currGoal.position.y - player.transform.position.y) < 0.5 && isFixing == false)
         {
+            
             Fix();
         }
 
