@@ -8,6 +8,7 @@ TagManager:
   - builder
   - obstacles
   - phone
+  - breakable
   layers:
   - Default
   - TransparentFX
