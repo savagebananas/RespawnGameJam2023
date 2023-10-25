@@ -23,6 +23,13 @@ public class GoalPoint_Script : MonoBehaviour
 
     [SerializeField] Transform goalF;
 
+    bool firstGoalDone = false;
+    bool secondGoalDone = false;
+    bool thirdGoalDone = false;
+    bool fourthGoalDone = false;
+    bool fifthGoalDone = false;
+    bool sixthGoalDone = false;
+
     Transform firstGoal;
     Transform secondGoal;
     Transform thirdGoal;
@@ -60,6 +67,30 @@ public class GoalPoint_Script : MonoBehaviour
         
         //if bell in range set that to current goal
         //if goal value = null set it to new one
+        if(Input.GetMouseButtonDown(0)){
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if(Physics.Raycast(ray, out hit, 100)){
+                if(hit.transform.tag.Equals("phone") == true){
+                    float timeRemaining = 5.0f;
+                    //phone ring sound effect
+                    //phone ring animation
+                    while(timeRemaining > 0){
+                        if(Mathf.Abs(hit.transform.position.x - player.transform.position.x) < 5 
+                        && Mathf.Abs(hit.transform.position.y - player.transform.position.y) < 5 ){
+                            //figure out which phone it is
+                            //set currGoal to that task 
+                            //set ai to walk there
+                        }
+                        //make time increase
+                        timeRemaining-=Time.deltaTime;
+                    }
+                    
+                }
+            }
+            
+        }
     }
 
     public void changeGoalRand()
@@ -242,59 +273,204 @@ public class GoalPoint_Script : MonoBehaviour
 
         if(currGoal == firstGoal){
             Debug.Log("First task done");
-            currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
+            //currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
+
+            if(secondGoalDone == false){
             currGoal.position = secondGoal.position;
             currGoal = secondGoal;
+            }
+            else if(thirdGoalDone == false){
+            currGoal.position = thirdGoal.position;
+            currGoal = thirdGoal;
+            }
+            else if(fourthGoal == false){
+                currGoal.position = fourthGoal.position;
+                currGoal = fourthGoal;
+            }
+            else if(fifthGoalDone == false){
+                currGoal.position = fifthGoal.position;
+                currGoal = fifthGoal;
+            }
+            else if(sixthGoalDone == false){
+                currGoal.position = sixthGoal.position;
+                currGoal = sixthGoal;
+            }
+            else{
+                YouWin();
+            }
+
             player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
             isFixing = false;
+            firstGoalDone = true;
             yield break;
         }
 
         else if(currGoal == secondGoal){
             Debug.Log("Second task done");
-            currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
+            //currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
+            
+            if(secondGoalDone == false){
+            currGoal.position = secondGoal.position;
+            currGoal = secondGoal;
+            }
+            else if(thirdGoalDone == false){
             currGoal.position = thirdGoal.position;
             currGoal = thirdGoal;
+            }
+            else if(fourthGoal == false){
+                currGoal.position = fourthGoal.position;
+                currGoal = fourthGoal;
+            }
+            else if(fifthGoalDone == false){
+                currGoal.position = fifthGoal.position;
+                currGoal = fifthGoal;
+            }
+            else if(sixthGoalDone == false){
+                currGoal.position = sixthGoal.position;
+                currGoal = sixthGoal;
+            }
+            else{
+                YouWin();
+            }
+
             player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
             isFixing = false;
+            secondGoalDone = true;
             yield break;
         }
 
         else if(currGoal == thirdGoal){
             Debug.Log("Third task done");
-            currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
-            currGoal.position = fourthGoal.position;
-            currGoal = fourthGoal;
+            //currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
+            
+            if(secondGoalDone == false){
+            currGoal.position = secondGoal.position;
+            currGoal = secondGoal;
+            }
+            else if(thirdGoalDone == false){
+            currGoal.position = thirdGoal.position;
+            currGoal = thirdGoal;
+            }
+            else if(fourthGoal == false){
+                currGoal.position = fourthGoal.position;
+                currGoal = fourthGoal;
+            }
+            else if(fifthGoalDone == false){
+                currGoal.position = fifthGoal.position;
+                currGoal = fifthGoal;
+            }
+            else if(sixthGoalDone == false){
+                currGoal.position = sixthGoal.position;
+                currGoal = sixthGoal;
+            }
+            else{
+                YouWin();
+            }
+
             player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
             isFixing = false;
+            thirdGoalDone = true;
             yield break;
         }
 
         else if(currGoal == fourthGoal){
             Debug.Log("Fourth task done");
-            currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
-            currGoal.position = fifthGoal.position;
-            currGoal = fifthGoal;
+            //currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
+            
+            if(secondGoalDone == false){
+            currGoal.position = secondGoal.position;
+            currGoal = secondGoal;
+            }
+            else if(thirdGoalDone == false){
+            currGoal.position = thirdGoal.position;
+            currGoal = thirdGoal;
+            }
+            else if(fourthGoal == false){
+                currGoal.position = fourthGoal.position;
+                currGoal = fourthGoal;
+            }
+            else if(fifthGoalDone == false){
+                currGoal.position = fifthGoal.position;
+                currGoal = fifthGoal;
+            }
+            else if(sixthGoalDone == false){
+                currGoal.position = sixthGoal.position;
+                currGoal = sixthGoal;
+            }
+            else{
+                YouWin();
+            }
+
             player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
             isFixing = false;
+            fourthGoalDone = true;
             yield break;
         }
 
         else if(currGoal == fifthGoal){
             Debug.Log("Fifth task done");
-            currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
-            currGoal.position = sixthGoal.position;
-            currGoal = sixthGoal;
+            //currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
+            
+            if(secondGoalDone == false){
+            currGoal.position = secondGoal.position;
+            currGoal = secondGoal;
+            }
+            else if(thirdGoalDone == false){
+            currGoal.position = thirdGoal.position;
+            currGoal = thirdGoal;
+            }
+            else if(fourthGoal == false){
+                currGoal.position = fourthGoal.position;
+                currGoal = fourthGoal;
+            }
+            else if(fifthGoalDone == false){
+                currGoal.position = fifthGoal.position;
+                currGoal = fifthGoal;
+            }
+            else if(sixthGoalDone == false){
+                currGoal.position = sixthGoal.position;
+                currGoal = sixthGoal;
+            }
+            else{
+                YouWin();
+            }
+
             player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
             isFixing = false;
+            fifthGoalDone = true;
             yield break;
         }
 
         else if(currGoal == sixthGoal){
-            Debug.Log("last task done");
-            Debug.Log("You win");
+            if(secondGoalDone == false){
+            currGoal.position = secondGoal.position;
+            currGoal = secondGoal;
+            }
+            else if(thirdGoalDone == false){
+            currGoal.position = thirdGoal.position;
+            currGoal = thirdGoal;
+            }
+            else if(fourthGoal == false){
+                currGoal.position = fourthGoal.position;
+                currGoal = fourthGoal;
+            }
+            else if(fifthGoalDone == false){
+                currGoal.position = fifthGoal.position;
+                currGoal = fifthGoal;
+            }
+            else if(sixthGoalDone == false){
+                currGoal.position = sixthGoal.position;
+                currGoal = sixthGoal;
+            }
+            else{
+                YouWin();
+            }
         }
 
-        
+    }
+
+    public void YouWin(){
+        Debug.Log("last task done");
+        Debug.Log("You win");
     }
 }

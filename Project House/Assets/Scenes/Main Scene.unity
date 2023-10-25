@@ -3192,6 +3192,8 @@ MonoBehaviour:
   m_LocalBounds:
     m_Center: {x: 0.00060009956, y: -0.0013999939, z: 0}
     m_Extent: {x: 5.5080004, y: 5.5027, z: 0}
+    m_Center: {x: -0.0050997734, y: -0.005400181, z: 0}
+    m_Extent: {x: 5.5021, y: 5.5039, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -36206,7 +36208,7 @@ Transform:
   m_GameObject: {fileID: 1829535598}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.03, y: -0.1, z: 0}
+  m_LocalPosition: {x: 23.56, y: -0.1, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -37154,7 +37156,7 @@ MonoBehaviour:
   goalC: {fileID: 312121508}
   goalD: {fileID: 87381662}
   goalE: {fileID: 36113790}
-  goalF: {fileID: 1980205719}
+  goalF: {fileID: 1263941060}
   isFixing: 0
 --- !u!1001 &2007058080
 PrefabInstance:
