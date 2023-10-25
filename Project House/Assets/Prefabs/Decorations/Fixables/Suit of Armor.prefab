@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9216126814725634025}
   - component: {fileID: 8486634651877168963}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8408625465686931824}
   - component: {fileID: 2864860078417340682}
-  m_Layer: 0
+  - component: {fileID: 7910483018011285544}
+  m_Layer: 6
   m_Name: Suit of Armor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,6 +130,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   taskText: {fileID: 0}
+--- !u!61 &7910483018011285544
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5053399134384880935}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.2864635}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 0.427073}
+  m_EdgeRadius: 0
 --- !u!1 &6118934900928095442
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,7 +185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2805166008371044352}
   - component: {fileID: 5371316522808486876}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Suit of Armour Broken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4604175732010935456}
   - component: {fileID: 2406063502279743509}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Suit of Armour Fixed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -309,7 +355,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3644384475087239208}
   - component: {fileID: 9076381164128854194}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
