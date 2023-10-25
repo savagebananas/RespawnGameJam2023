@@ -19,6 +19,7 @@ public class DraggableFurniture : MonoBehaviour
         
     }
     void OnMouseEnter() {
+        //TODO Add highlight effect
         mouseIsOver = true;
     }
     void OnMouseDown() {
@@ -28,6 +29,9 @@ public class DraggableFurniture : MonoBehaviour
             StartCoroutine(DestroySelf());
             return;
         }
+    }
+    void OnMouseExit() {
+        //TODO Disable Highlight
     }
 
     IEnumerator DestroySelf()
