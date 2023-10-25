@@ -13,8 +13,9 @@ public class Builder : MonoBehaviour
     Vector3 lastPos;
     private float angle;
     private float timer = 0.1f;
-    
-    
+
+    public GameObject bloodParticles;
+    public GameObject bloodCloud;
 
     // Start is called before the first frame update
     void Start()
@@ -143,8 +144,13 @@ public class Builder : MonoBehaviour
     public void Die()
     {
         //Show death animation
+        GameObject p = Instantiate(bloodParticles);
+        p.transform.position = this.transform.position;
+        GameObject c = Instantiate(bloodCloud);
+        c.transform.position = this.transform.position;
         //play some sound
         //change scene to death screen
+        Destroy(this.gameObject);
     }
 
 }

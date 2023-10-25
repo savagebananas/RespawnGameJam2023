@@ -29,6 +29,9 @@ public class Wolf : MonoBehaviour
     private bool shouldBreak;
     private bool isBreaking = false;
 
+
+    private bool builderAlive = true;
+
     void Start()
     {
         lastPos = transform.position;
@@ -94,9 +97,11 @@ public class Wolf : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision){
         //if colides with player stun player
-        if(collision.gameObject.tag.Equals("builder") == true)
+        if(collision.gameObject.tag.Equals("builder") == true && builderAlive)
         {
-            builder.Die();
+            isAttacking = true;
+            StartCoroutine(builderDeath());
+            builderAlive = false;
         }
 
         if(collision.gameObject.tag.Equals("breakable") == true)
@@ -136,6 +141,15 @@ public class Wolf : MonoBehaviour
         collision.gameObject.layer = 0;
     }
 
+
+    IEnumerator builderDeath()
+    {
+        yield return new WaitForSeconds(0.2f);
+        builder.Die();
+        isIdle = true;
+        isAttacking = false;
+        Destroy(this);
+    }
 
     IEnumerator WolfBreak(Collision2D collision)
     {
