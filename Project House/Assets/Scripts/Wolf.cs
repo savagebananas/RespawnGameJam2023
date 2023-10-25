@@ -10,6 +10,7 @@ public class Wolf : MonoBehaviour
     Rigidbody2D rb;
     Animator anim;
     Vector3 lastPos;
+    CircleCollider2D colid;
 
     public float freezeTime = 3f;
     // Start is called before the first frame update
@@ -17,7 +18,8 @@ public class Wolf : MonoBehaviour
     {
         lastPos = transform.position;
         rb = GetComponent<Rigidbody2D>();
-         anim = transform.GetChild(0).GetComponent<Animator> ();
+        anim = transform.GetChild(0).GetComponent<Animator> ();
+        colid = GetComponent<CircleCollider2D>();
     }
 
     // Update is called once per frame
@@ -66,17 +68,18 @@ public class Wolf : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collision){
+        Debug.Log("hit");
         //if colides with player stun player
         if(collision.transform.tag.Equals("builder") == true)
         {
             builder.Die();
         }
 
-        if(collision .transform.tag.Equals("Barrier") == true)
+        if(collision.transform.tag.Equals("obstacles") == true)
         {
+           // Debug.Log("hit");
             StartCoroutine(WolfBreak(collision));
         }
-
     }
 
     IEnumerator WolfBreak(Collision2D collision)
@@ -93,6 +96,7 @@ public class Wolf : MonoBehaviour
 
         //stop animation
 
+        Destroy(collision.gameObject);
         //continue movement
         GetComponent<AIDestinationSetter>().target = rb.transform;
     }
