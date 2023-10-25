@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2346075588865348937}
   - component: {fileID: 5828420966156727934}
   - component: {fileID: 8880905975706352020}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: PumpkinShelf
   m_TagString: obstacles
   m_Icon: {fileID: 0}
@@ -161,6 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasBeenDragged: 0
+  isBreaking: 0
   transparentItem: {fileID: 1134467096536977012, guid: ea7ec91800650ef4fb6015813fb9b931, type: 3}
 --- !u!1 &6355277532534693108
 GameObject:
@@ -172,7 +173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4598759496772708305}
   - component: {fileID: 8049924806548505864}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +255,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6712177513430012213}
   - component: {fileID: 7675623584881288563}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

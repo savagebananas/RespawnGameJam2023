@@ -112,7 +112,7 @@ public class Wolf : MonoBehaviour
         GetComponent<AIDestinationSetter>().target = rb.transform;
         yield return new WaitForSeconds(5.0f); 
 
-        Destroy(collision.gameObject);
+        if (collision.gameObject.tag.Equals("breakable")) Destroy(collision.gameObject);
 
         //continue movement
         GetComponent<AIDestinationSetter>().target = builder.transform;
