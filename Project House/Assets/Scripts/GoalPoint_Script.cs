@@ -41,7 +41,9 @@ public class GoalPoint_Script : MonoBehaviour
         player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
         goalPoint = currGoal;
         goalPoint.position = currGoal.position;
-        
+
+        //test
+        //currGoal = goalF;
     }
 
     // Update is called once per frame
@@ -240,6 +242,7 @@ public class GoalPoint_Script : MonoBehaviour
 
         if(currGoal == firstGoal){
             Debug.Log("First task done");
+            currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
             currGoal.position = secondGoal.position;
             currGoal = secondGoal;
             player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
@@ -249,6 +252,7 @@ public class GoalPoint_Script : MonoBehaviour
 
         else if(currGoal == secondGoal){
             Debug.Log("Second task done");
+            currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
             currGoal.position = thirdGoal.position;
             currGoal = thirdGoal;
             player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
@@ -258,6 +262,7 @@ public class GoalPoint_Script : MonoBehaviour
 
         else if(currGoal == thirdGoal){
             Debug.Log("Third task done");
+            currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
             currGoal.position = fourthGoal.position;
             currGoal = fourthGoal;
             player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
@@ -267,6 +272,7 @@ public class GoalPoint_Script : MonoBehaviour
 
         else if(currGoal == fourthGoal){
             Debug.Log("Fourth task done");
+            currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
             currGoal.position = fifthGoal.position;
             currGoal = fifthGoal;
             player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
@@ -276,6 +282,7 @@ public class GoalPoint_Script : MonoBehaviour
 
         else if(currGoal == fifthGoal){
             Debug.Log("Fifth task done");
+            currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
             currGoal.position = sixthGoal.position;
             currGoal = sixthGoal;
             player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
