@@ -27,6 +27,8 @@ public class Wolf : MonoBehaviour
     {
         if(charMoved() == true)
         {
+            anim.SetBool("isIdle", false);
+            anim.SetBool("isAttacking", false);
             anim.SetBool("isWalking", true);
         }
     }
@@ -88,8 +90,9 @@ public class Wolf : MonoBehaviour
         GetComponent<AIDestinationSetter>().target = rb.transform;
 
         //change animation
-
-        //deal damage to object
+        anim.SetBool("isIdle", false);
+        anim.SetBool("isAttacking", true);
+        anim.SetBool("isWalking", false);
 
         //timer for amount of time it takes to destroy
         yield return new WaitForSeconds(5.0f); 
@@ -97,8 +100,9 @@ public class Wolf : MonoBehaviour
         //stop animation
 
         Destroy(collision.gameObject);
+
         //continue movement
-        GetComponent<AIDestinationSetter>().target = rb.transform;
+        GetComponent<AIDestinationSetter>().target = builder.transform;
     }
 
     

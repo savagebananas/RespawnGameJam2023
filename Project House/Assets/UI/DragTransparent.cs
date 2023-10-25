@@ -34,7 +34,8 @@ public class DragTransparent : MonoBehaviour
     void OnMouseDown() {
         if (!isColliding()) {
             dragging = false;
-            Instantiate(item, Camera.main.ScreenToWorldPoint(Input.mousePosition) + new Vector3(0, 0, 10), Quaternion.identity);
+            GameObject f = Instantiate(item, Camera.main.ScreenToWorldPoint(Input.mousePosition) + new Vector3(0, 0, 10), Quaternion.identity);
+            f.hasBeenDragged = true;
             Destroy(this.gameObject);
         }
     }
