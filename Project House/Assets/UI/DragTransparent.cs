@@ -13,11 +13,14 @@ public class DragTransparent : MonoBehaviour
     private bool dragging = true;
     private int collcount = 0;
     public GameObject item;
+    private Rigidbody2D rb;
+    public float v = 40f;
 
     // Start is called before the first frame update
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
         sr.color = noColl;
     }
     void OnTriggerEnter2D(Collider2D collider) {
@@ -46,7 +49,9 @@ public class DragTransparent : MonoBehaviour
     {
         if (dragging) {
             Vector3 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.position = new Vector3(mousepos.x, mousepos.y, transform.position.z);
+            Vector2 vel = new Vector2(mousepos.x-transform.position.x, mousepos.y-transform.position.y);
+            rb.velocity = vel*v;
+
         }
     }
 }

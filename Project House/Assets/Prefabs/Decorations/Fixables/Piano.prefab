@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2191181307083136094}
   - component: {fileID: 4214122061144149399}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1158663703749877535}
   - component: {fileID: 2867073210261173195}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8578551492988485536}
   - component: {fileID: 7039860852000336342}
-  m_Layer: 0
+  - component: {fileID: 7808821248388091135}
+  m_Layer: 6
   m_Name: Piano Broken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,6 +253,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7808821248388091135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4698191739091101152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb19f919a48e17940852652d121d7f25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStatic: 1
+  bottomOfSprite: {fileID: 8578551492988485536}
 --- !u!1 &5711634702931960762
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,7 +277,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4064046141256511579}
   - component: {fileID: 4150857718893423584}
-  m_Layer: 0
+  - component: {fileID: 4770280653172573331}
+  m_Layer: 6
   m_Name: Piano
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,6 +315,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   taskText: {fileID: 0}
+--- !u!61 &4770280653172573331
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5711634702931960762}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1.5}
+  m_EdgeRadius: 0
 --- !u!1 &7825838197467116864
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,7 +370,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5384085186821567983}
   - component: {fileID: 3703079739392923582}
-  m_Layer: 0
+  - component: {fileID: 8946940648106522602}
+  m_Layer: 6
   m_Name: Piano Fixed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,6 +447,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8946940648106522602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7825838197467116864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb19f919a48e17940852652d121d7f25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStatic: 1
+  bottomOfSprite: {fileID: 5384085186821567983}
 --- !u!1 &8573631257832798827
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,7 +471,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7974672338586667807}
   - component: {fileID: 3352412677003924040}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shadow (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -479,7 +555,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8896799808404269288}
   - component: {fileID: 3795850749419395980}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
