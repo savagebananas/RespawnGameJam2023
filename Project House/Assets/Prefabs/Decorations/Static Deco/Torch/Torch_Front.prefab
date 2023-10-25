@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5161726136366557643}
   - component: {fileID: 3413450695306518239}
-  - component: {fileID: 2749152733200074383}
   m_Layer: 0
   m_Name: Torch_Front
   m_TagString: Untagged
@@ -86,20 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2749152733200074383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1783653469466513128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb19f919a48e17940852652d121d7f25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isStatic: 1
-  bottomOfSprite: {fileID: 5161726136366557643}
 --- !u!1 &3127597638300006467
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,7 +178,6 @@ GameObject:
   - component: {fileID: 1993487834297288659}
   - component: {fileID: 5567981460379083535}
   - component: {fileID: 931233133239061768}
-  - component: {fileID: 2827545097738982236}
   m_Layer: 0
   m_Name: Small_Fireball
   m_TagString: Untagged
@@ -291,20 +275,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2827545097738982236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3345635757283378633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb19f919a48e17940852652d121d7f25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isStatic: 1
-  bottomOfSprite: {fileID: 1993487834297288659}
 --- !u!1 &8268047261837529429
 GameObject:
   m_ObjectHideFlags: 0
