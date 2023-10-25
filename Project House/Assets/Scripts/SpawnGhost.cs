@@ -7,31 +7,42 @@ public class SpawnGhost : MonoBehaviour
     // Start is called before the first frame update
     public GameObject ghost;
     public int index;
-    public static Vector3[][] positions = new Vector3[1][];
+    public static GameObject[] locations = new GameObject[4];
+    public static bool isSpawned = false;
+    private int length = 3;
     void Start()
     {
-        positions[0] = new Vector3[3];
-        positions[0][0] = new Vector3(-3.62f, 8.45f, 0f);
-        positions[0][1] = new Vector3(-9.38f, 8.45f, 0f);
-        positions[0][2] = new Vector3(1.12f, 8.45f, 0f);
+        for (int i = 1; i<=locations.Length;i++) {
+            string name = "GhostLocation" + i;
+            Debug.Log(name);
+            locations[i-1] = GameObject.Find(name);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Time.time>0.01&&Mathf.Abs(Time.time%10) < 0.05) {
+        if (Time.time>0.05&&Mathf.Abs(Time.time%10) < 0.05&&!isSpawned) {
             GameObject obj = Instantiate(ghost, getRandomPosition(), Quaternion.identity);
-            obj.GetComponent<GhostMovement>().setIndex(index);
+            isSpawned = true;
         }
     }
     private Vector3 getRandomPosition() {
         int temp = index;
-        //while (temp==index) {
-            //index = Random.Range(0, positions.Length);
-        //}
-        return positions[index][0];
+        int loopCount = 0;
+        while ((temp==index||!locations[temp].GetComponent<GhostLocationRadius>().shouldSpawn)&&loopCount<50) {
+            temp = Random.Range(0, length);
+            loopCount++;
+
+        }
+        if (loopCount>=50) {
+            Debug.Log("spawnGhost :" + temp);
+            Debug.Log("spawnGhost :" + locations[temp]);
+        }
+        index = temp;
+        return locations[index].transform.position;
     }
-    public static Vector3[] getVectors(int i) {
-        return positions[i];
+    public static GameObject getLocation(int i) {
+        return locations[i];
     }
 }
