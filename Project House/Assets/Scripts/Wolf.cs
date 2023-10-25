@@ -100,6 +100,7 @@ public class Wolf : MonoBehaviour
         if(collision.gameObject.tag.Equals("obstacles") == true)
         {
             if (!isIdle) isAttacking = true;
+            collision.gameObject.GetComponent<DraggableFurniture>().isBreaking = true;
             breakable = collision.collider;
             StartCoroutine(WolfBreak(collision));
         }
