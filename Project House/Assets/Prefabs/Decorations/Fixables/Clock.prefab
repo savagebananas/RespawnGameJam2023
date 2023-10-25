@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8873609999350964474}
   - component: {fileID: 6259055937904102938}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FloorLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2106497117086552060}
   - component: {fileID: 3446603647201627563}
-  m_Layer: 0
+  - component: {fileID: 1865332792742717384}
+  m_Layer: 6
   m_Name: Clock Fixed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,6 +169,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1865332792742717384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3419392550095412581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb19f919a48e17940852652d121d7f25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStatic: 1
+  bottomOfSprite: {fileID: 7526889937761962426}
 --- !u!1 &4076669347867527940
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,7 +193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1821507448831219042}
   - component: {fileID: 1876634872706439959}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SpriteLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +275,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7526889937761962426}
   - component: {fileID: 5089184616256610597}
-  m_Layer: 0
+  - component: {fileID: 5652869889897684718}
+  m_Layer: 6
   m_Name: Clock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -297,6 +313,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   taskText: {fileID: 0}
+--- !u!61 &5652869889897684718
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6345193657681411726}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &6504223722820893272
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,7 +368,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6046971005740371540}
   - component: {fileID: 3139313974000091389}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FloorLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,7 +450,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2659401723473063774}
   - component: {fileID: 1026091271474281751}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DecoLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -471,7 +532,8 @@ GameObject:
   m_Component:
   - component: {fileID: 854148361952765607}
   - component: {fileID: 6707438292340654424}
-  m_Layer: 0
+  - component: {fileID: 5875658134523915639}
+  m_Layer: 6
   m_Name: Clock Broken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -547,3 +609,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5875658134523915639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8356921566452862971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb19f919a48e17940852652d121d7f25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStatic: 1
+  bottomOfSprite: {fileID: 7526889937761962426}
