@@ -17,6 +17,9 @@ public class DraggableFurniture : MonoBehaviour
             gameObject.tag = "Untagged";
             gameObject.layer = 6;
         }
+        if (hasBeenDragged) {
+            gameObject.tag = "breakable";
+        }
     }
 
     // Update is called once per frame
