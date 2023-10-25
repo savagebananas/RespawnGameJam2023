@@ -2868,10 +2868,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0016498566, y: 0.0013501644, z: 0}
-    m_Extent: {x: 5.50455, y: 5.50795, z: 0}
-    m_Center: {x: 0.0021498203, y: 0.0076498985, z: 0}
-    m_Extent: {x: 5.5068502, y: 5.50115, z: 0}
+    m_Center: {x: 0.0024499893, y: -0.0013000965, z: 0}
+    m_Extent: {x: 5.49955, y: 5.5048, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -30911,7 +30909,6 @@ Transform:
   - {fileID: 656845816}
   - {fileID: 619490274}
   - {fileID: 1628986093}
-  - {fileID: 1029302582}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1805446551
@@ -37773,6 +37770,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3743981987661566062, guid: d057160f0d0d9714fa1d93ccad8957fa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3956243157947116253, guid: d057160f0d0d9714fa1d93ccad8957fa, type: 3}
       propertyPath: m_Name
       value: Power Box
@@ -37855,4 +37856,4 @@ SceneRoots:
   - {fileID: 1805446554}
   - {fileID: 1006256023}
   - {fileID: 328707847}
-  - {fileID: 1305054737}
+  - {fileID: 1773925231}
