@@ -13,8 +13,7 @@ public class PhoneRing : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //phone.enabled = false;
-        phone.GetComponent<CircleCollider2D>().enabled = false;
+        this.GetComponent<CircleCollider2D>().enabled = false;
     }
 
     // Update is called once per frame
@@ -23,14 +22,9 @@ public class PhoneRing : MonoBehaviour
 
     }
 
-    void onEnble()
-    {
-        phone.GetComponent<CircleCollider2D>().enabled = true;
-    }
-
     void OnMouseDown()
     {
-        this.enabled = true;
+        this.GetComponent<CircleCollider2D>().enabled = true;
         StartCoroutine(Ring());
     }
 
