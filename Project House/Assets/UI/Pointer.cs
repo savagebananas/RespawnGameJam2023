@@ -35,13 +35,13 @@ public class Pointer : MonoBehaviour
         //float angle = Vector3.SignedAngle(dir, new Vector3(1, 0, 0), new Vector3(0, 0, 1));
         var angle = Mathf.Rad2Deg*Mathf.Atan2(dir.y, dir.x);
         targetScreenPoint = Camera.main.WorldToScreenPoint(targetPos);
-        isOffScreen = ((targetScreenPoint.x)<=-width || (targetScreenPoint.x)>= (Screen.width+width) || (targetScreenPoint.y)<=-height || (targetScreenPoint.y)>=(Screen.height+height));
+        isOffScreen = ((targetScreenPoint.x)<=-width || (targetScreenPoint.x)>= (Screen.width+width) || (targetScreenPoint.y)<=(1/4*Screen.height)-height || (targetScreenPoint.y)>=(Screen.height+height));
         if (isOffScreen) {
             sr.color = new Color(255, 255, 255, 1f);
             Vector3 capScreenPoint = targetScreenPoint;
             if (capScreenPoint.x <= 0f+border) capScreenPoint.x = border;
             if (capScreenPoint.x>=Screen.width-border) capScreenPoint.x = Screen.width-border;
-            if (capScreenPoint.y <= 0f+border) capScreenPoint.y = border;
+            if (capScreenPoint.y <= 0f+border) capScreenPoint.y = border+(1/4*Screen.height);
             if (capScreenPoint.y>=Screen.height-border) capScreenPoint.y = Screen.height-border;
             Vector3 pointWorldPos = Camera.main.ScreenToWorldPoint(capScreenPoint);
             pointerTransform.position = pointWorldPos;

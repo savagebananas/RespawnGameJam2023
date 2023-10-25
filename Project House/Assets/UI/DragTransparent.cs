@@ -32,17 +32,24 @@ public class DragTransparent : MonoBehaviour
         //collcount++;
         if (!colliders.Contains(collider)) {
             colliders.Add(collider);
-            shouldRemove.Add(true);
+            shouldRemove.Add(false);
         }
     }
     void OnTriggerExit2D(Collider2D collider) {
         //collcount--;
         if (!isColliding()) sr.color = noColl;
-        colliders.Remove(collider);
-        shouldRemove.RemoveAt(colliders.IndexOf(collider));
+        if (colliders.Contains(collider)) {
+            colliders.Remove(collider);
+            shouldRemove.RemoveAt(colliders.IndexOf(collider));
+        }
     }
     void OnTriggerStay2D(Collider2D collider) {
-        shouldRemove[colliders.IndexOf(collider)] = false;
+        if (collider.gameObject.tag=="phone") return;
+        if (colliders.Contains(collider)) shouldRemove[colliders.IndexOf(collider)] = false;
+        else {
+            colliders.Add(collider);
+            shouldRemove.Add(false);
+        }
     }
 
     void OnMouseDown() {
@@ -62,12 +69,14 @@ public class DragTransparent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i<colliders.Count; i++) {
+        int count = colliders.Count;
+        for (int i = 0; i<count; i++) {
    
             bool x = shouldRemove[i];
             if (x) {
                 colliders.RemoveAt(i);
                 shouldRemove.RemoveAt(i);
+                count--;
             }
         }
         if (!isColliding()) {
