@@ -246,11 +246,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 28633151737715320, guid: cadcfc9f9a4f1e64c926672e3dd5250c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.7828102
+      value: 21.74
       objectReference: {fileID: 0}
     - target: {fileID: 28633151737715320, guid: cadcfc9f9a4f1e64c926672e3dd5250c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5843964
+      value: 5.64
       objectReference: {fileID: 0}
     - target: {fileID: 28633151737715320, guid: cadcfc9f9a4f1e64c926672e3dd5250c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -284,9 +284,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2509496359611088267, guid: cadcfc9f9a4f1e64c926672e3dd5250c, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5565227605071568558, guid: cadcfc9f9a4f1e64c926672e3dd5250c, type: 3}
       propertyPath: m_Name
       value: Couch (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5565227605071568558, guid: cadcfc9f9a4f1e64c926672e3dd5250c, type: 3}
+      propertyPath: m_TagString
+      value: obstacles
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2521,6 +2529,8 @@ MonoBehaviour:
   m_LocalBounds:
     m_Center: {x: -0.0020501614, y: 0.005100012, z: 0}
     m_Extent: {x: 5.50795, y: 5.5048, z: 0}
+    m_Center: {x: 0.0012001991, y: -0.0035498142, z: 0}
+    m_Extent: {x: 5.5074, y: 5.5033503, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -35163,7 +35173,7 @@ Transform:
   m_GameObject: {fileID: 1829535598}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.25, y: 6.87, z: 0}
+  m_LocalPosition: {x: 24.234, y: 6.87, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -35331,7 +35341,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.013293028, y: -0.0331316}
+  m_Offset: {x: -0.010752201, y: -0.0331316}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -35342,7 +35352,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25080538, y: 0.1279521}
+  m_Size: {x: 0.467206, y: 0.1279521}
   m_EdgeRadius: 0
 --- !u!1 &1903610856
 GameObject:
@@ -36827,6 +36837,10 @@ PrefabInstance:
     - target: {fileID: 5565227605071568558, guid: cadcfc9f9a4f1e64c926672e3dd5250c, type: 3}
       propertyPath: m_Name
       value: Couch
+      objectReference: {fileID: 0}
+    - target: {fileID: 5565227605071568558, guid: cadcfc9f9a4f1e64c926672e3dd5250c, type: 3}
+      propertyPath: m_TagString
+      value: obstacles
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
