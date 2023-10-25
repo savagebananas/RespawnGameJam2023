@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1605676127137430992}
   - component: {fileID: 477727612255266061}
-  - component: {fileID: 9485729870425984}
   m_Layer: 0
   m_Name: Portrait Broken
   m_TagString: Untagged
@@ -87,20 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &9485729870425984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 343824648894901687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb19f919a48e17940852652d121d7f25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isStatic: 1
-  bottomOfSprite: {fileID: 5765079929984654724}
 --- !u!1 &1808277324691164333
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,7 +260,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1217002372136051162}
   - component: {fileID: 4786691434122048278}
-  - component: {fileID: 6354088849239891817}
   m_Layer: 0
   m_Name: Portrait Fixed
   m_TagString: Untagged
@@ -352,20 +336,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6354088849239891817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4128490125175814517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb19f919a48e17940852652d121d7f25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isStatic: 1
-  bottomOfSprite: {fileID: 5765079929984654724}
 --- !u!1 &6291338111496572222
 GameObject:
   m_ObjectHideFlags: 0

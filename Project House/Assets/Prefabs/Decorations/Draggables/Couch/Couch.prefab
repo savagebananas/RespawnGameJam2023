@@ -94,7 +94,6 @@ GameObject:
   - component: {fileID: 3946187055041436704}
   - component: {fileID: 3312632467238660592}
   - component: {fileID: 2509496359611088267}
-  - component: {fileID: 667051800682459963}
   m_Layer: 6
   m_Name: Couch
   m_TagString: Untagged
@@ -228,16 +227,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.96875, y: 0.96875}
   m_EdgeRadius: 0
---- !u!114 &667051800682459963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5565227605071568558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb19f919a48e17940852652d121d7f25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bottomOfSprite: {fileID: 28633151737715320}
