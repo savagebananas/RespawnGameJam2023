@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1755539871340447609}
   - component: {fileID: 2557900903169409239}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7028631584507839793}
   - component: {fileID: 945752848880789228}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 1238730611819272385}
   - component: {fileID: 9028985933315784600}
   - component: {fileID: 8173988474202575214}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SkullShelf
   m_TagString: obstacles
   m_Icon: {fileID: 0}
@@ -301,7 +301,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.250353}
+  m_Offset: {x: 0, y: 0.19424587}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -312,7 +312,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.25, y: 0.500706}
+  m_Size: {x: 1.25, y: 0.7176535}
   m_EdgeRadius: 0
 --- !u!114 &8173988474202575214
 MonoBehaviour:
@@ -326,4 +326,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f723fb6dc192b482784e209006085996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasBeenDragged: 0
   transparentItem: {fileID: 5345912783638118599, guid: f4765ed710fa9374788c3578ba0031c9, type: 3}

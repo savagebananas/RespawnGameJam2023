@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2346075588865348937}
   - component: {fileID: 5828420966156727934}
   - component: {fileID: 8880905975706352020}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PumpkinShelf
   m_TagString: obstacles
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.28995135}
+  m_Offset: {x: 0, y: 0.27181306}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -146,7 +146,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.25, y: 0.5799027}
+  m_Size: {x: 1.25, y: 0.7301901}
   m_EdgeRadius: 0
 --- !u!114 &8880905975706352020
 MonoBehaviour:
@@ -160,6 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f723fb6dc192b482784e209006085996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasBeenDragged: 0
   transparentItem: {fileID: 1134467096536977012, guid: ea7ec91800650ef4fb6015813fb9b931, type: 3}
 --- !u!1 &6355277532534693108
 GameObject:
@@ -171,7 +172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4598759496772708305}
   - component: {fileID: 8049924806548505864}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,7 +254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6712177513430012213}
   - component: {fileID: 7675623584881288563}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
