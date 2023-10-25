@@ -2475,7 +2475,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 3.15625
+  orthographic size: 3.125
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3651,8 +3651,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0024998188, y: -0.00090003014, z: 0}
-    m_Extent: {x: 5.4969997, y: 5.5024004, z: 0}
+    m_Center: {x: 0.0015499592, y: 0.0044999123, z: 0}
+    m_Extent: {x: 5.50655, y: 5.4983, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

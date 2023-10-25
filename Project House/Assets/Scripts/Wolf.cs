@@ -97,7 +97,7 @@ public class Wolf : MonoBehaviour
             builder.Die();
         }
 
-        if(collision.gameObject.tag.Equals("obstacles") == true)
+        if(collision.gameObject.tag.Equals("breakable") == true)
         {
             if (!isIdle) isAttacking = true;
             collision.gameObject.GetComponent<DraggableFurniture>().isBreaking = true;
