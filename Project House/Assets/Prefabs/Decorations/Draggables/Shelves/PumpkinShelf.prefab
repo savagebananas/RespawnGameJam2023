@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 2346075588865348937}
   - component: {fileID: 5828420966156727934}
   - component: {fileID: 8880905975706352020}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: PumpkinShelf
-  m_TagString: Untagged
+  m_TagString: obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,7 +171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4598759496772708305}
   - component: {fileID: 8049924806548505864}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,7 +253,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6712177513430012213}
   - component: {fileID: 7675623584881288563}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

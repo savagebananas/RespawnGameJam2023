@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2589222010818829847}
   - component: {fileID: 5114250823583780763}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,9 +95,9 @@ GameObject:
   - component: {fileID: 3312632467238660592}
   - component: {fileID: 2509496359611088267}
   - component: {fileID: 667051800682459963}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Couch
-  m_TagString: Untagged
+  m_TagString: obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -240,4 +240,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb19f919a48e17940852652d121d7f25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStatic: 0
   bottomOfSprite: {fileID: 28633151737715320}

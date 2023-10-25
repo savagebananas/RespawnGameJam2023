@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1755539871340447609}
   - component: {fileID: 2557900903169409239}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7028631584507839793}
   - component: {fileID: 945752848880789228}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,9 +179,9 @@ GameObject:
   - component: {fileID: 1238730611819272385}
   - component: {fileID: 9028985933315784600}
   - component: {fileID: 8173988474202575214}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: SkullShelf
-  m_TagString: Untagged
+  m_TagString: obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
