@@ -2475,7 +2475,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 3.125
+  orthographic size: 3.9453125
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3651,8 +3651,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0054500103, y: 0.00024986267, z: 0}
-    m_Extent: {x: 5.4964504, y: 5.50775, z: 0}
+    m_Center: {x: -0.0012998581, y: 0.0025498867, z: 0}
+    m_Extent: {x: 5.5049, y: 5.49485, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4270,7 +4270,7 @@ Transform:
   m_GameObject: {fileID: 787033300}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.36, y: 0.7, z: 0}
+  m_LocalPosition: {x: -0.82, y: 0.322, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4461,6 +4461,8 @@ MonoBehaviour:
   rb: {fileID: 787033303}
   anim: {fileID: 0}
   freezeTime: 3
+  bloodParticles: {fileID: 6882165985705611084, guid: 772b91ce098f69f4abdf20828e5b0ec1, type: 3}
+  bloodCloud: {fileID: 2527587192641209166, guid: e41252079859f634ab1b432b5bc305b4, type: 3}
 --- !u!1 &787975945
 GameObject:
   m_ObjectHideFlags: 0
@@ -4890,13 +4892,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871178138}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.359, y: -1.059, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -18.882368, y: -4.3549986, z: -0.08232306}
   m_LocalScale: {x: 0.57, y: 0.57, z: 0.55}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 593207677}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2039718399}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &880328382 stripped
 Transform:
@@ -37841,7 +37843,7 @@ Transform:
   m_GameObject: {fileID: 1805446551}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -2, y: -1.0846332, z: -0.40950897}
+  m_LocalPosition: {x: -21, y: -2.24, z: -0.40950897}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -37857,11 +37859,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1829535599}
   - component: {fileID: 1829535605}
+  - component: {fileID: 1829535612}
   - component: {fileID: 1829535606}
   - component: {fileID: 1829535608}
   - component: {fileID: 1829535607}
   - component: {fileID: 1829535609}
-  - component: {fileID: 1829535612}
   m_Layer: 0
   m_Name: Badguy
   m_TagString: Enemy
@@ -37878,7 +37880,7 @@ Transform:
   m_GameObject: {fileID: 1829535598}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.09, y: -1.93, z: 0}
+  m_LocalPosition: {x: 1.36, y: 0.47, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -39275,6 +39277,8 @@ Transform:
   m_Children:
   - {fileID: 519420032}
   - {fileID: 1948671983}
+  - {fileID: 2050741940}
+  - {fileID: 871178141}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2050741937
@@ -39371,13 +39375,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2050741937}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.358547, y: -1.0438, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -18.881916, y: -4.3397985, z: -0.08232306}
   m_LocalScale: {x: 0.53, y: 0.53, z: 0.53}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1369225858}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2039718399}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2060845555 stripped
 Transform:
@@ -40430,5 +40434,3 @@ SceneRoots:
   - {fileID: 666331324}
   - {fileID: 1805446554}
   - {fileID: 745907482}
-  - {fileID: 2050741940}
-  - {fileID: 871178141}
