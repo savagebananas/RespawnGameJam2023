@@ -13,8 +13,8 @@ public class DraggableFurniture : MonoBehaviour
     {
         AstarPath.active.Scan();
         if (!hasBeenDragged) {
-            this.tag = "Untagged";
-            this.layer = 6;
+            gameObject.tag = "Untagged";
+            gameObject.layer = 6;
         }
     }
 
