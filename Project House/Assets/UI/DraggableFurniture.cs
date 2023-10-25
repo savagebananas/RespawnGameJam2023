@@ -6,11 +6,16 @@ using UnityEngine;
 public class DraggableFurniture : MonoBehaviour
 {
     private bool mouseIsOver;
+    public bool hasBeenDragged;
     public GameObject transparentItem;
     // Start is called before the first frame update
     void Start()
     {
         AstarPath.active.Scan();
+        if (!hasBeenDragged) {
+            this.tag = "Untagged";
+            this.layer = 6;
+        }
     }
 
     // Update is called once per frame
