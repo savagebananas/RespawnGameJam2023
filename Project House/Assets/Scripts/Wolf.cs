@@ -193,16 +193,13 @@ public class Wolf : MonoBehaviour
     private void setDirection()
     {
         float x = transform.position.x - lastPos.x;
-        Debug.Log(x);
         
         if (x > 0)
         {
-            Debug.Log("right");
             wolfRenderer.flipX = true;
         }
         else if (x < 0)
         {
-            Debug.Log("left");
             wolfRenderer.flipX = false;
         }
     }
