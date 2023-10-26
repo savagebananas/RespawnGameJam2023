@@ -27,12 +27,21 @@ public class SpawnGhost : MonoBehaviour
     void Update()
     {
         if (Time.time>0.05&&Mathf.Abs(Time.time%10) < 0.05&&!hasMoved) {
-            obj.transform.position = getRandomPosition();
-            obj.transform.rotation = Quaternion.identity;
-            hasMoved = true;
-            obj.GetComponent<GhostMovement>().updatePositions();
+            StartCoroutine(respawnGhost());
         }
     }
+
+    IEnumerator respawnGhost()
+    {
+        obj.GetComponent<Animator>().SetTrigger("fadeOut");
+        yield return new WaitForSeconds(1f);
+        obj.transform.position = getRandomPosition();
+        obj.transform.rotation = Quaternion.identity;
+        hasMoved = true;
+        obj.GetComponent<GhostMovement>().updatePositions();
+        obj.GetComponent<Animator>().SetTrigger("fadeIn");
+    }
+
     private Vector3 getRandomPosition() {
         int temp = index;
         int loopCount = 0;

@@ -14,6 +14,7 @@ public class GhostMovement : MonoBehaviour
     public static float x = 5;
 
     private SpriteRenderer sprite;
+    private Animator animator;
     void Start()
     {
         timeOffset = Time.time;
