@@ -532,6 +532,7 @@ public class GoalPoint_Script : MonoBehaviour
         player.GetComponent<Builder>().isFixing = true;
         yield return new WaitForSeconds(5.0f);
         player.GetComponent<Builder>().isFixing = false;
+        FindObjectOfType<AudioManager>().Play("TaskDone");
 
         if(currGoal == firstGoal){
             Debug.Log("First task done");
