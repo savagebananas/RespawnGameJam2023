@@ -34,9 +34,6 @@ public class GhostMovement : MonoBehaviour
     void Update()
     {
         updateSpriteFlip();
-        if (Mathf.Abs(Time.time-timeOffset-10)<0.05) {
-            SpawnGhost.hasMoved = false;
-        }
         if (transform.position==movePositions[ind]) {
             ind = 2/ind;
             vel.x *= -1;

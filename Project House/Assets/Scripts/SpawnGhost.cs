@@ -7,9 +7,9 @@ public class SpawnGhost : MonoBehaviour
     // Start is called before the first frame update
     public GameObject ghost;
     public int index;
-    public static GameObject[] locations = new GameObject[4];
-    public static bool hasMoved = false;
-    private int length = 4;
+    public static GameObject[] locations = new GameObject[6];
+    public bool hasMoved = false;
+    private int length = 6;
     GameObject obj;
     void Start()
     {
@@ -20,10 +20,15 @@ public class SpawnGhost : MonoBehaviour
         }
             obj = Instantiate(ghost, getRandomPosition(), Quaternion.identity);
             hasMoved = true;
+            StartCoroutine(setHasMoved());
     }
     
 
     // Update is called once per frame
+    IEnumerator setHasMoved() {
+        yield return new WaitForSeconds(0.06f);
+        hasMoved = false;
+    }
     void Update()
     {
         if (Time.time>0.05&&Mathf.Abs(Time.time%10) < 0.05&&!hasMoved) {
@@ -38,25 +43,25 @@ public class SpawnGhost : MonoBehaviour
         obj.transform.position = getRandomPosition();
         obj.transform.rotation = Quaternion.identity;
         hasMoved = true;
+        StartCoroutine(setHasMoved());
         obj.GetComponent<GhostMovement>().updatePositions();
         obj.GetComponent<Animator>().SetTrigger("fadeIn");
     }
 
     private Vector3 getRandomPosition() {
         int temp = index;
-        int loopCount = 0;
-        bool x = true;
-        while ((temp==index||!locations[temp].GetComponent<GhostLocationRadius>().shouldSpawn||x)&&loopCount<50) {
-            RaycastHit2D hit = Physics2D.Raycast(locations[temp].transform.position, Vector2.zero);
-            x = hit.collider!=null&&!hit.collider.gameObject.tag.Equals("phone")&&hit.collider.gameObject.layer!=5;
-            temp = Random.Range(0, length);
-            loopCount++;
+        List<GameObject> tmp = new List<GameObject>();
+        foreach (GameObject x in locations) {
+            if (x.GetComponent<GhostLocationRadius>().getShouldSpawn()) {
+                tmp.Add(x);
+            }
+        tmp.Remove(locations[index]);
+        }
+        if (tmp.Count>0) {
+            temp = Random.Range(0, tmp.Count);
+        }
 
-        }
-        if (loopCount>=50) {
-            Debug.Log("spawnGhost :" + temp);
-            Debug.Log("spawnGhost :" + locations[temp]);
-        }
+        
         index = temp;
         return locations[index].transform.position;
     }
