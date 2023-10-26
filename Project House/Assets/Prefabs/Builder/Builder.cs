@@ -86,18 +86,6 @@ public class Builder : MonoBehaviour
         }
     }
 
-    private void LateUpdate()
-    {
-        //var directionVector = transform.position - lastPos;
-
-    }
-
-    IEnumerator setlastPos()
-    {
-        yield return new WaitForSeconds(0.04f);
-        lastPos = transform.position;
-
-    }
     private void resetAnimatorBools()
     {
         anim.SetBool("side", false);
