@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5865237572117912117}
   - component: {fileID: 6375391908296476694}
   - component: {fileID: 8098129288178476261}
+  - component: {fileID: 1306507791856652153}
   m_Layer: 6
   m_Name: Oven
   m_TagString: Untagged
@@ -161,3 +162,15 @@ MonoBehaviour:
   hasBeenDragged: 0
   isBreaking: 0
   transparentItem: {fileID: 4446283321949418432, guid: 45707095acf584e2d998d72af9e0d05a, type: 3}
+--- !u!114 &1306507791856652153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7279228872078135002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1845cf8bb806f4768917b96be632ee97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
