@@ -8,8 +8,8 @@ public class SpawnGhost : MonoBehaviour
     public GameObject ghost;
     public int index;
     public static GameObject[] locations = new GameObject[4];
-    public static bool hasMoved= false;
-    private int length = 3;
+    public static bool hasMoved = false;
+    private int length = 4;
     GameObject obj;
     void Start()
     {
