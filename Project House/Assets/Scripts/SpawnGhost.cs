@@ -11,6 +11,8 @@ public class SpawnGhost : MonoBehaviour
     public bool hasMoved = false;
     private int length = 6;
     GameObject obj;
+    public GameObject pointer;
+    GameObject pnt;
     void Start()
     {
         for (int i = 1; i<=locations.Length;i++) {
@@ -19,6 +21,8 @@ public class SpawnGhost : MonoBehaviour
             locations[i-1] = GameObject.Find(name);
         }
             obj = Instantiate(ghost, getRandomPosition(), Quaternion.identity);
+            pnt = Instantiate(pointer);
+            //pnt.GetComponent<Pointer>().
             hasMoved = true;
             StartCoroutine(setHasMoved());
     }

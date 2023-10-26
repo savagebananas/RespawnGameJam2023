@@ -59,7 +59,8 @@ public class Pointer : MonoBehaviour
     void OnMouseDown() {
         cam.transform.localPosition = target.position+new Vector3(0, 0, cam.transform.position.z-target.position.z);
     }
-    void OnMouseEnter() {
 
+    public void setTarget(Transform t) {
+        target = t;
     }
 }
