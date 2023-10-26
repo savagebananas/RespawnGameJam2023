@@ -18,7 +18,7 @@ public class GhostLocationRadius : MonoBehaviour
         
     }
     void OnTriggerEnter2D(Collider2D coll) {
-        if (coll.gameObject.tag.Equals("builder")) {
+        if (coll.gameObject.tag.Equals(builder)) {
             shouldSpawn = false;
         }
     }
