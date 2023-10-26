@@ -60,7 +60,9 @@ public class Pointer : MonoBehaviour
         cam.transform.localPosition = target.position+new Vector3(0, 0, cam.transform.position.z-target.position.z);
     }
 
-    public void setTarget(Transform t) {
-        target = t;
+    public void setTarget(GameObject t) {
+        targetObject = t;
+        target = t.transform;
+
     }
 }
