@@ -104,6 +104,12 @@ public class GoalPoint_Script : MonoBehaviour
             }
         }
 
+        if(timeRemaining < 0)
+        {
+            hit.transform.GetComponent<Animator>().SetBool("isRinging", false);
+            hit.transform.GetComponent<Animator>().SetBool("isNormal", true);
+        }
+
         if (isRinging && timeRemaining > 0){
             Debug.Log("Step 4");
                     if(Mathf.Abs(hit.transform.position.x - player.transform.position.x) < 999999 
@@ -138,23 +144,23 @@ public class GoalPoint_Script : MonoBehaviour
                             currGoal = firstGoal;
                             currGoal.position = firstGoal.position;
                         }
-                        if(minDistance == distanceToTaskTwo){
+                        else if(minDistance == distanceToTaskTwo){
                             currGoal = secondGoal;
                             currGoal.position = secondGoal.position;
                         }
-                        if(minDistance == distanceToTaskThree){
+                        else if(minDistance == distanceToTaskThree){
                             currGoal = thirdGoal;
                             currGoal.position = thirdGoal.position;
                         }
-                        if(minDistance == distanceToTaskFour){
+                        else if(minDistance == distanceToTaskFour){
                             currGoal = fourthGoal;
                             currGoal.position = fourthGoal.position;
                         }
-                        if(minDistance == distanceToTaskFive){
+                        else if(minDistance == distanceToTaskFive){
                             currGoal = fifthGoal;
                             currGoal.position = fifthGoal.position;
                         }
-                        if(minDistance == distanceToTaskSix){
+                        else if(minDistance == distanceToTaskSix){
                             currGoal = sixthGoal;
                             currGoal.position = sixthGoal.position;
                         }

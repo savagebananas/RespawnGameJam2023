@@ -33,6 +33,8 @@ public class Wolf : MonoBehaviour
 
     private bool builderAlive = true;
 
+    public bool canAttack = true;
+
     void Start()
     {
         lastPos = transform.position;
@@ -78,6 +80,7 @@ public class Wolf : MonoBehaviour
 
     IEnumerator FreezePosition()
     {
+        canAttack = false;
         this.GetComponent<AIDestinationSetter>().target = rb.transform;
         isIdle = true;
 
@@ -85,6 +88,7 @@ public class Wolf : MonoBehaviour
 
         this.GetComponent<AIDestinationSetter>().target = builder.transform;
         isIdle = false;
+        canAttack = true;
     }
 
     public void Burn()
@@ -97,6 +101,7 @@ public class Wolf : MonoBehaviour
 
     IEnumerator fireFright()
     {
+        canAttack = false;
         GetComponent<AIPath>().speed = 4f;
         Debug.Log("Hit hit hit hit hit hti hit");
         wolfFire.SetActive(true);
@@ -114,11 +119,12 @@ public class Wolf : MonoBehaviour
         wolfFire.SetActive(false);
         GetComponent<AIPath>().speed = 1.51f;
         //GetComponent<AIDestinationSetter>().target = builder.transform;
+        canAttack = true;
     }
 
     void OnCollisionStay2D(Collision2D collision){
         //if colides with player stun player
-        if(collision.gameObject.tag.Equals("builder") == true && builderAlive)
+        if(collision.gameObject.tag.Equals("builder") == true && builderAlive && canAttack)
         {
             isAttacking = true;
             StartCoroutine(builderDeath());
