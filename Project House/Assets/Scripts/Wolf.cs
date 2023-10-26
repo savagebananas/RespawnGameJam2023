@@ -103,6 +103,7 @@ public class Wolf : MonoBehaviour
 
         yield return new WaitForSeconds(freezeTime * 3);
         GetComponent<AIDestinationSetter>().enabled = true;
+        wolfFire.SetActive(false);
         //GetComponent<AIDestinationSetter>().target = builder.transform;
     }
 
