@@ -43,6 +43,8 @@ public class GoalPoint_Script : MonoBehaviour
     public bool isRinging;
 
     RaycastHit2D hit;
+
+    public float phoneCooldown = 10.0f;
     
 
     // Start is called before the first frame update
