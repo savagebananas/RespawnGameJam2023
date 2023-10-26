@@ -90,6 +90,7 @@ public class Wolf : MonoBehaviour
 
     IEnumerator fireFright()
     {
+        GetComponent<AIPath>().speed = 4f;
         Debug.Log("Hit hit hit hit hit hti hit");
         wolfFire.SetActive(true);
         GetComponent<AIDestinationSetter>().enabled = false;
@@ -104,6 +105,7 @@ public class Wolf : MonoBehaviour
         yield return new WaitForSeconds(freezeTime * 3);
         GetComponent<AIDestinationSetter>().enabled = true;
         wolfFire.SetActive(false);
+        GetComponent<AIPath>().speed = 1.51f;
         //GetComponent<AIDestinationSetter>().target = builder.transform;
     }
 
