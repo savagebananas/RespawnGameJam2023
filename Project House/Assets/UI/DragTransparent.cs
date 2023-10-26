@@ -51,13 +51,15 @@ public class DragTransparent : MonoBehaviour
             shouldRemove.Add(false);
         }
     }
-
     void OnMouseDown() {
         if (!isColliding()) {
             dragging = false;
             GameObject f = Instantiate(item, Camera.main.ScreenToWorldPoint(Input.mousePosition) + new Vector3(0, 0, 10), Quaternion.identity);
             if (f.GetComponent<DraggableFurniture>() != null) f.GetComponent<DraggableFurniture>().hasBeenDragged = true;
             Destroy(this.gameObject);
+        }
+        else {
+            Debug.Log("transp problem : " + isColliding() + "  " + colliders.Count);
         }
     }
     bool isColliding() {
@@ -74,9 +76,11 @@ public class DragTransparent : MonoBehaviour
    
             bool x = shouldRemove[i];
             if (x) {
-                colliders.RemoveAt(i);
-                shouldRemove.RemoveAt(i);
-                count--;
+                if (colliders.Count>i) {
+                    colliders.RemoveAt(i);
+                    shouldRemove.RemoveAt(i);
+                    count--;
+                }
             }
         }
         if (!isColliding()) {
@@ -89,7 +93,9 @@ public class DragTransparent : MonoBehaviour
 
         }
         for (int i = 0; i<shouldRemove.Count; i++) {
-            shouldRemove[i] = false;
+            if (shouldRemove.Count>i) {
+                shouldRemove[i] = false;
+            }
         }
         if (Mathf.Abs(Time.time-20)<0.1) Debug.Log("Couch Test : " + colliders.Count);
     }
