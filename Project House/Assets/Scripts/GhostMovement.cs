@@ -43,7 +43,10 @@ public class GhostMovement : MonoBehaviour
     void OnTriggerEnter2D(Collider2D coll) {
         if (coll.gameObject.layer == 5) return;
         if (coll.gameObject.tag.Equals("phone")) return;
-        if (coll.gameObject.GetComponent<Builder>().Die());
+        if (coll.gameObject.tag.Equals("builder")) {
+            coll.gameObject.GetComponent<Builder>().Die();
+            return;
+        }
         ind = 2/ind;
         vel.x *= -1;
     }
