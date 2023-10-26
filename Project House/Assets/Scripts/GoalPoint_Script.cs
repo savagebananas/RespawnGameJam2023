@@ -89,6 +89,9 @@ public class GoalPoint_Script : MonoBehaviour
             }
             
             if(hit.transform.tag.Equals("phone") == true && isRinging == false && phoneCooldown > 0){
+                
+            hit.transform.GetComponent<Animator>().SetBool("isRinging", false);
+            hit.transform.GetComponent<Animator>().SetBool("isNormal", true);
                 Debug.Log("Step 3");
                 float timeRemaining = 5.0f;
                 //phone ring sound effect
@@ -167,8 +170,6 @@ public class GoalPoint_Script : MonoBehaviour
         else{
             isRinging = false;
             timeRemaining = 5.0f;
-            hit.transform.GetComponent<Animator>().SetBool("isRinging", false);
-            hit.transform.GetComponent<Animator>().SetBool("isNormal", true);
         }
     }
 
