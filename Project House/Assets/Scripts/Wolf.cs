@@ -15,6 +15,7 @@ public class Wolf : MonoBehaviour
     Animator anim;
     Vector3 lastPos;
     CircleCollider2D colid;
+    public GameObject wolfFire;
 
     public float freezeTime = 3f;
     private float freezeTimer = 3f;
@@ -90,6 +91,7 @@ public class Wolf : MonoBehaviour
     IEnumerator fireFright()
     {
         Debug.Log("Hit hit hit hit hit hti hit");
+        wolfFire.SetActive(true);
         GetComponent<AIDestinationSetter>().enabled = false;
         Vector3 thePointToFleeFrom = Vector3.zero;
         int theGScoreToStopAt = 10000;
@@ -101,6 +103,7 @@ public class Wolf : MonoBehaviour
 
         yield return new WaitForSeconds(freezeTime * 3);
         GetComponent<AIDestinationSetter>().enabled = true;
+        wolfFire.SetActive(false);
         //GetComponent<AIDestinationSetter>().target = builder.transform;
     }
 
@@ -167,7 +170,7 @@ public class Wolf : MonoBehaviour
         //stop movement
         GetComponent<AIDestinationSetter>().target = rb.transform;
         isAttacking = true;
-        yield return new WaitForSeconds(5.0f); 
+        yield return new WaitForSeconds(2.5f); 
 
         if (collision.gameObject.tag.Equals("breakable")&&isBreaking) Destroy(collision.gameObject);
 
