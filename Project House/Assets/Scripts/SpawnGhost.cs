@@ -49,6 +49,10 @@ public class SpawnGhost : MonoBehaviour
     }
 
     private Vector3 getRandomPosition() {
+        if (index==null) {
+            index = Random.Range(0, length);
+            return locations[index].transform.position;
+        }
         int temp = index;
         List<GameObject> tmp = new List<GameObject>();
         foreach (GameObject x in locations) {
