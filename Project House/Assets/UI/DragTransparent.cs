@@ -25,6 +25,7 @@ public class DragTransparent : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         sr.color = noColl;
+        PlayerManager.mouseDragging = true;
     }
     void OnTriggerEnter2D(Collider2D collider) {
         if (collider.gameObject.layer == 5) return;
