@@ -122,7 +122,7 @@ public class Wolf : MonoBehaviour
             
             if (!shouldBreak) {
                 float angle = Vector3.Angle(collision.gameObject.transform.position-transform.position, builder.transform.position-transform.position);
-                if (angle<90f) {
+                if (angle<110) {
                     shouldBreak = true;
                 }
             }
