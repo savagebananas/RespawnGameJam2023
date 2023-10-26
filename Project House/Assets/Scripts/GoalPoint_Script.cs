@@ -74,7 +74,6 @@ public class GoalPoint_Script : MonoBehaviour
             Fix();
         }
 
-
         
         //if bell in range set that to current goal
         //if goal value = null set it to new one
@@ -89,13 +88,15 @@ public class GoalPoint_Script : MonoBehaviour
                 Debug.Log(" null Step 2");
             }
             
-            if(hit.transform.tag.Equals("phone") == true){
+            if(hit.transform.tag.Equals("phone") == true && isRinging == false && phoneCooldown > 0){
                 Debug.Log("Step 3");
                 float timeRemaining = 5.0f;
                 //phone ring sound effect
                 //phone ring animation
                 
                 isRinging = true;
+                hit.transform.GetComponent<Animator>().SetBool("isRinging", true);
+                hit.transform.GetComponent<Animator>().SetBool("isNormal", false);
             }
         }
 
@@ -166,6 +167,8 @@ public class GoalPoint_Script : MonoBehaviour
         else{
             isRinging = false;
             timeRemaining = 5.0f;
+            hit.transform.GetComponent<Animator>().SetBool("isRinging", false);
+            hit.transform.GetComponent<Animator>().SetBool("isNormal", true);
         }
     }
 
