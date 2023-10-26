@@ -99,8 +99,8 @@ public class GoalPoint_Script : MonoBehaviour
 
         if (isRinging && timeRemaining > 0){
             Debug.Log("Step 4");
-                    if(Mathf.Abs(hit.transform.position.x - player.transform.position.x) < 15 
-                    && Mathf.Abs(hit.transform.position.y - player.transform.position.y) < 15 ){
+                    if(Mathf.Abs(hit.transform.position.x - player.transform.position.x) < 999999 
+                    && Mathf.Abs(hit.transform.position.y - player.transform.position.y) < 999999 ){
                        Debug.Log("step 5");
                         //figure out which phone it is
                         float distanceToTaskOne = Mathf.Abs((hit.transform.position.x - firstGoal.transform.position.x) + (hit.transform.position.y - firstGoal.transform.position.y));
