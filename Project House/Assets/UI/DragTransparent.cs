@@ -27,7 +27,8 @@ public class DragTransparent : MonoBehaviour
         sr.color = noColl;
     }
     void OnTriggerEnter2D(Collider2D collider) {
-        if (collider.gameObject.tag == "phone") return;
+        if (collider.gameObject.layer == 5) return;
+        if (collider.gameObject.tag.Equals("phone")) return;
         sr.color = coll;
         //collcount++;
         if (!colliders.Contains(collider)) {
@@ -37,6 +38,7 @@ public class DragTransparent : MonoBehaviour
     }
     void OnTriggerExit2D(Collider2D collider) {
         //collcount--;
+        if (collider.gameObject.layer == 5) return;
         if (!isColliding()) sr.color = noColl;
         if (colliders.Contains(collider)) {
             shouldRemove.RemoveAt(colliders.IndexOf(collider));
@@ -44,6 +46,7 @@ public class DragTransparent : MonoBehaviour
         }
     }
     void OnTriggerStay2D(Collider2D collider) {
+        if (collider.gameObject.layer == 5) return;
         if (collider.gameObject.tag=="phone") return;
         if (colliders.Contains(collider)) shouldRemove[colliders.IndexOf(collider)] = false;
         else {
