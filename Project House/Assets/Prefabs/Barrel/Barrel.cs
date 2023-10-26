@@ -20,6 +20,7 @@ public class Barrel : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        FindObjectOfType<AudioManager>().Play("BarrelRoll");
     }
 
     void Update()

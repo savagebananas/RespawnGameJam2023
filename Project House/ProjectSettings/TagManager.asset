@@ -9,6 +9,8 @@ TagManager:
   - obstacles
   - phone
   - breakable
+  - vertical
+  - horizontal
   layers:
   - Default
   - TransparentFX
