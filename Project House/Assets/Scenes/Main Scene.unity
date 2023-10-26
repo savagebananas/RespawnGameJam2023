@@ -4066,7 +4066,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.35
+  m_Intensity: 0.25
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000b32ef56255d80f513d264ea8efdedea3
@@ -37394,6 +37394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   taskText: {fileID: 1704737975}
+  globalLight: {fileID: 0}
 --- !u!1 &1981902862
 GameObject:
   m_ObjectHideFlags: 0
@@ -40178,6 +40179,10 @@ PrefabInstance:
       propertyPath: taskText
       value: 
       objectReference: {fileID: 406159888}
+    - target: {fileID: 1467869972266757282, guid: d057160f0d0d9714fa1d93ccad8957fa, type: 3}
+      propertyPath: globalLight
+      value: 
+      objectReference: {fileID: 619394801}
     - target: {fileID: 2453365536999200768, guid: d057160f0d0d9714fa1d93ccad8957fa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.75
