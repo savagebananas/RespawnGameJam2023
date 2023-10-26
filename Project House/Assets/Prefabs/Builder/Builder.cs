@@ -17,6 +17,8 @@ public class Builder : MonoBehaviour
     public GameObject bloodParticles;
     public GameObject bloodCloud;
 
+    public bool isFixing = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,62 +30,74 @@ public class Builder : MonoBehaviour
         anim.SetBool("down", false);
         anim.SetBool("side", false);
         anim.SetBool("idle", false);
+        anim.SetBool("fix", false);
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        var x = transform.position.x - lastPos.x;
-        var y = transform.position.y - lastPos.y;
-        angle = Mathf.Atan2(y, x) * Mathf.Rad2Deg;
-
-        //Up
-        if (angle >= 45 && angle <= 135)
+        if (!isFixing)
         {
-            anim.SetBool("up", true);
+            var x = transform.position.x - lastPos.x;
+            var y = transform.position.y - lastPos.y;
+            angle = Mathf.Atan2(y, x) * Mathf.Rad2Deg;
+
+            //Up
+            if (angle >= 45 && angle <= 135)
+            {
+                anim.SetBool("up", true);
+                anim.SetBool("down", false);
+                anim.SetBool("side", false);
+                anim.SetBool("idle", false);
+            }
+            //Down
+            if (angle >= -135 && angle <= -45)
+            {
+                anim.SetBool("up", false);
+                anim.SetBool("down", true);
+                anim.SetBool("side", true);
+                anim.SetBool("idle", false);
+            }
+
+            //Left
+            if (angle >= 135 && angle <= 180 || angle > -180 && angle <= -135)
+            {
+                anim.SetBool("up", false);
+                anim.SetBool("down", false);
+                anim.SetBool("side", true);
+                anim.SetBool("idle", false);
+                sprite.flipX = true;
+            }
+            //Right
+            if (angle <= 45 && angle >= 0 || angle <= 0 && angle >= -45)
+            {
+                anim.SetBool("up", false);
+                anim.SetBool("down", false);
+                anim.SetBool("side", true);
+                anim.SetBool("idle", false);
+                sprite.flipX = false;
+            }
+
+            //StartCoroutine(setlastPos());
+            if (timer <= 0)
+            {
+                lastPos = transform.position;
+                timer = 0.5f;
+            }
+            else
+            {
+                timer -= Time.deltaTime;
+            }
+        }
+        else if (isFixing)
+        {
+            anim.SetBool("fix", true);
+            anim.SetBool("up", false);
             anim.SetBool("down", false);
             anim.SetBool("side", false);
             anim.SetBool("idle", false);
         }
-        //Down
-        if (angle >= -135 && angle <= -45)
-        {
-            anim.SetBool("up", false);
-            anim.SetBool("down", true);
-            anim.SetBool("side", true);
-            anim.SetBool("idle", false);
-        }
 
-        //Left
-        if (angle >= 135 && angle <= 180 || angle > -180 && angle <= -135)
-        {
-            anim.SetBool("up", false);
-            anim.SetBool("down", false);
-            anim.SetBool("side", true);
-            anim.SetBool("idle", false);
-            sprite.flipX = true;
-        }
-        //Right
-        if (angle <= 45 && angle >= 0 || angle <= 0 && angle >= -45)
-        {
-            anim.SetBool("up", false);
-            anim.SetBool("down", false);
-            anim.SetBool("side", true);
-            anim.SetBool("idle", false);
-            sprite.flipX = false;
-        }
-
-        //StartCoroutine(setlastPos());
-        if (timer <= 0)
-        {
-            lastPos = transform.position;
-            timer = 0.5f;
-        }
-        else
-        {
-            timer -= Time.deltaTime;
-        }
     }
 
     private void resetAnimatorBools()
@@ -92,30 +106,6 @@ public class Builder : MonoBehaviour
         anim.SetBool("up", false);
         anim.SetBool("down", false);
         anim.SetBool("idle", false);
-    }
-
-    private bool charMovedUp()
-    {
-        var dispacement = transform.position.y - lastPos.y;
-        return dispacement > 0.01;
-    }
-
-    private bool charMovedDown()
-    {
-        var dispacement = transform.position.y - lastPos.y;
-        return dispacement < 0.01;
-    }
-
-    private bool charMovedLeft()
-    {
-        var dispacement = transform.position.x - lastPos.x;
-        return dispacement < 0.01;
-    }
-
-    private bool charMovedRight()
-    {
-        var dispacement = transform.position.x - lastPos.x;
-        return dispacement > 0.01;
     }
 
     public void Stun()

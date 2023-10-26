@@ -125,7 +125,7 @@ public class Wolf : MonoBehaviour
             //     if (angle<110) {
             //         shouldBreak = true;
             //     }
-            }
+            //}
             if (!shouldBreak) StartCoroutine(stopBreaking(collision));
 
         }
