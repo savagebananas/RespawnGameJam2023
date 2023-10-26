@@ -34,7 +34,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: ring
+    m_ConditionEvent: isRinging
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7281082642666951425}
@@ -86,14 +86,14 @@ AnimatorController:
   m_Name: Ringing Phone
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: ring
-    m_Type: 9
+  - m_Name: isRinging
+    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: stopRing
-    m_Type: 9
+  - m_Name: isNormal
+    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -120,7 +120,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: stopRing
+    m_ConditionEvent: isNormal
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1177249948473003871}
