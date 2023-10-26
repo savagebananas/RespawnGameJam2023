@@ -12,6 +12,8 @@ public class GhostMovement : MonoBehaviour
     private float velocity = 0.4f;
     private float timeOffset = 0f;
     public static float x = 5;
+
+    private SpriteRenderer sprite;
     void Start()
     {
         timeOffset = Time.time;
@@ -23,21 +25,22 @@ public class GhostMovement : MonoBehaviour
         vel = ((Vector2) movePositions[ind] - (Vector2) movePositions[0])*velocity;
         rb.velocity = vel;
 
+        sprite = GetComponent<SpriteRenderer>();
+        sprite.flipX = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        updateSpriteFlip();
         if (Mathf.Abs(Time.time-timeOffset-10)<0.05) {
             SpawnGhost.hasMoved = false;
         }
         if (transform.position==movePositions[ind]) {
             ind = 2/ind;
-            transform.Rotate(new Vector3(0, 0, 180));
             vel.x *= -1;
         }
         rb.velocity = vel;
-        
     }
 
     void OnTriggerEnter2D(Collider2D coll) {
@@ -54,6 +57,12 @@ public class GhostMovement : MonoBehaviour
         movePositions[0] = transform.position;
         movePositions[1] = transform.position+new Vector3(x,0,0);
         movePositions[2] = transform.position-new Vector3(x, 0, 0);
+    }
+
+    private void updateSpriteFlip()
+    {
+        if (rb.velocity.x > 0) sprite.flipX = true;
+        else sprite.flipX = false;
     }
 
 
