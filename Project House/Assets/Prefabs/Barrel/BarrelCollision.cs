@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BarrelCollision : MonoBehaviour
 {
+    public GameObject particles;
     void OnCollisionEnter2D(Collision2D collision)
     {
         //if colides with player stun player
@@ -18,6 +19,8 @@ public class BarrelCollision : MonoBehaviour
             collision.gameObject.GetComponent<Wolf>().Stun();
         }
 
+        GameObject o = Instantiate(particles, this.transform);
+        o.transform.parent = null;
         FindObjectOfType<AudioManager>().Play("BarrelBreak");
         Destroy(this.transform.parent.gameObject);
     }

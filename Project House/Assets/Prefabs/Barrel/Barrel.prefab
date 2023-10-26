@@ -331,6 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0c12ffc9b124414c8eb5efe2f61be0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particles: {fileID: 1314378680914494685, guid: 22d6d05fc1e84d6499b25e37a385863a, type: 3}
 --- !u!1 &3876736249934150429
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,7 +384,7 @@ MonoBehaviour:
   m_Intensity: 0.4
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000b32ef56255d80f51
+  m_ApplyToSortingLayers: 00000000b32ef562
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -662,6 +663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0c12ffc9b124414c8eb5efe2f61be0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particles: {fileID: 1314378680914494685, guid: 22d6d05fc1e84d6499b25e37a385863a, type: 3}
 --- !u!1 &7966371885654131455
 GameObject:
   m_ObjectHideFlags: 0
@@ -714,7 +716,7 @@ MonoBehaviour:
   m_Intensity: 0.4
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000b32ef56255d80f51
+  m_ApplyToSortingLayers: 00000000b32ef562
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
