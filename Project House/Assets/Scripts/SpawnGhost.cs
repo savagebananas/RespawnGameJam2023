@@ -7,9 +7,9 @@ public class SpawnGhost : MonoBehaviour
     // Start is called before the first frame update
     public GameObject ghost;
     public int index = -1;
-    public static GameObject[] locations = new GameObject[3];
+    public static GameObject[] locations = new GameObject[4];
     public bool hasMoved = false;
-    private int length = 3;
+    private int length = 4;
     GameObject obj;
     //public GameObject pointer;
     //GameObject pnt;
