@@ -4650,7 +4650,7 @@ GameObject:
   - component: {fileID: 744043392}
   - component: {fileID: 744043394}
   - component: {fileID: 744043393}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: GhostLocation6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34898,7 +34898,7 @@ Transform:
   m_GameObject: {fileID: 1829535598}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.63, y: -7.11, z: 0}
+  m_LocalPosition: {x: 11.98, y: -1.92, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -36995,11 +36995,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3484989049791245046, guid: e0633ef86f30f41b4bed628a93d374e0, type: 3}
       propertyPath: m_Layer
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4039712046731051968, guid: e0633ef86f30f41b4bed628a93d374e0, type: 3}
       propertyPath: m_Layer
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5056638077831375741, guid: e0633ef86f30f41b4bed628a93d374e0, type: 3}
       propertyPath: m_Name
@@ -37007,11 +37007,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5056638077831375741, guid: e0633ef86f30f41b4bed628a93d374e0, type: 3}
       propertyPath: m_Layer
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6148642978973107810, guid: e0633ef86f30f41b4bed628a93d374e0, type: 3}
       propertyPath: m_Layer
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6668889158175433388, guid: e0633ef86f30f41b4bed628a93d374e0, type: 3}
       propertyPath: m_LocalScale.x
@@ -37031,7 +37031,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8463757170037102625, guid: e0633ef86f30f41b4bed628a93d374e0, type: 3}
       propertyPath: m_Layer
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8587006953977510583, guid: e0633ef86f30f41b4bed628a93d374e0, type: 3}
       propertyPath: m_LocalScale.x
@@ -37068,7 +37068,7 @@ GameObject:
   - component: {fileID: 2138722686}
   - component: {fileID: 2138722688}
   - component: {fileID: 2138722687}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: GhostLocation5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
