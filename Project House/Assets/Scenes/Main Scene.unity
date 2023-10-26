@@ -2859,7 +2859,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 3.34375
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4085,8 +4085,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00060009956, y: -0.00029993057, z: 0}
-    m_Extent: {x: 5.5039997, y: 5.508, z: 0}
+    m_Center: {x: 0.00045013428, y: 0.00075006485, z: 0}
+    m_Extent: {x: 5.50845, y: 5.50465, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -34091,7 +34091,7 @@ Transform:
   m_GameObject: {fileID: 1829535598}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.61, y: 0.22, z: 0}
+  m_LocalPosition: {x: 24, y: 0.22, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -34950,6 +34950,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 28633151737715320, guid: cadcfc9f9a4f1e64c926672e3dd5250c, type: 3}
   m_PrefabInstance: {fileID: 1957107112}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1964544108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1964544109}
+  m_Layer: 0
+  m_Name: PortaitGoalPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1964544109
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964544108}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.37, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1980205719}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1973651360
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35201,7 +35232,7 @@ MonoBehaviour:
   currGoal: {fileID: 1399823339}
   player: {fileID: 787033300}
   goalPoint: {fileID: 1399823339}
-  goalA: {fileID: 1980205719}
+  goalA: {fileID: 1964544109}
   goalB: {fileID: 2060845555}
   goalC: {fileID: 1080809416}
   goalD: {fileID: 91542902}
@@ -35994,7 +36025,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5765079929984654724, guid: 038de503976d6c74f8413243a5f7aec3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1964544109}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 038de503976d6c74f8413243a5f7aec3, type: 3}
 --- !u!1001 &736724199567964088
