@@ -5,7 +5,7 @@ using UnityEngine;
 public class Moli : MonoBehaviour
 {
     [SerializeField] public GameObject moli;
-    [SerializeField] GameObject wolf;
+    [SerializeField] Wolf wolf;
     [SerializeField] float lifespan = 5f;
 
     // Start is called before the first frame update
@@ -25,9 +25,8 @@ public class Moli : MonoBehaviour
         StartCoroutine(Lifespan());
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Balls");
         //if colides with player stun player
         if(collision.transform.tag.Equals("builder") == true)
         {
@@ -37,8 +36,7 @@ public class Moli : MonoBehaviour
         //if colides with monster stun monster
         if(collision.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("PENIS");
-            collision.transform.GetComponent<Wolf>().Burn();
+            wolf.Burn();
         }
     }
 
