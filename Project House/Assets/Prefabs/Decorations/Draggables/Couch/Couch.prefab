@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 3312632467238660592}
   - component: {fileID: 2509496359611088267}
   - component: {fileID: 667051800682459963}
+  - component: {fileID: 9084113430643567073}
   m_Layer: 0
   m_Name: Couch
   m_TagString: obstacles
@@ -182,6 +183,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f723fb6dc192b482784e209006085996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasBeenDragged: 0
+  isBreaking: 0
   transparentItem: {fileID: 6083980030411941787, guid: 1d556d6849eae26408b8ea5e49827e84, type: 3}
 --- !u!61 &2509496359611088267
 BoxCollider2D:
@@ -242,3 +245,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStatic: 0
   bottomOfSprite: {fileID: 28633151737715320}
+--- !u!114 &9084113430643567073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5565227605071568558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1845cf8bb806f4768917b96be632ee97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

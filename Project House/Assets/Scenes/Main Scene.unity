@@ -2903,6 +2903,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5161726136366557643, guid: 53657718ec2c1054c84ad93a54d1b5e1, type: 3}
   m_PrefabInstance: {fileID: 1951889350}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &502243048 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5565227605071568558, guid: cadcfc9f9a4f1e64c926672e3dd5250c, type: 3}
+  m_PrefabInstance: {fileID: 1381720029}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3011,7 +3016,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 5.3125
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4456,8 +4461,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.002949953, y: 0.0001001358, z: 0}
-    m_Extent: {x: 5.5022497, y: 5.5028, z: 0}
+    m_Center: {x: 0.0014498234, y: -0.0039999485, z: 0}
+    m_Extent: {x: 5.4942503, y: 5.5053997, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5745,6 +5750,7 @@ GameObject:
   - component: {fileID: 871178140}
   - component: {fileID: 871178139}
   - component: {fileID: 871178142}
+  - component: {fileID: 871178143}
   m_Layer: 5
   m_Name: WearwolfPointer
   m_TagString: Untagged
@@ -5884,6 +5890,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &871178143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871178138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1845cf8bb806f4768917b96be632ee97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &880328382 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5161726136366557643, guid: 53657718ec2c1054c84ad93a54d1b5e1, type: 3}
@@ -22020,13 +22038,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5565227605071568558, guid: cadcfc9f9a4f1e64c926672e3dd5250c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1381720035}
   m_SourcePrefab: {fileID: 100100000, guid: cadcfc9f9a4f1e64c926672e3dd5250c, type: 3}
 --- !u!4 &1381720030 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 28633151737715320, guid: cadcfc9f9a4f1e64c926672e3dd5250c, type: 3}
   m_PrefabInstance: {fileID: 1381720029}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1381720035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502243048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1845cf8bb806f4768917b96be632ee97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1392420831
 GameObject:
   m_ObjectHideFlags: 0
@@ -36429,6 +36462,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2039718399}
+  - component: {fileID: 2039718400}
   m_Layer: 0
   m_Name: General
   m_TagString: Untagged
@@ -36455,6 +36489,19 @@ Transform:
   - {fileID: 871178141}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2039718400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039718398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38ad5d0ed91944c53b20996692b5a022, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlight: {fileID: 7549689722271459539, guid: 388339033107d4124aa2cec07972166c, type: 3}
 --- !u!1 &2050741937
 GameObject:
   m_ObjectHideFlags: 0
@@ -36467,6 +36514,7 @@ GameObject:
   - component: {fileID: 2050741939}
   - component: {fileID: 2050741938}
   - component: {fileID: 2050741941}
+  - component: {fileID: 2050741942}
   m_Layer: 5
   m_Name: BuilderPointer
   m_TagString: Untagged
@@ -36606,6 +36654,18 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &2050741942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050741937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1845cf8bb806f4768917b96be632ee97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2060845555 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7526889937761962426, guid: c7da659d757cb1d47867c1dfcc8da6c3, type: 3}

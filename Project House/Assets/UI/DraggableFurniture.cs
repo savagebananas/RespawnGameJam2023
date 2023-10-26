@@ -19,6 +19,7 @@ public class DraggableFurniture : MonoBehaviour
         }
         if (hasBeenDragged) {
             gameObject.tag = "breakable";
+            gameObject.layer = 7;
         }
     }
 
