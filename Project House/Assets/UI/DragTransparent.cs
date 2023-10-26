@@ -39,8 +39,8 @@ public class DragTransparent : MonoBehaviour
         //collcount--;
         if (!isColliding()) sr.color = noColl;
         if (colliders.Contains(collider)) {
-            colliders.Remove(collider);
             shouldRemove.RemoveAt(colliders.IndexOf(collider));
+            colliders.Remove(collider);
         }
     }
     void OnTriggerStay2D(Collider2D collider) {
