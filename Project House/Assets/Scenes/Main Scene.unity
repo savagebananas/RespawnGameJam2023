@@ -2859,7 +2859,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 3.7734375
+  orthographic size: 4.2109375
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4081,8 +4081,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0054500103, y: -0.0022499561, z: 0}
-    m_Extent: {x: 5.50185, y: 5.5054502, z: 0}
+    m_Center: {x: -0.0011501312, y: -0.0016000271, z: 0}
+    m_Extent: {x: 5.50485, y: 5.4988003, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4527,7 +4527,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 0.875, y: 1.5563283}
+  m_Size: {x: 3.1731055, y: 1.5563283}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4542,7 +4542,7 @@ Transform:
   m_GameObject: {fileID: 745907480}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.148369, y: -10.529001, z: 0}
+  m_LocalPosition: {x: 18.7135, y: -7.029001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27490,7 +27490,7 @@ Transform:
   m_GameObject: {fileID: 1654919809}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.3, y: -8.559999, z: 0}
+  m_LocalPosition: {x: 19.55, y: -8.559999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
