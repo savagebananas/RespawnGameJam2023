@@ -18,6 +18,7 @@ public class BarrelCollision : MonoBehaviour
             collision.gameObject.GetComponent<Wolf>().Stun();
         }
 
+        FindObjectOfType<AudioManager>().Play("BarrelBreak");
         Destroy(this.transform.parent.gameObject);
     }
 }
