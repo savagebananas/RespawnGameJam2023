@@ -133,6 +133,8 @@ public class Builder : MonoBehaviour
         //change scene to death screen
         gameState.LoseGame();
 
+        FindObjectOfType<AudioManager>().Play("PlayerDeath");
+
         Destroy(this.gameObject);
     }
 
