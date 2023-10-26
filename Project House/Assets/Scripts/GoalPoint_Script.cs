@@ -521,7 +521,10 @@ public class GoalPoint_Script : MonoBehaviour
             yield break;
         }
 
+        
+        player.GetComponent<Builder>().isFixing = true;
         yield return new WaitForSeconds(5.0f);
+        player.GetComponent<Builder>().isFixing = false;
 
         if(currGoal == firstGoal){
             Debug.Log("First task done");
