@@ -62,6 +62,7 @@ public class DragTransparent : MonoBehaviour
         if (!isColliding()) {
             dragging = false;
             GameObject f = Instantiate(item, Camera.main.ScreenToWorldPoint(Input.mousePosition) + new Vector3(0, 0, 10), Quaternion.identity);
+            FindObjectOfType<AudioManager>().Play("PlaceObj");
             if (f.GetComponent<DraggableFurniture>() != null) f.GetComponent<DraggableFurniture>().hasBeenDragged = true;
             Destroy(this.gameObject);
         }
