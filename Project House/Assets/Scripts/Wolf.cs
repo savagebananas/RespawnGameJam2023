@@ -90,9 +90,18 @@ public class Wolf : MonoBehaviour
     IEnumerator fireFright()
     {
         Debug.Log("Hit hit hit hit hit hti hit");
-        GetComponent<AIDestinationSetter>().target = rb.transform;
+        GetComponent<AIDestinationSetter>().enabled = false;
+        Vector3 thePointToFleeFrom = Vector3.zero;
+        int theGScoreToStopAt = 10000;
+        FleePath path = FleePath.Construct (transform.position, thePointToFleeFrom, theGScoreToStopAt);
+        path.aimStrength = 1;
+        path.spread = 4000;
+        Seeker seeker = GetComponent<Seeker>();
+        seeker.StartPath(path);
+
         yield return new WaitForSeconds(freezeTime * 3);
-        GetComponent<AIDestinationSetter>().target = rb.transform;
+        GetComponent<AIDestinationSetter>().enabled = true;
+        //GetComponent<AIDestinationSetter>().target = builder.transform;
     }
 
     void OnCollisionStay2D(Collision2D collision){
