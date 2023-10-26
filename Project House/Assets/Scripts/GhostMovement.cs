@@ -35,28 +35,30 @@ public class GhostMovement : MonoBehaviour
         updateSpriteFlip();
         if (transform.position==movePositions[ind]) {
             ind = 2/ind;
-            vel.x *= -1;
+            if (gameObject.tag.Equals("horizontal")) vel.x *= -1;
+            if (gameObject.tag.Equals("vertical")) vel.y *= -1;
         }
         rb.velocity = vel;
     }
 
     void OnTriggerEnter2D(Collider2D coll) {
         if (coll.gameObject.layer == 5) return;
+        if (coll.gameObject.layer == 2) return;
         if (coll.gameObject.tag.Equals("phone")) return;
         if (coll.gameObject.tag.Equals("builder")) {
             coll.gameObject.GetComponent<Builder>().Die();
             return;
         }
         ind = 2/ind;
-        vel.x *= -1;
+        if (gameObject.tag.Equals("horizontal")) vel.x *= -1;
+        if (gameObject.tag.Equals("vertical")) vel.y *= -1;
     }
     public void updatePositions() {
         movePositions[0] = transform.position;
         if (gameObject.tag.Equals("horizontal")) {
             movePositions[1] = transform.position+new Vector3(dist, 0, 0);
             movePositions[2] = transform.position-new Vector3(dist, 0, 0);
-        }
-        if (gameObject.tag.Equals("vertical")) {
+        }  else if (gameObject.tag.Equals("vertical")) {
             movePositions[1] = transform.position+new Vector3(0, dist, 0);
             movePositions[2] = transform.position-new Vector3(0, dist, 0);
         }

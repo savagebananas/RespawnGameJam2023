@@ -25,9 +25,6 @@ public class GhostLocationRadius : MonoBehaviour
        
     }
     public bool getShouldSpawn() {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.zero);
-        bool x = hit.collider!=null&&!hit.collider.gameObject.tag.Equals("phone")&&hit.collider.gameObject.layer!=5;
-        if (x) shouldSpawn = false;
         return shouldSpawn;
     }
 }
