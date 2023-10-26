@@ -12,7 +12,7 @@ public class Builder : MonoBehaviour
 
     Vector3 lastPos;
     private float angle;
-    private float timer = 0.1f;
+    private float timer = 0.5f;
 
     public GameObject bloodParticles;
     public GameObject bloodCloud;
@@ -33,6 +33,7 @@ public class Builder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         var x = transform.position.x - lastPos.x;
         var y = transform.position.y - lastPos.y;
         angle = Mathf.Atan2(y, x) * Mathf.Rad2Deg;
