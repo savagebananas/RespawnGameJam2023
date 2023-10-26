@@ -30,6 +30,7 @@ public class DraggableFurniture : MonoBehaviour
     }
 
     void OnMouseDown() {
+        Debug.Log("furniture test");
         if(!PlayerManager.mouseDragging&&!isBreaking) {
             Vector3 t = transform.position;
             Instantiate(transparentItem, t, Quaternion.identity);

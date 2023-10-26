@@ -29,6 +29,7 @@ public class DragTransparent : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collider) {
         if (collider.gameObject.layer == 5) return;
+        if (collider.gameObject.layer == 2) return;
         if (collider.gameObject.tag.Equals("phone")) return;
         sr.color = coll;
         //collcount++;
