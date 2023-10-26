@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8455221502231495840}
   - component: {fileID: 4457466106154209522}
   - component: {fileID: 5577555943414910300}
+  - component: {fileID: 6988910048446272476}
+  - component: {fileID: 2773714025015461023}
   m_Layer: 0
   m_Name: Dresser
   m_TagString: Untagged
@@ -76,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ccbf6794dd2f13548a985a8b8b294360, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.56824493, g: 0.8679245, b: 0.814917, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -145,3 +147,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStatic: 0
   bottomOfSprite: {fileID: 5444278694666367645}
+--- !u!114 &6988910048446272476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254569747937825785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f723fb6dc192b482784e209006085996, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasBeenDragged: 0
+  isBreaking: 0
+  transparentItem: {fileID: 4725715277107242961, guid: fe81ba3076adfc8429b5d77fda14f4ab, type: 3}
+--- !u!114 &2773714025015461023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254569747937825785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1845cf8bb806f4768917b96be632ee97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
