@@ -33,7 +33,7 @@ public class SpawnGhost : MonoBehaviour
         bool x = true;
         while ((temp==index||!locations[temp].GetComponent<GhostLocationRadius>().shouldSpawn||x)&&loopCount<50) {
             RaycastHit2D hit = Physics2D.Raycast(locations[temp].transform.position, Vector2.zero);
-            x = hit.collider!=null&&!hit.collider.gameObject.tag.Equals("phone")&&!hit.collider.gameObject.layer==5;
+            x = hit.collider!=null&&!hit.collider.gameObject.tag.Equals("phone")&&hit.collider.gameObject.layer!=5;
             temp = Random.Range(0, length);
             loopCount++;
 
