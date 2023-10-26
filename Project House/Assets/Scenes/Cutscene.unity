@@ -294,8 +294,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: In the heart of a eerie, blood-curdling haunted forest, an ominous haunted
-    house loomed.
+  m_text: In the heart of a dark, eerie forest, there looms an ominous haunted house.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c7a022f8c062114c9320531f170d814, type: 2}
   m_sharedMaterial: {fileID: -3308153986121419545, guid: 7c7a022f8c062114c9320531f170d814, type: 2}
@@ -3376,7 +3375,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Builder has come and fix your tasks, in no particular order.
+  m_text: "Tired of being alone, Spooky stares beyond\u2019s the dark forest, where
+    the pretty houses gathered"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c7a022f8c062114c9320531f170d814, type: 2}
   m_sharedMaterial: {fileID: -3308153986121419545, guid: 7c7a022f8c062114c9320531f170d814, type: 2}
