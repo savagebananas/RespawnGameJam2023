@@ -134,10 +134,11 @@ public class Wolf : MonoBehaviour
     IEnumerator stopBreaking(Collision2D collision) {
         GetComponent<AIDestinationSetter>().target = builder.transform;
         collision.gameObject.layer = 6;
+        collision.gameObject.GetComponent<DraggableFurniture>().isBreaking = false;
         AstarPath.active.Scan();
         isAttacking = false;
         isBreaking = false;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         collision.gameObject.layer = 0;
     }
 
@@ -156,9 +157,10 @@ public class Wolf : MonoBehaviour
         isBreaking = true;
         //stop movement
         GetComponent<AIDestinationSetter>().target = rb.transform;
+        isAttacking = true;
         yield return new WaitForSeconds(5.0f); 
 
-        if (collision.gameObject.tag.Equals("breakable")&&shouldBreak) Destroy(collision.gameObject);
+        if (collision.gameObject.tag.Equals("breakable")&&isBreaking) Destroy(collision.gameObject);
 
         //continue movement
         GetComponent<AIDestinationSetter>().target = builder.transform;
