@@ -56,6 +56,7 @@ public class Wolf : MonoBehaviour
         FindObjectOfType<AudioManager>().Stop("WolfSwipe");
         }
         
+        
 
         //Debug.Log("isIdle: " + isIdle + "   isAttacking: " + isAttacking);
     }
