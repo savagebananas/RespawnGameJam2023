@@ -9,7 +9,7 @@ public class BarrelCollision : MonoBehaviour
         //if colides with player stun player
         if (collision.transform.tag.Equals("builder") == true)
         {
-            //Builder.stun
+            collision.transform.GetComponent<Builder>().Die();
         }
 
         //if colides with monster stun monster

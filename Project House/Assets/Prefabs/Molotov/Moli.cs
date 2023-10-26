@@ -7,6 +7,7 @@ public class Moli : MonoBehaviour
     [SerializeField] public GameObject moli;
     [SerializeField] GameObject wolf;
     [SerializeField] float lifespan = 5f;
+    [SerializeField] GameObject builder;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +32,7 @@ public class Moli : MonoBehaviour
         //if colides with player stun player
         if(collision.transform.tag.Equals("builder") == true)
         {
-            //Builder.stun
+            collision.transform.GetComponent<Builder>().Die();
         }
 
         //if colides with monster stun monster
