@@ -118,16 +118,16 @@ public class Wolf : MonoBehaviour
             if (!isIdle) isAttacking = true;
             collision.gameObject.GetComponent<DraggableFurniture>().isBreaking = true;
             breakable = collision.collider;
-            bool shouldBreak = false;
+            //bool shouldBreak = false;
             if (!isBreaking) StartCoroutine(WolfBreak(collision));
 
-            RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, builder.transform.position-transform.position);
-            foreach (RaycastHit2D hit in hits) {
-                if (hit.collider==collision.collider) {
-                    shouldBreak = true;
-                    break;
-                }
-            }
+            // RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, builder.transform.position-transform.position);
+            // foreach (RaycastHit2D hit in hits) {
+            //     if (hit.collider==collision.collider) {
+            //         shouldBreak = true;
+            //         break;
+            //     }
+            // }
             
             // if (!shouldBreak) {
             //     float angle = Vector3.Angle(collision.gameObject.transform.position-transform.position, builder.transform.position-transform.position);
@@ -135,7 +135,7 @@ public class Wolf : MonoBehaviour
             //         shouldBreak = true;
             //     }
             //}
-            if (!shouldBreak) StartCoroutine(stopBreaking(collision));
+            //if (!shouldBreak) StartCoroutine(stopBreaking(collision));
 
         }
     }
