@@ -15,8 +15,10 @@ public class Pointer : MonoBehaviour
     private SpriteRenderer sr;
     public GameObject targetObject;
     private Color col;
+    private  GameObject cam;
     void Start()
     {
+        cam = GameObject.Find("Main Camera");
         Debug.Log(Screen.width);
         Debug.Log(Screen.height);
         if (targetObject==null) target = GameObject.Find("Badguy").transform;
@@ -52,6 +54,12 @@ public class Pointer : MonoBehaviour
             sr.color = new Color(col.r, col.g, col.b, 0f);
         }
         pointerTransform.rotation = Quaternion.Euler(0, 0, angle -90);
+
+    }
+    void OnMouseDown() {
+        cam.transform.localPosition = target.position+new Vector3(0, 0, cam.transform.position.z-target.position.z);
+    }
+    void OnMouseEnter() {
 
     }
 }
