@@ -24,6 +24,7 @@ public class Moli : MonoBehaviour
     void OnEnable()
     {
         StartCoroutine(Lifespan());
+        FindObjectOfType<AudioManager>().Play("Moli");
     }
 
     void OnTriggerEnter2D(Collider2D collision)
