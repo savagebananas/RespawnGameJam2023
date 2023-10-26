@@ -525,7 +525,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Builder has come and fix your tasks, in no particular order.
+  m_text: The contractor has come to fix you up. He will perform his tasks randomly.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c7a022f8c062114c9320531f170d814, type: 2}
   m_sharedMaterial: {fileID: -3308153986121419545, guid: 7c7a022f8c062114c9320531f170d814, type: 2}
@@ -1908,7 +1908,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ring phones next to the 6 tasks to redirect builder towards it
+  m_text: 'Ring phones next to the tasks to redirect builder towards it.
 
 '
   m_isRightToLeft: 0
@@ -2408,7 +2408,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Right Click and drag to navigate the house
+  m_text: Right Click and drag to navigate the house.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c7a022f8c062114c9320531f170d814, type: 2}
   m_sharedMaterial: {fileID: -3308153986121419545, guid: 7c7a022f8c062114c9320531f170d814, type: 2}
@@ -2774,7 +2774,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use items from the basement to slow down the monster
+  m_text: Use items from the basement to slow down the monster.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c7a022f8c062114c9320531f170d814, type: 2}
   m_sharedMaterial: {fileID: -3308153986121419545, guid: 7c7a022f8c062114c9320531f170d814, type: 2}
@@ -2970,7 +2970,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Click to move furniture. \n- Monster breaks\n- Builder goes around"
+  m_text: Click to move furniture around. The monster will break it.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c7a022f8c062114c9320531f170d814, type: 2}
   m_sharedMaterial: {fileID: -3308153986121419545, guid: 7c7a022f8c062114c9320531f170d814, type: 2}
@@ -5264,9 +5264,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Watch out for ghosts! Keep builder away from them!
-
-'
+  m_text: Watch out for ghosts! Move furniture to keep the contractor away from them.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c7a022f8c062114c9320531f170d814, type: 2}
   m_sharedMaterial: {fileID: -3308153986121419545, guid: 7c7a022f8c062114c9320531f170d814, type: 2}
@@ -30309,9 +30307,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'The monster chases the builder. Protect him!
-
-'
+  m_text: A monster chases the contractor, you must stop him!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7c7a022f8c062114c9320531f170d814, type: 2}
   m_sharedMaterial: {fileID: -3308153986121419545, guid: 7c7a022f8c062114c9320531f170d814, type: 2}
