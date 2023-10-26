@@ -7,16 +7,16 @@ public class SpawnGhost3 : MonoBehaviour
  // Start is called before the first frame update
     public GameObject ghost;
     public int index = -1;
-    public static GameObject[] locations3 = new GameObject[4];
+    public static GameObject[] locations3 = new GameObject[3];
     public bool hasMoved = false;
-    private int length = 4;
+    private int length = 3;
     GameObject obj;
     //public GameObject pointer;
     //GameObject pnt;
     void Start()
     {
         for (int i = 1; i<=locations3.Length;i++) {
-            string name = "GhostLocation" + (i+4);
+            string name = "GhostLocation" + (i+3);
             Debug.Log(name);
             locations3[i-1] = GameObject.Find(name);
         }

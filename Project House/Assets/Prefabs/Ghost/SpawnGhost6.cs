@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnGhost : MonoBehaviour
+public class SpawnGhost6 : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject ghost;
     public int index = -1;
-    public static GameObject[] locations = new GameObject[3];
+    public static GameObject[] locations6 = new GameObject[3];
     public bool hasMoved = false;
     private int length = 3;
     GameObject obj;
@@ -15,13 +15,12 @@ public class SpawnGhost : MonoBehaviour
     //GameObject pnt;
     void Start()
     {
-        for (int i = 1; i<=locations.Length;i++) {
-            string name = "GhostLocation" + i;
-            Debug.Log(name);
-            locations[i-1] = GameObject.Find(name);
+        for (int i = 1; i<=locations6.Length;i++) {
+            string name = "GL" + (i+6);
+            locations6[i-1] = GameObject.Find(name);
         }
             obj = Instantiate(ghost, getRandomPosition(), Quaternion.identity);
-            obj.tag = "horizontal";
+            obj.tag = "vertical";
             //pnt = Instantiate(pointer);
             //pnt.GetComponent<Pointer>().setTarget(obj);
             hasMoved = true;
@@ -40,6 +39,7 @@ public class SpawnGhost : MonoBehaviour
             StartCoroutine(respawnGhost());
             hasMoved = true;
             StartCoroutine(setHasMoved());
+
         }
     }
 
@@ -56,27 +56,28 @@ public class SpawnGhost : MonoBehaviour
     private Vector3 getRandomPosition() {
         if (index==-1) {
             index = Random.Range(0, length);
-            return locations[index].transform.position;
+            return locations6[index].transform.position;
         }
         int temp = index;
         List<GameObject> tmp = new List<GameObject>();
-        foreach (GameObject x in locations) {
+        foreach (GameObject x in locations6) {
             if (x.GetComponent<GhostLocationRadius>().getShouldSpawn()) {
                 tmp.Add(x);
             }
         }
-        tmp.Remove(locations[index]);
+        tmp.Remove(locations6[index]);
 
         if (tmp.Count>0) {
+            Debug.Log("GHOST" + tmp.Count);
             temp = Random.Range(0, tmp.Count);
             index = temp;
             return tmp[index].transform.position;
         } else {
-            return locations[index].transform.position;
+            return locations6[index].transform.position;
         }
 
         
-
+        
     }
     
 
