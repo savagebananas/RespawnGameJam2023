@@ -26,6 +26,11 @@ public class Wolf : MonoBehaviour
     private Collider2D breakable;
     private float flipXtimer = 0.1f;
     private float angle;
+    private bool shouldBreak;
+    private bool isBreaking = false;
+
+
+    private bool builderAlive = true;
 
     void Start()
     {
@@ -92,9 +97,11 @@ public class Wolf : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision){
         //if colides with player stun player
-        if(collision.gameObject.tag.Equals("builder") == true)
+        if(collision.gameObject.tag.Equals("builder") == true && builderAlive)
         {
-            builder.Die();
+            isAttacking = true;
+            StartCoroutine(builderDeath());
+            builderAlive = false;
         }
 
         if(collision.gameObject.tag.Equals("breakable") == true)
@@ -102,22 +109,64 @@ public class Wolf : MonoBehaviour
             if (!isIdle) isAttacking = true;
             collision.gameObject.GetComponent<DraggableFurniture>().isBreaking = true;
             breakable = collision.collider;
-            StartCoroutine(WolfBreak(collision));
+            bool shouldBreak = false;
+            if (!isBreaking) StartCoroutine(WolfBreak(collision));
+
+            RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, builder.transform.position-transform.position);
+            foreach (RaycastHit2D hit in hits) {
+                if (hit.collider==collision.collider) {
+                    shouldBreak = true;
+                    break;
+                }
+            }
+            
+            if (!shouldBreak) {
+                float angle = Vector3.Angle(collision.gameObject.transform.position-transform.position, builder.transform.position-transform.position);
+                if (angle<110) {
+                    shouldBreak = true;
+                }
+            }
+            if (!shouldBreak) StartCoroutine(stopBreaking(collision));
+
         }
+    }
+    
+    IEnumerator stopBreaking(Collision2D collision) {
+        GetComponent<AIDestinationSetter>().target = builder.transform;
+        collision.gameObject.layer = 6;
+        collision.gameObject.GetComponent<DraggableFurniture>().isBreaking = false;
+        AstarPath.active.Scan();
+        isAttacking = false;
+        isBreaking = false;
+        yield return new WaitForSeconds(1f);
+        collision.gameObject.layer = 0;
+    }
+
+
+    IEnumerator builderDeath()
+    {
+        yield return new WaitForSeconds(0.2f);
+        builder.Die();
+        isIdle = true;
+        isAttacking = false;
+        Destroy(this);
     }
 
     IEnumerator WolfBreak(Collision2D collision)
     {
+        isBreaking = true;
         //stop movement
         GetComponent<AIDestinationSetter>().target = rb.transform;
+        isAttacking = true;
         yield return new WaitForSeconds(5.0f); 
 
-        if (collision.gameObject.tag.Equals("breakable")) Destroy(collision.gameObject);
+        if (collision.gameObject.tag.Equals("breakable")&&isBreaking) Destroy(collision.gameObject);
 
         //continue movement
         GetComponent<AIDestinationSetter>().target = builder.transform;
 
         isAttacking = false;
+        isBreaking = false;
     }
 
     public void wolfMove()
@@ -142,7 +191,7 @@ public class Wolf : MonoBehaviour
             }
             else
             {
-                if (breakable != null && breakable.tag.Equals("obstacle")) Destroy(breakable.gameObject);
+                if (breakable != null && breakable.tag.Equals("breakable")) Destroy(breakable.gameObject);
                 //continue movement
                 GetComponent<AIDestinationSetter>().target = builder.transform;
                 isAttacking = false;
