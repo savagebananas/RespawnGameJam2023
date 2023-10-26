@@ -35,6 +35,7 @@ public class GameState : MonoBehaviour
         if (gameEnd == false)
         {
             gameOverUI.SetActive(true);
+            GameObject.Find("LevelLoader").GetComponent<SceneTransition>().startTransition();
             gameEnd = true;
         }
     }
