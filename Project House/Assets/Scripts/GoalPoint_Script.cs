@@ -95,6 +95,7 @@ public class GoalPoint_Script : MonoBehaviour
                 Debug.Log("Step 3");
                 float timeRemaining = 5.0f;
                 //phone ring sound effect
+                FindObjectOfType<AudioManager>().Play("PhoneRing");
                 //phone ring animation
                 
                 isRinging = true;
@@ -527,10 +528,11 @@ public class GoalPoint_Script : MonoBehaviour
             yield break;
         }
 
-        
+        FindObjectOfType<AudioManager>().Play("Wrench");
         player.GetComponent<Builder>().isFixing = true;
         yield return new WaitForSeconds(5.0f);
         player.GetComponent<Builder>().isFixing = false;
+        FindObjectOfType<AudioManager>().Play("TaskDone");
 
         if(currGoal == firstGoal){
             Debug.Log("First task done");

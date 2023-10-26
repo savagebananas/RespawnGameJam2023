@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2052229639977716438}
   - component: {fileID: 5206512574537347108}
   - component: {fileID: 2344567529882213762}
+  - component: {fileID: 7861113402059894062}
+  - component: {fileID: 1982268362926872567}
   m_Layer: 0
   m_Name: VerticalCouch
   m_TagString: Untagged
@@ -118,7 +120,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01577282, y: -0.014878035}
+  m_Offset: {x: 0.01577282, y: -0.12945318}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -129,7 +131,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.59345436, y: 1.7514939}
+  m_Size: {x: 0.59345436, y: 1.5223436}
   m_EdgeRadius: 0
 --- !u!114 &2344567529882213762
 MonoBehaviour:
@@ -145,3 +147,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStatic: 0
   bottomOfSprite: {fileID: 178264755551380262}
+--- !u!114 &7861113402059894062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2639061508261153303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f723fb6dc192b482784e209006085996, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasBeenDragged: 0
+  isBreaking: 0
+  transparentItem: {fileID: 8716660968979637701, guid: 33cc953d52aa2ad41a9459908da8e766, type: 3}
+--- !u!114 &1982268362926872567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2639061508261153303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1845cf8bb806f4768917b96be632ee97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

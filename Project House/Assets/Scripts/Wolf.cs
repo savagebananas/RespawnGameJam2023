@@ -50,6 +50,11 @@ public class Wolf : MonoBehaviour
         setDirection();
         //wolfAttack();
         setAnimations();
+
+        if(isBreaking == false)
+        {
+        FindObjectOfType<AudioManager>().Stop("WolfSwipe");
+        }
         
 
         //Debug.Log("isIdle: " + isIdle + "   isAttacking: " + isAttacking);
@@ -84,6 +89,7 @@ public class Wolf : MonoBehaviour
     public void Burn()
     {
         
+       FindObjectOfType<AudioManager>().Play("WolfHurt"); 
        StartCoroutine(fireFright());
         
     }
@@ -120,6 +126,7 @@ public class Wolf : MonoBehaviour
 
         if(collision.gameObject.tag.Equals("breakable") == true)
         {
+            FindObjectOfType<AudioManager>().Play("WolfSwipe");
             if (!isIdle) isAttacking = true;
             collision.gameObject.GetComponent<DraggableFurniture>().isBreaking = true;
             breakable = collision.collider;
