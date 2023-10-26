@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Builder : MonoBehaviour
 {
-    private GameState gameState;
+
     [SerializeField] Rigidbody2D rb;
     [SerializeField]Animator anim;
     private SpriteRenderer sprite;
@@ -31,8 +31,6 @@ public class Builder : MonoBehaviour
         anim.SetBool("side", false);
         anim.SetBool("idle", false);
         anim.SetBool("fix", false);
-
-        gameState = GameObject.Find("General").GetComponent<GameState>();
     }
 
     // Update is called once per frame
@@ -131,8 +129,6 @@ public class Builder : MonoBehaviour
         c.transform.position = this.transform.position;
         //play some sound
         //change scene to death screen
-        gameState.LoseGame();
-
         Destroy(this.gameObject);
     }
 

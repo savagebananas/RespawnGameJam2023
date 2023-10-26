@@ -6,9 +6,8 @@ using Pathfinding;
 
 public class GoalPoint_Script : MonoBehaviour
 {
-    private GameState gameState;
-
     public Transform currGoal;
+
 
     [SerializeField] GameObject player;
     [SerializeField] Transform goalPoint;
@@ -55,7 +54,8 @@ public class GoalPoint_Script : MonoBehaviour
         goalPoint.position = currGoal.position;
         isRinging = false;
 
-        gameState = GameObject.Find("General").GetComponent<GameState>();
+        //test
+        //currGoal = goalF;
     }
 
     // Update is called once per frame
@@ -772,6 +772,5 @@ public class GoalPoint_Script : MonoBehaviour
     public void YouWin(){
         Debug.Log("last task done");
         Debug.Log("You win");
-        gameState.WinGame();
     }
 }
