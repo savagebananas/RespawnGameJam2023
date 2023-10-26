@@ -2889,7 +2889,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 3.1875
+  orthographic size: 5.3125
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4667,7 +4667,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.86, y: -14.04, z: 0}
-  m_LocalScale: {x: 10, y: 1, z: 1}
+  m_LocalScale: {x: 7, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1980657250}
@@ -36989,6 +36989,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3366201730971984611, guid: e0633ef86f30f41b4bed628a93d374e0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3484989049791245046, guid: e0633ef86f30f41b4bed628a93d374e0, type: 3}
       propertyPath: m_Layer
       value: 5
@@ -37011,11 +37015,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6668889158175433388, guid: e0633ef86f30f41b4bed628a93d374e0, type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6668889158175433388, guid: e0633ef86f30f41b4bed628a93d374e0, type: 3}
       propertyPath: m_LocalPosition.y
       value: -17.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6719778832540486401, guid: e0633ef86f30f41b4bed628a93d374e0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6719778832540486401, guid: e0633ef86f30f41b4bed628a93d374e0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -37024,6 +37032,10 @@ PrefabInstance:
     - target: {fileID: 8463757170037102625, guid: e0633ef86f30f41b4bed628a93d374e0, type: 3}
       propertyPath: m_Layer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8587006953977510583, guid: e0633ef86f30f41b4bed628a93d374e0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8587006953977510583, guid: e0633ef86f30f41b4bed628a93d374e0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -37073,7 +37085,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.3, y: 7.92, z: 0}
-  m_LocalScale: {x: 10, y: 1, z: 1}
+  m_LocalScale: {x: 7, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1980657250}
