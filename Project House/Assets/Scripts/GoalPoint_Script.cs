@@ -343,6 +343,7 @@ public class GoalPoint_Script : MonoBehaviour
 
     IEnumerator Fixing()
     {
+        Debug.Log(currGoal);
         if(currGoal == firstGoal && firstGoalDone == true){
             if(secondGoalDone == false){
                 currGoal = secondGoal;
@@ -429,7 +430,7 @@ public class GoalPoint_Script : MonoBehaviour
             isFixing = false;
             yield break;
         }
-        else if(currGoal == fourthGoal && fourthGoal == true){
+        else if(currGoal == fourthGoal && fourthGoalDone == true){
             if(secondGoalDone == false){
                 currGoal = secondGoal;
                 currGoal.position = secondGoal.position;
@@ -598,7 +599,6 @@ public class GoalPoint_Script : MonoBehaviour
 
         else if(currGoal == thirdGoal){
             Debug.Log("Third task done");
-            
             thirdGoalDone = true;
             currGoal.gameObject.GetComponent<Task>().fixTask(); //Fixed task
             if(firstGoalDone == false){
