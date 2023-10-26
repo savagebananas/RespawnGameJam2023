@@ -8,8 +8,9 @@ public class SpawnGhost : MonoBehaviour
     public GameObject ghost;
     public int index;
     public static GameObject[] locations = new GameObject[4];
-    public static bool isSpawned = false;
+    public static bool hasMoved= false;
     private int length = 3;
+    GameObject obj;
     void Start()
     {
         for (int i = 1; i<=locations.Length;i++) {
@@ -17,14 +18,19 @@ public class SpawnGhost : MonoBehaviour
             Debug.Log(name);
             locations[i-1] = GameObject.Find(name);
         }
+            obj = Instantiate(ghost, getRandomPosition(), Quaternion.identity);
+            hasMoved = true;
     }
+    
 
     // Update is called once per frame
     void Update()
     {
-        if (Time.time>0.05&&Mathf.Abs(Time.time%10) < 0.05&&!isSpawned) {
-            GameObject obj = Instantiate(ghost, getRandomPosition(), Quaternion.identity);
-            isSpawned = true;
+        if (Time.time>0.05&&Mathf.Abs(Time.time%10) < 0.05&&!hasMoved) {
+            obj.transform.position = getRandomPosition();
+            obj.transform.rotation = Quaternion.identity;
+            hasMoved = true;
+            obj.GetComponent<GhostMovement>().updatePositions();
         }
     }
     private Vector3 getRandomPosition() {
@@ -45,7 +51,6 @@ public class SpawnGhost : MonoBehaviour
         index = temp;
         return locations[index].transform.position;
     }
-    public static GameObject getLocation(int i) {
-        return locations[i];
-    }
+    
+
 }
