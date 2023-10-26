@@ -80,6 +80,8 @@ public class Wolf : MonoBehaviour
 
     IEnumerator FreezePosition()
     {
+        wolfRenderer.color = new Color(255, 0, 0, 255);
+
         canAttack = false;
         this.GetComponent<AIDestinationSetter>().target = rb.transform;
         isIdle = true;
@@ -89,6 +91,9 @@ public class Wolf : MonoBehaviour
         this.GetComponent<AIDestinationSetter>().target = builder.transform;
         isIdle = false;
         canAttack = true;
+
+        wolfRenderer.color = new Color(202, 202, 202, 255);
+
     }
 
     public void Burn()
@@ -101,6 +106,7 @@ public class Wolf : MonoBehaviour
 
     IEnumerator fireFright()
     {
+        wolfRenderer.color = new Color(255, 0, 0, 255);
         canAttack = false;
         GetComponent<AIPath>().speed = 4f;
         Debug.Log("Hit hit hit hit hit hti hit");
@@ -115,10 +121,13 @@ public class Wolf : MonoBehaviour
         seeker.StartPath(path);
 
         yield return new WaitForSeconds(freezeTime * 3);
+
         GetComponent<AIDestinationSetter>().enabled = true;
         wolfFire.SetActive(false);
         GetComponent<AIPath>().speed = 1.51f;
         //GetComponent<AIDestinationSetter>().target = builder.transform;
+        wolfRenderer.color = new Color(202, 202, 202, 255);
+
         canAttack = true;
     }
 

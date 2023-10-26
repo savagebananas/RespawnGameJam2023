@@ -25373,7 +25373,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 457161154, guid: e5a28b25cf2ad62478e6d24e61df212a, type: 3}
-  m_Color: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 1}
+  m_Color: {r: 0.827451, g: 0.827451, b: 0.827451, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -37675,6 +37675,7 @@ MonoBehaviour:
   wolfFire: {fileID: 1649992567}
   freezeTime: 3
   attackTime: 0
+  canAttack: 1
 --- !u!58 &1829535613
 CircleCollider2D:
   m_ObjectHideFlags: 0
