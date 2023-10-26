@@ -131,11 +131,13 @@ public class Builder : MonoBehaviour
         c.transform.position = this.transform.position;
         //play some sound
         //change scene to death screen
-        gameState.LoseGame();
+        
 
         FindObjectOfType<AudioManager>().Play("PlayerDeath");
 
-        Destroy(this.gameObject);
+        this.transform.GetChild(0).gameObject.SetActive(false);
+        rb.constraints = RigidbodyConstraints2D.FreezePosition;
+        gameState.LoseGame();
     }
 
 }
