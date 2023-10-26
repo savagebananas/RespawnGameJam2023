@@ -37560,7 +37560,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 41e9a313ed402ea458af641b3e40d3dc, type: 3}
     - target: {fileID: 5385919078115014170, guid: 658c9d6dc63a9cd41aceffe6cef4956b, type: 3}
       propertyPath: sounds.Array.data[4].name
-      value: MonsterSwipe
+      value: WolfSwipe
       objectReference: {fileID: 0}
     - target: {fileID: 5385919078115014170, guid: 658c9d6dc63a9cd41aceffe6cef4956b, type: 3}
       propertyPath: sounds.Array.data[5].clip
@@ -37576,7 +37576,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 51f17e116589fc44488d30d53caa0b5f, type: 3}
     - target: {fileID: 5385919078115014170, guid: 658c9d6dc63a9cd41aceffe6cef4956b, type: 3}
       propertyPath: sounds.Array.data[6].loop
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5385919078115014170, guid: 658c9d6dc63a9cd41aceffe6cef4956b, type: 3}
       propertyPath: sounds.Array.data[6].name
