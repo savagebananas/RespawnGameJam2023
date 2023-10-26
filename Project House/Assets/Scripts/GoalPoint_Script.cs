@@ -99,8 +99,8 @@ public class GoalPoint_Script : MonoBehaviour
 
         if (isRinging && timeRemaining > 0){
             Debug.Log("Step 4");
-                    if(Mathf.Abs(hit.transform.position.x - player.transform.position.x) < 25 
-                    && Mathf.Abs(hit.transform.position.y - player.transform.position.y) < 25 ){
+                    if(Mathf.Abs(hit.transform.position.x - player.transform.position.x) < 15 
+                    && Mathf.Abs(hit.transform.position.y - player.transform.position.y) < 15 ){
                        Debug.Log("step 5");
                         //figure out which phone it is
                         float distanceToTaskOne = Mathf.Abs((hit.transform.position.x - firstGoal.transform.position.x) + (hit.transform.position.y - firstGoal.transform.position.y));
@@ -155,7 +155,7 @@ public class GoalPoint_Script : MonoBehaviour
 
                         //set currGoal to that task 
                         player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
-                        
+                    
                         //set ai to walk there
                     }
                     //make time increase
@@ -343,6 +343,183 @@ public class GoalPoint_Script : MonoBehaviour
 
     IEnumerator Fixing()
     {
+        if(currGoal == firstGoal && firstGoalDone == true){
+            if(secondGoalDone == false){
+                currGoal = secondGoal;
+                currGoal.position = secondGoal.position;
+            
+            }
+            else if(thirdGoalDone == false){
+                currGoal = thirdGoal;
+                currGoal.position = thirdGoal.position;
+            }
+            else if(fourthGoalDone == false){
+                currGoal = fourthGoal;
+                currGoal.position = fourthGoal.position;
+            }
+            else if(fifthGoalDone == false){
+                currGoal = fifthGoal;
+                currGoal.position = fifthGoal.position;
+            }
+            else if(sixthGoalDone == false){
+                currGoal = sixthGoal;
+                currGoal.position = sixthGoal.position;
+            }
+            player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
+            isFixing = false;
+            yield break;
+        }
+        else if(currGoal == secondGoal && secondGoalDone == true){
+            if(secondGoalDone == false){
+                currGoal = secondGoal;
+                currGoal.position = secondGoal.position;
+            
+            }
+            else if(thirdGoalDone == false){
+                currGoal = thirdGoal;
+                currGoal.position = thirdGoal.position;
+            }
+            else if(fourthGoalDone == false){
+                currGoal = fourthGoal;
+                currGoal.position = fourthGoal.position;
+            }
+            else if(fifthGoalDone == false){
+                currGoal = fifthGoal;
+                currGoal.position = fifthGoal.position;
+            }
+            else if(sixthGoalDone == false){
+                currGoal = sixthGoal;
+                currGoal.position = sixthGoal.position;
+            }
+            if(firstGoalDone == false){
+                currGoal = firstGoal;
+                currGoal.position = firstGoal.position;
+            }
+            player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
+            isFixing = false;
+            yield break;
+        }
+        else if(currGoal == thirdGoal && thirdGoalDone == true){
+            if(secondGoalDone == false){
+                currGoal = secondGoal;
+                currGoal.position = secondGoal.position;
+            
+            }
+            else if(thirdGoalDone == false){
+                currGoal = thirdGoal;
+                currGoal.position = thirdGoal.position;
+            }
+            else if(fourthGoalDone == false){
+                currGoal = fourthGoal;
+                currGoal.position = fourthGoal.position;
+            }
+            else if(fifthGoalDone == false){
+                currGoal = fifthGoal;
+                currGoal.position = fifthGoal.position;
+            }
+            else if(sixthGoalDone == false){
+                currGoal = sixthGoal;
+                currGoal.position = sixthGoal.position;
+            }
+            if(firstGoalDone == false){
+                currGoal = firstGoal;
+                currGoal.position = firstGoal.position;
+            }
+            player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
+            isFixing = false;
+            yield break;
+        }
+        else if(currGoal == fourthGoal && fourthGoal == true){
+            if(secondGoalDone == false){
+                currGoal = secondGoal;
+                currGoal.position = secondGoal.position;
+            
+            }
+            else if(thirdGoalDone == false){
+                currGoal = thirdGoal;
+                currGoal.position = thirdGoal.position;
+            }
+            else if(fourthGoalDone == false){
+                currGoal = fourthGoal;
+                currGoal.position = fourthGoal.position;
+            }
+            else if(fifthGoalDone == false){
+                currGoal = fifthGoal;
+                currGoal.position = fifthGoal.position;
+            }
+            else if(sixthGoalDone == false){
+                currGoal = sixthGoal;
+                currGoal.position = sixthGoal.position;
+            }
+            if(firstGoalDone == false){
+                currGoal = firstGoal;
+                currGoal.position = firstGoal.position;
+            }
+            player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
+            isFixing = false;
+            yield break;
+        }
+        else if(currGoal == fifthGoal && fifthGoalDone == true){
+            if(secondGoalDone == false){
+                currGoal = secondGoal;
+                currGoal.position = secondGoal.position;
+            
+            }
+            else if(thirdGoalDone == false){
+                currGoal = thirdGoal;
+                currGoal.position = thirdGoal.position;
+            }
+            else if(fourthGoalDone == false){
+                currGoal = fourthGoal;
+                currGoal.position = fourthGoal.position;
+            }
+            else if(fifthGoalDone == false){
+                currGoal = fifthGoal;
+                currGoal.position = fifthGoal.position;
+            }
+            else if(sixthGoalDone == false){
+                currGoal = sixthGoal;
+                currGoal.position = sixthGoal.position;
+            }
+            if(firstGoalDone == false){
+                currGoal = firstGoal;
+                currGoal.position = firstGoal.position;
+            }
+            player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
+            isFixing = false;
+            yield break;
+        }
+        else if(currGoal == sixthGoal && sixthGoalDone == true){
+            if(secondGoalDone == false){
+                currGoal = secondGoal;
+                currGoal.position = secondGoal.position;
+            
+            }
+            else if(thirdGoalDone == false){
+                currGoal = thirdGoal;
+                currGoal.position = thirdGoal.position;
+            }
+            else if(fourthGoalDone == false){
+                currGoal = fourthGoal;
+                currGoal.position = fourthGoal.position;
+            }
+            else if(fifthGoalDone == false){
+                currGoal = fifthGoal;
+                currGoal.position = fifthGoal.position;
+            }
+            else if(sixthGoalDone == false){
+                currGoal = sixthGoal;
+                currGoal.position = sixthGoal.position;
+            }
+            if(firstGoalDone == false){
+                currGoal = firstGoal;
+                currGoal.position = firstGoal.position;
+            }
+            player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
+            isFixing = false;
+            yield break;
+        }
+
         yield return new WaitForSeconds(5.0f);
 
         if(currGoal == firstGoal){

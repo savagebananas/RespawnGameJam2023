@@ -2859,7 +2859,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 4.2109375
+  orthographic size: 3.34375
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3773,6 +3773,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plant1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5747031167762069167, guid: 58d2f1f5a58266c459fb4bdb36f131b1, type: 3}
+      propertyPath: bottomOfSprite
+      value: 
+      objectReference: {fileID: 1181608066}
     - target: {fileID: 7151971649774289584, guid: 58d2f1f5a58266c459fb4bdb36f131b1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11
@@ -4081,8 +4085,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0018000603, y: 0.0010001659, z: 0}
-    m_Extent: {x: 5.5064, y: 5.5011997, z: 0}
+    m_Center: {x: -0.00060009956, y: -0.00029993057, z: 0}
+    m_Extent: {x: 5.5039997, y: 5.508, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -36821,6 +36825,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plant1
       objectReference: {fileID: 0}
+    - target: {fileID: 5747031167762069167, guid: 58d2f1f5a58266c459fb4bdb36f131b1, type: 3}
+      propertyPath: bottomOfSprite
+      value: 
+      objectReference: {fileID: 1931955648}
     - target: {fileID: 7151971649774289584, guid: 58d2f1f5a58266c459fb4bdb36f131b1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18
