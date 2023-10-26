@@ -4081,8 +4081,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0024499893, y: 0.005049944, z: 0}
-    m_Extent: {x: 5.50015, y: 5.5036497, z: 0}
+    m_Center: {x: 0.0054500103, y: -0.0022499561, z: 0}
+    m_Extent: {x: 5.50185, y: 5.5054502, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4937,8 +4937,8 @@ MonoBehaviour:
   rb: {fileID: 787033303}
   anim: {fileID: 0}
   freezeTime: 3
-  bloodParticles: {fileID: 0}
-  bloodCloud: {fileID: 0}
+  bloodParticles: {fileID: 6882165985705611084, guid: 772b91ce098f69f4abdf20828e5b0ec1, type: 3}
+  bloodCloud: {fileID: 2527587192641209166, guid: e41252079859f634ab1b432b5bc305b4, type: 3}
 --- !u!1 &787975945
 GameObject:
   m_ObjectHideFlags: 0
