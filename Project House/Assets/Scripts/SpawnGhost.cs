@@ -22,7 +22,7 @@ public class SpawnGhost : MonoBehaviour
         }
             obj = Instantiate(ghost, getRandomPosition(), Quaternion.identity);
             pnt = Instantiate(pointer);
-            pnt.GetComponent<Pointer>().
+            //pnt.GetComponent<Pointer>().
             hasMoved = true;
             StartCoroutine(setHasMoved());
     }
