@@ -5,13 +5,13 @@ using UnityEngine;
 //game object in Unity Editor.
 public class DraggableFurniture : MonoBehaviour
 {
-    private bool mouseIsOver;
     public bool hasBeenDragged;
     public bool isBreaking = false;
     public GameObject transparentItem;
     // Start is called before the first frame update
     void Start()
     {
+        PlayerManager.mouseDragging = false;
         AstarPath.active.Scan();
         if (!hasBeenDragged) {
             gameObject.tag = "Untagged";
@@ -28,12 +28,9 @@ public class DraggableFurniture : MonoBehaviour
     {
         
     }
-    void OnMouseEnter() {
-        //TODO Add highlight effect
-        mouseIsOver = true;
-    }
+
     void OnMouseDown() {
-        if(mouseIsOver && !PlayerManager.mouseDragging&&!isBreaking) {
+        if(!PlayerManager.mouseDragging&&!isBreaking) {
             Vector3 t = transform.position;
             Instantiate(transparentItem, t, Quaternion.identity);
             StartCoroutine(DestroySelf());
@@ -46,6 +43,7 @@ public class DraggableFurniture : MonoBehaviour
 
     IEnumerator DestroySelf()
     {
+        
         yield return new WaitForSeconds(0.01f);
         Destroy(this.gameObject);
 
