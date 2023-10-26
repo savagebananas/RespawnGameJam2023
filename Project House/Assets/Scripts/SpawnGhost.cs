@@ -6,7 +6,7 @@ public class SpawnGhost : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject ghost;
-    public int index;
+    public int index = -1;
     public static GameObject[] locations = new GameObject[6];
     public bool hasMoved = false;
     private int length = 6;
@@ -49,7 +49,7 @@ public class SpawnGhost : MonoBehaviour
     }
 
     private Vector3 getRandomPosition() {
-        if (index==null) {
+        if (index==-1) {
             index = Random.Range(0, length);
             return locations[index].transform.position;
         }
