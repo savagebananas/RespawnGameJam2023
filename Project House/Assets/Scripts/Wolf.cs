@@ -15,6 +15,7 @@ public class Wolf : MonoBehaviour
     Animator anim;
     Vector3 lastPos;
     CircleCollider2D colid;
+    public GameObject wolfFire;
 
     public float freezeTime = 3f;
     private float freezeTimer = 3f;
@@ -90,6 +91,7 @@ public class Wolf : MonoBehaviour
     IEnumerator fireFright()
     {
         Debug.Log("Hit hit hit hit hit hti hit");
+        wolfFire.SetActive(true);
         GetComponent<AIDestinationSetter>().enabled = false;
         Vector3 thePointToFleeFrom = Vector3.zero;
         int theGScoreToStopAt = 10000;
