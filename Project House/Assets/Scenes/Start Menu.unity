@@ -2593,7 +2593,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5.421875
+  orthographic size: 3.9453125
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -22314,7 +22314,7 @@ GameObject:
   - component: {fileID: 1342310645}
   - component: {fileID: 1342310644}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Start Menu Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23786,6 +23786,26 @@ PrefabInstance:
       objectReference: {fileID: 1697341002353492508}
     - target: {fileID: 7388460458952585152, guid: 5794dafaa1b1143e8832d7322e3cfb15, type: 3}
       propertyPath: ui3
+      value: 
+      objectReference: {fileID: 4216463353162059702}
+    - target: {fileID: 7388460458952585152, guid: 5794dafaa1b1143e8832d7322e3cfb15, type: 3}
+      propertyPath: uiObjects.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388460458952585152, guid: 5794dafaa1b1143e8832d7322e3cfb15, type: 3}
+      propertyPath: uiObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 2044181776}
+    - target: {fileID: 7388460458952585152, guid: 5794dafaa1b1143e8832d7322e3cfb15, type: 3}
+      propertyPath: uiObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 1697341002353492508}
+    - target: {fileID: 7388460458952585152, guid: 5794dafaa1b1143e8832d7322e3cfb15, type: 3}
+      propertyPath: uiObjects.Array.data[2]
+      value: 
+      objectReference: {fileID: 1025845027314379139}
+    - target: {fileID: 7388460458952585152, guid: 5794dafaa1b1143e8832d7322e3cfb15, type: 3}
+      propertyPath: uiObjects.Array.data[3]
       value: 
       objectReference: {fileID: 4216463353162059702}
     m_RemovedComponents: []
@@ -34007,8 +34027,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 2039718399}
+  - {fileID: 1342310647}
   - {fileID: 724131497}
   - {fileID: 1792228869}
   - {fileID: 1952464521}
-  - {fileID: 1342310647}
   - {fileID: 909404085}

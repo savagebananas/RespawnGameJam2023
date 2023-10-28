@@ -27,6 +27,7 @@ public class GameState : MonoBehaviour
         {
             gameWinUI.SetActive(true);
             gameEnd = true;
+            StartCoroutine(fadeToNextScene(1.5f));
         }
     }
 
@@ -35,8 +36,14 @@ public class GameState : MonoBehaviour
         if (gameEnd == false)
         {
             gameOverUI.SetActive(true);
-            GameObject.Find("LevelLoader").GetComponent<SceneTransition>().startTransition();
             gameEnd = true;
+            StartCoroutine(fadeToNextScene(1.5f));
         }
+    }
+
+    IEnumerator fadeToNextScene(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        GameObject.Find("LevelLoader").GetComponent<SceneTransition>().startTransition();
     }
 }

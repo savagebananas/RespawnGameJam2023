@@ -9,28 +9,23 @@ public class SceneTransition : MonoBehaviour
     private static float time = 1f;
     public Animator transition;
 
-    public Animator ui1;
-    public Animator ui2;
-    public Animator ui3;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Animator[] uiObjects;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void startTransition() {
         StartCoroutine(levelTransition());
     }
     IEnumerator levelTransition() {
         transition.SetTrigger(trName);
-        if (ui1 != null) ui1.SetTrigger("fadeOut");
-        if (ui2 != null) ui2.SetTrigger("fadeOut");
-        if (ui3 != null) ui3.SetTrigger("fadeOut");
+
+        if(uiObjects != null)
+        {
+            for (int i = 0; i < uiObjects.Length; i++)
+            {
+                if (uiObjects[i].GetComponent<Animator>() != null) uiObjects[i].SetTrigger("fadeOut");
+                else Debug.Log("No animator component for uiObjects: index " + i);
+            }
+        }
+
         yield return new WaitForSeconds(time);
         if(SceneManager.GetActiveScene().buildIndex != SceneManager.sceneCountInBuildSettings - 1) 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
