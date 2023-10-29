@@ -1908,7 +1908,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ring phones next to the tasks to redirect builder towards it.
+  m_text: 'Ring phones next to the tasks to redirect builder towards them.
 
 '
   m_isRightToLeft: 0
@@ -2593,7 +2593,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 3.9453125
+  orthographic size: 2.8125
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
