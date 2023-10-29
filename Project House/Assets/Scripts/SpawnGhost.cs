@@ -6,78 +6,36 @@ public class SpawnGhost : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject ghost;
-    public int index = -1;
-    public static GameObject[] locations = new GameObject[3];
-    public bool hasMoved = false;
     private int length = 3;
     GameObject obj;
+    private int numGhosts = 6;
+    private int numLocations = 9;
     //public GameObject pointer;
     //GameObject pnt;
     void Start()
     {
-        for (int i = 1; i<=locations.Length;i++) {
-            string name = "GhostLocation" + i;
-            Debug.Log(name);
-            locations[i-1] = GameObject.Find(name);
+        int locationsPerGhost = (numLocations*2)/numGhosts;
+        for (int j = 0; j<numGhosts; j++) {
+            string tag;
+            if (j%2==0) tag = "horizontal";
+            else tag = "vertical";
+            List<Transform> locations = new List<Transform>();
+            for (int i = 0; i<locationsPerGhost;i++) {
+                string name = "";
+                if (tag.Equals("horizontal")) name = "GhostLocation";
+                else name = "GL";
+                int num = (1+locationsPerGhost*(j/2)+i);
+                name =name + num;
+                locations.Add(GameObject.Find(name).transform);
+                Debug.Log(name);
+            }
+            Debug.Log("Ghost Spawn");
+            obj = Instantiate(ghost, locations[0].position, Quaternion.identity);  
+            obj.GetComponent<GhostMovement>().setLocations(locations);
+            obj.tag = tag;
         }
-            obj = Instantiate(ghost, getRandomPosition(), Quaternion.identity);
-            obj.tag = "horizontal";
             //pnt = Instantiate(pointer);
             //pnt.GetComponent<Pointer>().setTarget(obj);
-            hasMoved = true;
-            StartCoroutine(setHasMoved());
+  
     }
-    
-
-    // Update is called once per frame
-    IEnumerator setHasMoved() {
-        yield return new WaitForSeconds(0.06f);
-        hasMoved = false;
-    }
-    void Update()
-    {
-        if (Time.time>0.05&&Mathf.Abs(Time.time%10) < 0.05&&!hasMoved) {
-            StartCoroutine(respawnGhost());
-            hasMoved = true;
-            StartCoroutine(setHasMoved());
-        }
-    }
-
-    IEnumerator respawnGhost()
-    {
-        obj.GetComponent<Animator>().SetTrigger("fadeOut");
-        yield return new WaitForSeconds(1f);
-        obj.transform.position = getRandomPosition();
-        obj.transform.rotation = Quaternion.identity;
-        obj.GetComponent<GhostMovement>().updatePositions();
-        obj.GetComponent<Animator>().SetTrigger("fadeIn");
-    }
-
-    private Vector3 getRandomPosition() {
-        if (index==-1) {
-            index = Random.Range(0, length);
-            return locations[index].transform.position;
-        }
-        int temp = index;
-        List<GameObject> tmp = new List<GameObject>();
-        foreach (GameObject x in locations) {
-            if (x.GetComponent<GhostLocationRadius>().getShouldSpawn()) {
-                tmp.Add(x);
-            }
-        }
-        tmp.Remove(locations[index]);
-
-        if (tmp.Count>0) {
-            temp = Random.Range(0, tmp.Count);
-            index = temp;
-            return tmp[index].transform.position;
-        } else {
-            return locations[index].transform.position;
-        }
-
-        
-
-    }
-    
-
 }
