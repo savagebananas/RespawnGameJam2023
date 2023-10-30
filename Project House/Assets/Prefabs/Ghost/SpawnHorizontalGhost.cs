@@ -13,11 +13,12 @@ public class SpawnHorizontalGhost : MonoBehaviour
     //public GameObject pointer;
     //GameObject pnt;
     private static string baseName = "GhostLocation";
+    private static string tag = "horizontal";
+
     void Start()
     {
         int locationsPerGhost = (numLocations)/numGhosts;
         for (int j = 0; j<numGhosts; j++) {
-            string tag = "horizontal";
             List<Transform> locations = new List<Transform>();
             for (int i = 0; i<locationsPerGhost;i++) {
                 string name = baseName;

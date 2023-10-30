@@ -13,11 +13,12 @@ public class SpawnVerticalGhost : MonoBehaviour
     //public GameObject pointer;
     //GameObject pnt;
     private static string baseName = "GL";
+    private static string tag = "vertical";
+
     void Start()
     {
         int locationsPerGhost = numLocations/numGhosts;
         for (int j = 0; j<numGhosts; j++) {
-            string tag = "vertical";
             List<Transform> locations = new List<Transform>();
             for (int i = 0; i<locationsPerGhost;i++) {
                 string name = baseName;
