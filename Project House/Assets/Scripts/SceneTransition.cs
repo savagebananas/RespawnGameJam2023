@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransition : MonoBehaviour
 {
+    public static bool isFirstPlay;
+
     private static string trName = "End";
     private static float time = 1f;
     public Animator transition;
@@ -29,9 +31,10 @@ public class SceneTransition : MonoBehaviour
         yield return new WaitForSeconds(time);
         if(SceneManager.GetActiveScene().buildIndex != SceneManager.sceneCountInBuildSettings - 1) 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
-        else
-            SceneManager.LoadScene(0);
-
+        else 
+        {
+            SceneManager.LoadScene(1);
+        }
     }
 
     public void QuitGame()
