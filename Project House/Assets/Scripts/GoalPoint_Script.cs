@@ -168,6 +168,7 @@ public class GoalPoint_Script : MonoBehaviour
 
                         //set currGoal to that task 
                         player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
+                        timeRemaining = 0;
                     
                         //set ai to walk there
                     }
