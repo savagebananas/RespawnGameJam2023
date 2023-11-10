@@ -17,6 +17,7 @@ public class SpawnHorizontalGhost : MonoBehaviour
 
     void Start()
     {
+        
         int locationsPerGhost = (numLocations)/numGhosts;
         for (int j = 0; j<numGhosts; j++) {
             List<Transform> locations = new List<Transform>();
@@ -36,4 +37,5 @@ public class SpawnHorizontalGhost : MonoBehaviour
             //pnt.GetComponent<Pointer>().setTarget(obj);
   
     }
+
 }

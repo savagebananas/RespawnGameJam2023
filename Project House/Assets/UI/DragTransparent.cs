@@ -22,6 +22,7 @@ public class DragTransparent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        AstarPath.active.Scan();
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         sr.color = noColl;
