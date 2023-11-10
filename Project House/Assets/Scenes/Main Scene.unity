@@ -43856,7 +43856,7 @@ MonoBehaviour:
   - name: WolfSwipe
     clip: {fileID: 8300000, guid: 41e9a313ed402ea458af641b3e40d3dc, type: 3}
     volume: 1
-    pitch: 2.5
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: WolfHurt
