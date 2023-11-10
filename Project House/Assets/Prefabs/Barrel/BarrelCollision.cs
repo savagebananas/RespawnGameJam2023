@@ -7,6 +7,7 @@ public class BarrelCollision : MonoBehaviour
     public GameObject particles;
     void OnCollisionEnter2D(Collision2D collision)
     {
+        FindObjectOfType<AudioManager>().Stop("BarrelRoll");
         //if colides with player stun player
         if (collision.transform.tag.Equals("builder") == true)
         {
@@ -23,5 +24,6 @@ public class BarrelCollision : MonoBehaviour
         o.transform.parent = null;
         FindObjectOfType<AudioManager>().Play("BarrelBreak");
         Destroy(this.transform.parent.gameObject);
+        
     }
 }
