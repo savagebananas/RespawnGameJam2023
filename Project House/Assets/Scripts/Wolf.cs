@@ -142,7 +142,6 @@ public class Wolf : MonoBehaviour
 
         if(collision.gameObject.tag.Equals("breakable") == true)
         {
-            FindObjectOfType<AudioManager>().Play("WolfSwipe");
             if (!isIdle) isAttacking = true;
             collision.gameObject.GetComponent<DraggableFurniture>().isBreaking = true;
             breakable = collision.collider;
@@ -195,6 +194,7 @@ public class Wolf : MonoBehaviour
         //stop movement
         GetComponent<AIDestinationSetter>().target = rb.transform;
         isAttacking = true;
+        FindObjectOfType<AudioManager>().Play("WolfSwipe");
         yield return new WaitForSeconds(2.5f); 
 
         if (collision.gameObject.tag.Equals("breakable")&&isBreaking) Destroy(collision.gameObject);
