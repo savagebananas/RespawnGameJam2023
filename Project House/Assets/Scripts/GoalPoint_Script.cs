@@ -88,7 +88,7 @@ public class GoalPoint_Script : MonoBehaviour
                 Debug.Log(" null Step 2");
             }
             
-            if(hit.transform.tag.Equals("phone") == true && isRinging == false && phoneCooldown > 0){
+            if(hit.transform.tag.Equals("phone") == true && isRinging == false && phoneCooldown > 0 && isFixing == false){
                 
             hit.transform.GetComponent<Animator>().SetBool("isRinging", false);
             hit.transform.GetComponent<Animator>().SetBool("isNormal", true);

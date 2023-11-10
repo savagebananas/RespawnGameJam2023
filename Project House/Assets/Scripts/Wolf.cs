@@ -114,7 +114,7 @@ public class Wolf : MonoBehaviour
         GetComponent<AIDestinationSetter>().enabled = false;
         Vector3 thePointToFleeFrom = Vector3.zero;
         int theGScoreToStopAt = 10000;
-        FleePath path = FleePath.Construct (transform.position, thePointToFleeFrom, theGScoreToStopAt);
+        FleePath path = FleePath.Construct (-transform.position, thePointToFleeFrom, theGScoreToStopAt);
         path.aimStrength = 1;
         path.spread = 4000;
         Seeker seeker = GetComponent<Seeker>();
