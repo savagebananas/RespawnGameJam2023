@@ -33,6 +33,7 @@ public class Builder : MonoBehaviour
         anim.SetBool("fix", false);
 
         gameState = GameObject.Find("General").GetComponent<GameState>();
+        if (gameState == null) Debug.LogError("gameState is null");
     }
 
     // Update is called once per frame
@@ -129,10 +130,11 @@ public class Builder : MonoBehaviour
         p.transform.position = this.transform.position;
         GameObject c = Instantiate(bloodCloud);
         c.transform.position = this.transform.position;
-        //play some sound
-        //change scene to death screen
-        
 
+        //change scene to death screen
+        gameState.LoseGame();
+
+        //play some sound
         FindObjectOfType<AudioManager>().Play("PlayerDeath");
 
         this.transform.GetChild(0).gameObject.SetActive(false);
