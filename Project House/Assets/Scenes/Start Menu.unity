@@ -336,7 +336,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1722889810}
         m_TargetAssemblyTypeName: LoadNextTutorialPage, Assembly-CSharp
-        m_MethodName: LoadNext
+        m_MethodName: loadNext
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1183,7 +1183,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2118906711}
         m_TargetAssemblyTypeName: LoadNextTutorialPage, Assembly-CSharp
-        m_MethodName: LoadNext
+        m_MethodName: loadNext
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5669,7 +5669,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2106911547}
         m_TargetAssemblyTypeName: LoadNextTutorialPage, Assembly-CSharp
-        m_MethodName: LoadNext
+        m_MethodName: loadNext
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20440,7 +20440,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 311101231}
         m_TargetAssemblyTypeName: LoadNextTutorialPage, Assembly-CSharp
-        m_MethodName: LoadNext
+        m_MethodName: loadNext
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -21753,7 +21753,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 984779763}
         m_TargetAssemblyTypeName: LoadNextTutorialPage, Assembly-CSharp
-        m_MethodName: LoadNext
+        m_MethodName: loadNext
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -30501,7 +30501,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 628151736}
         m_TargetAssemblyTypeName: LoadNextTutorialPage, Assembly-CSharp
-        m_MethodName: LoadNext
+        m_MethodName: loadNext
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -30634,7 +30634,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2029306475}
         m_TargetAssemblyTypeName: LoadNextTutorialPage, Assembly-CSharp
-        m_MethodName: LoadNext
+        m_MethodName: loadNext
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -32218,6 +32218,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2039718399}
     m_Modifications:
+    - target: {fileID: 2093156349814651124, guid: 4bbbe2d8f53efc741b785bc4e4d0c1cb, type: 3}
+      propertyPath: orthographic size
+      value: 3.21875
+      objectReference: {fileID: 0}
     - target: {fileID: 4896906295938681901, guid: 4bbbe2d8f53efc741b785bc4e4d0c1cb, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -33886,7 +33890,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 9003793407863626452}
         m_TargetAssemblyTypeName: LoadNextTutorialPage, Assembly-CSharp
-        m_MethodName: LoadNext
+        m_MethodName: loadFirst
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
