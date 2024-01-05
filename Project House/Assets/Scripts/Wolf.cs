@@ -132,7 +132,7 @@ public class Wolf : MonoBehaviour
     }
 
     void OnCollisionStay2D(Collision2D collision){
-        //if colides with player stun player
+        //if colides with player, kill builder, game over
         if(collision.gameObject.tag.Equals("builder") == true && builderAlive && canAttack)
         {
             isAttacking = true;
@@ -255,6 +255,9 @@ public class Wolf : MonoBehaviour
         freezeTimer = freezeTime;
     }
 
+    /**
+     * set animation of wolf for its idle, attack, and move
+     */
     private void setAnimations()
     {
         if (charMoved() == true && !isAttacking && !isIdle)
@@ -277,6 +280,9 @@ public class Wolf : MonoBehaviour
         }
     }
 
+    /**
+     *  flip wolf image depending on the direction it is moving
+     */
     private void setDirection()
     {
         float x = transform.position.x - lastPos.x;
