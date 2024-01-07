@@ -8,7 +8,7 @@ using UnityEngine;
  */
 public class LoadNextTutorialPage : MonoBehaviour
 {
-    private static GameObject currentTutorialPage;
+    public static GameObject currentTutorialPage;
     public GameObject nextTutorialPage;
     public static bool tutorialOpen;
 
