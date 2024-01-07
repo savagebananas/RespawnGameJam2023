@@ -10,8 +10,9 @@ public class Task : MonoBehaviour
 
     public void fixTask()
     {
-        gameObject.transform.GetChild(0).gameObject.SetActive(true);
-        gameObject.transform.GetChild(1).gameObject.SetActive(false);
+        gameObject.transform.GetChild(0).gameObject.SetActive(true); // add fixed deco
+        gameObject.transform.GetChild(1).gameObject.SetActive(false); // remove broken deco
+        gameObject.transform.GetChild(2).gameObject.GetComponent<Animator>().SetTrigger("out"); // exclamation mark
 
         //spawn particles
         //play sound
@@ -19,7 +20,7 @@ public class Task : MonoBehaviour
         //update ui
         taskText.GetComponent<Animator>().SetTrigger("fadeOut");
 
-        if (this.name.Equals("Power Box"))
+        if (this.name.Equals("Power Box")) // change light levels if task fixed power box
         {
             globalLight.intensity = 0.35f;
         }
