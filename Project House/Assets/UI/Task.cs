@@ -17,7 +17,7 @@ public class Task : MonoBehaviour
         //spawn particles
         //play sound
 
-        //update ui
+        //update ui text
         taskText.GetComponent<Animator>().SetTrigger("fadeOut");
 
         if (this.name.Equals("Power Box")) // change light levels if task fixed power box
