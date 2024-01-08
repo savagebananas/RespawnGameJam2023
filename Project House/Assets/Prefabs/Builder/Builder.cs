@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * Builder class sets up correct visuals and orientation of builder npc.
+ * Builder death visuals
+ */
 public class Builder : MonoBehaviour
 {
     private GameState gameState;
@@ -19,7 +23,6 @@ public class Builder : MonoBehaviour
 
     public bool isFixing = false;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
