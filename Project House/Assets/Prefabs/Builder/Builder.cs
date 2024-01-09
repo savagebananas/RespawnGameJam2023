@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /**
+ * Bruno Wu
  * Builder class sets up correct visuals and orientation of builder npc.
  * Builder death visuals
  */
