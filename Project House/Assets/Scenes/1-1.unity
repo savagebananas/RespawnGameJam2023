@@ -12081,6 +12081,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1987901556}
   - component: {fileID: 1987901557}
+  - component: {fileID: 1987901558}
   m_Layer: 0
   m_Name: GoalPoint
   m_TagString: Untagged
@@ -12110,14 +12111,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987901555}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 796946ea01d7da749981328d85e66312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currGoal: {fileID: 1399823339}
   player: {fileID: 787033300}
-  goalPoint: {fileID: 1399823339}
   goalA: {fileID: 0}
   goalB: {fileID: 0}
   goalC: {fileID: 0}
@@ -12128,6 +12128,23 @@ MonoBehaviour:
   timeRemaining: 5
   isRinging: 0
   phoneCooldown: 10
+--- !u!114 &1987901558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987901555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68b5c821e2e31e1458fd7556da92a2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currGoal: {fileID: 1399823339}
+  player: {fileID: 787033300}
+  goalArray:
+  - {fileID: 248661905}
+  isFixing: 0
 --- !u!1001 &2035659751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12723,7 +12740,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 6.71875
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
