@@ -11,7 +11,6 @@ public class GoalPoint_Script : MonoBehaviour
     public Transform currGoal;
 
     [SerializeField] GameObject player;
-    [SerializeField] Transform goalPoint;
     [SerializeField] Transform goalA;
 
     [SerializeField] Transform goalB;
@@ -53,8 +52,6 @@ public class GoalPoint_Script : MonoBehaviour
         isFixing = false;
         changeGoalRand();
         player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
-        //goalPoint = currGoal;
-        goalPoint.position = currGoal.position;
         isRinging = false;
 
         gameState = GameObject.Find("General").GetComponent<GameState>();
@@ -66,7 +63,6 @@ public class GoalPoint_Script : MonoBehaviour
         if(firstGoalDone && secondGoalDone && thirdGoalDone && fourthGoalDone && fifthGoalDone && sixthGoalDone){
             YouWin();
         }
-        goalPoint.position = currGoal.position;
         
         if(Mathf.Abs(currGoal.position.x - player.transform.position.x) < 0.5 && Mathf.Abs(currGoal.position.y - player.transform.position.y) < 0.5 && isFixing == false)
         {
