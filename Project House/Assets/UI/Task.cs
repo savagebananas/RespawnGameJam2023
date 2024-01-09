@@ -7,6 +7,12 @@ public class Task : MonoBehaviour
 {
     public GameObject taskText;
     public Light2D globalLight;
+    private AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = FindObjectOfType<AudioManager>();
+    }
 
     public void fixTask()
     {
@@ -16,7 +22,7 @@ public class Task : MonoBehaviour
 
         //spawn particles
         //play sound
-
+        audioManager.Play("TaskDone");
         //update ui text
         taskText.GetComponent<Animator>().SetTrigger("fadeOut");
 

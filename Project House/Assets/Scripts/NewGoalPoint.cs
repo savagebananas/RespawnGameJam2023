@@ -79,12 +79,12 @@ public class NewGoalPoint : MonoBehaviour
         {
             if(goalArray[i].position == currGoal.position)
             {
+                goalArray[i].gameObject.GetComponent<Task>().fixTask(); //Fixed task
                 goalArray[i] = null;
             }
         }
 
         player.GetComponent<Builder>().isFixing = false;
-        FindObjectOfType<AudioManager>().Play("TaskDone");
         checkIfWon();
         SetGoalPointRandom();
     }

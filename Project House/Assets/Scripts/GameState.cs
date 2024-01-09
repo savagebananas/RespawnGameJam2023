@@ -13,11 +13,12 @@ public class GameState : MonoBehaviour
     public GameObject gameOverUI;
     public GameObject gameWinUI;
 
-    private bool gameEnd = false;
+    public static bool gameEnd = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        gameEnd = false;
         MouseHighlight.setLight(highlight);
     }
 

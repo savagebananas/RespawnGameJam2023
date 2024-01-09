@@ -19,16 +19,17 @@ public class SceneTransition : MonoBehaviour
     IEnumerator levelTransition() {
         transition.SetTrigger(trName);
 
-        if(uiObjects != null)
+
+        for (int i = 0; i < uiObjects.Length; i++)
         {
-            for (int i = 0; i < uiObjects.Length; i++)
-            {
-                if (uiObjects[i].GetComponent<Animator>() != null) uiObjects[i].SetTrigger("fadeOut");
-                else Debug.Log("No animator component for uiObjects: index " + i);
-            }
+            if (uiObjects[i] != null || uiObjects[i].GetComponent<Animator>() != null) uiObjects[i].SetTrigger("fadeOut");
+            else Debug.Log("No animator component for uiObjects: index " + i);
         }
+           
 
         yield return new WaitForSeconds(time);
+
+        // load next scene (if last scene, load main menu)
         if(SceneManager.GetActiveScene().buildIndex != SceneManager.sceneCountInBuildSettings - 1) 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         else 

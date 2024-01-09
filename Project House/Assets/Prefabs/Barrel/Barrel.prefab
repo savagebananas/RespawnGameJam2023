@@ -48,11 +48,11 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.58431375, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.99215686, g: 0.74509805, b: 0.7411765, a: 1}
+  m_Intensity: 2
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 3d264ea855d80f51
+  m_ApplyToSortingLayers: 3d264ea8
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -239,8 +239,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1359992917
-  m_SortingLayer: 2
+  m_SortingLayerID: -1471273411
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 831515687, guid: c8d4aa668635347449920b6249143333, type: 3}
   m_Color: {r: 0.5294118, g: 0.5647059, b: 0.52156866, a: 1}
@@ -380,8 +380,8 @@ MonoBehaviour:
   m_LightType: 1
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
-  m_Color: {r: 0.5909619, g: 0.5850481, b: 0.9339623, a: 1}
-  m_Intensity: 0.4
+  m_Color: {r: 0.9528302, g: 0.7496796, b: 0.7496796, a: 1}
+  m_Intensity: 0.5
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000b32ef562
@@ -398,8 +398,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00019979477, y: 0.007349968, z: 0}
-    m_Extent: {x: 5.5014, y: 5.49975, z: 0}
+    m_Center: {x: 0.0002503395, y: 0.0018000603, z: 0}
+    m_Extent: {x: 8.50005, y: 8.506399, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -407,7 +407,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 5
+  m_ShapeLightFalloffSize: 8
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: -0.5, y: -0.5, z: 0}
@@ -462,11 +462,11 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.58431375, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.99215686, g: 0.7440431, b: 0.7411765, a: 1}
+  m_Intensity: 2
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 3d264ea855d80f51
+  m_ApplyToSortingLayers: 3d264ea8
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -571,8 +571,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1359992917
-  m_SortingLayer: 2
+  m_SortingLayerID: -1471273411
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 1818902582, guid: f73b6f11b029e8e44b7ff8d075752b86, type: 3}
   m_Color: {r: 0.531013, g: 0.5660378, b: 0.52011395, a: 1}
@@ -712,11 +712,11 @@ MonoBehaviour:
   m_LightType: 1
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
-  m_Color: {r: 0.5921569, g: 0.5882353, b: 0.9372549, a: 1}
-  m_Intensity: 0.4
+  m_Color: {r: 0.9529412, g: 0.7490196, b: 0.7490196, a: 1}
+  m_Intensity: 0.5
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000b32ef562
+  m_ApplyToSortingLayers: 00000000b32ef56255d80f51
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -730,8 +730,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.002300024, y: -0.0017001629, z: 0}
-    m_Extent: {x: 5.5052004, y: 5.5009003, z: 0}
+    m_Center: {x: -0.004599571, y: -0.0048003197, z: 0}
+    m_Extent: {x: 8.5007, y: 8.500299, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -739,7 +739,7 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 5
+  m_ShapeLightFalloffSize: 8
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: -0.5, y: -0.5, z: 0}

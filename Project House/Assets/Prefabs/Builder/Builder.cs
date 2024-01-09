@@ -11,7 +11,7 @@ public class Builder : MonoBehaviour
 {
     private GameState gameState;
     [SerializeField] Rigidbody2D rb;
-    [SerializeField]Animator anim;
+    [SerializeField] Animator anim;
     private SpriteRenderer sprite;
     public float freezeTime = 3f;
 
@@ -27,9 +27,9 @@ public class Builder : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = transform.GetChild(0).GetComponent<Animator> ();
+        anim = transform.GetChild(0).GetComponent<Animator>();
         sprite = transform.GetChild(0).GetComponent<SpriteRenderer>();
-        
+
         anim.SetBool("up", false);
         anim.SetBool("down", false);
         anim.SetBool("side", false);
@@ -129,21 +129,24 @@ public class Builder : MonoBehaviour
 
     public void Die()
     {
-        //Show death animation
-        GameObject p = Instantiate(bloodParticles);
-        p.transform.position = this.transform.position;
-        GameObject c = Instantiate(bloodCloud);
-        c.transform.position = this.transform.position;
+        if (GameState.gameEnd == false)
+        {
+            //Show death animation
+            GameObject p = Instantiate(bloodParticles);
+            p.transform.position = this.transform.position;
+            GameObject c = Instantiate(bloodCloud);
+            c.transform.position = this.transform.position;
 
-        //change scene to death screen
-        gameState.LoseGame();
+            //change scene to death screen
+            gameState.LoseGame();
 
-        //play some sound
-        FindObjectOfType<AudioManager>().Play("PlayerDeath");
+            //play some sound
+            FindObjectOfType<AudioManager>().Play("PlayerDeath");
 
-        this.transform.GetChild(0).gameObject.SetActive(false);
-        rb.constraints = RigidbodyConstraints2D.FreezePosition;
-        gameState.LoseGame();
+            this.transform.GetChild(0).gameObject.SetActive(false);
+            rb.constraints = RigidbodyConstraints2D.FreezePosition;
+        }
+
     }
 
 }
