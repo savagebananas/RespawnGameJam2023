@@ -121,16 +121,12 @@ public class NewGoalPoint : MonoBehaviour
     **/
     public void SetGoalPointSpecific(GameObject goalGiven)
     {
-        Debug.Log("here with " + goalGiven);
         if(goalGiven != null){
-            Debug.Log("Entered succesfully with " + goalGiven);
             isFixing = false;
             isSetting = true;
-            Debug.Log("setting here with " + goalGiven);
             currGoal.position = goalGiven.transform.position;
             StartCoroutine(setPointWait());
         }
-        else Debug.Log("problem at end");
         
         
     }
@@ -140,7 +136,7 @@ public class NewGoalPoint : MonoBehaviour
     **/
     private IEnumerator setPointWait()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.2f);
         isSetting = false;
     }
 
