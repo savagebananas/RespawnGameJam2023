@@ -8048,10 +8048,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62031e2491868e442ad5ae5e9ebf681f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phone: {fileID: 947477419}
   connectedTask: {fileID: 110549222}
-  builder: {fileID: 787033300}
-  currGoal: {fileID: 1399823338}
+  currGoal: {fileID: 1987901555}
   timeRemaining: 5
   isRinging: 0
 --- !u!1 &950447351
@@ -22678,10 +22676,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62031e2491868e442ad5ae5e9ebf681f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phone: {fileID: 982611495}
   connectedTask: {fileID: 1674503798}
-  builder: {fileID: 787033300}
-  currGoal: {fileID: 1399823338}
+  currGoal: {fileID: 1987901555}
   timeRemaining: 5
   isRinging: 0
 --- !u!1 &987607564
@@ -24213,10 +24209,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62031e2491868e442ad5ae5e9ebf681f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phone: {fileID: 890224505}
   connectedTask: {fileID: 331904843}
-  builder: {fileID: 787033300}
-  currGoal: {fileID: 1399823338}
+  currGoal: {fileID: 1987901555}
   timeRemaining: 5
   isRinging: 0
 --- !u!1001 &1191292349
@@ -27162,10 +27156,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62031e2491868e442ad5ae5e9ebf681f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phone: {fileID: 1582840894}
   connectedTask: {fileID: 832886699}
-  builder: {fileID: 787033300}
-  currGoal: {fileID: 1399823338}
+  currGoal: {fileID: 1987901555}
   timeRemaining: 5
   isRinging: 0
 --- !u!1 &1584624438
@@ -32952,10 +32944,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62031e2491868e442ad5ae5e9ebf681f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phone: {fileID: 1737408250}
   connectedTask: {fileID: 1738746673}
-  builder: {fileID: 787033300}
-  currGoal: {fileID: 1399823338}
+  currGoal: {fileID: 1987901555}
   timeRemaining: 5
   isRinging: 0
 --- !u!1 &1738746673 stripped
@@ -41046,10 +41036,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62031e2491868e442ad5ae5e9ebf681f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phone: {fileID: 979691559}
   connectedTask: {fileID: 2123819806}
-  builder: {fileID: 787033300}
-  currGoal: {fileID: 1399823338}
+  currGoal: {fileID: 1987901555}
   timeRemaining: 5
   isRinging: 0
 --- !u!1001 &1973651360
@@ -41275,7 +41263,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1987901556}
-  - component: {fileID: 1987901557}
   - component: {fileID: 1987901558}
   m_Layer: 0
   m_Name: GoalPoint
@@ -41299,30 +41286,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 820328864}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1987901557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1987901555}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 796946ea01d7da749981328d85e66312, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currGoal: {fileID: 1399823339}
-  player: {fileID: 787033300}
-  goalA: {fileID: 1980205719}
-  goalB: {fileID: 2060845555}
-  goalC: {fileID: 1080809416}
-  goalD: {fileID: 91542902}
-  goalE: {fileID: 605167522}
-  goalF: {fileID: 248661905}
-  isFixing: 0
-  timeRemaining: 5
-  isRinging: 0
-  phoneCooldown: 10
 --- !u!114 &1987901558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41341,10 +41304,11 @@ MonoBehaviour:
   - {fileID: 248661905}
   - {fileID: 1980205719}
   - {fileID: 2060845555}
+  - {fileID: 605167522}
   - {fileID: 1080809416}
   - {fileID: 91542902}
-  - {fileID: 605167522}
   isFixing: 0
+  isSetting: 0
 --- !u!4 &1997699456 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1287059991334983101, guid: cbd42676ddfd04648b1dfd9de1117aed, type: 3}
@@ -42427,7 +42391,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 6.71875
+  orthographic size: 7.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

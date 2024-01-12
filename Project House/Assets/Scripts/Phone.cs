@@ -12,9 +12,7 @@ using Pathfinding;
 public class Phone : MonoBehaviour
 {
 
-    [SerializeField] GameObject phone;
-    [SerializeField] GameObject connectedTask;
-    [SerializeField] GameObject builder;
+    public  GameObject connectedTask;
     [SerializeField] GameObject currGoal;
 
     RaycastHit2D hit;
@@ -22,30 +20,23 @@ public class Phone : MonoBehaviour
     public float timeRemaining = 5.0f;
     public bool isRinging;
 
+    void Start()
+    {
+
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && currGoal.GetComponent<NewGoalPoint>().isSetting == false)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            Debug.Log("Step 1");
             hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-
-            if(hit.collider != null)
-            {
-                Debug.Log("Step 2");
-            }
-
-            if(hit.collider == null)
-            {
-                Debug.Log(" null Step 2");
-            }
             
-            if(hit.transform.tag.Equals("phone") == true)
+            if(hit.transform.tag.Equals("phone") == true && isRinging == false)
             {
                 hit.transform.GetComponent<Animator>().SetBool("isRinging", false);
                 hit.transform.GetComponent<Animator>().SetBool("isNormal", true);
-                Debug.Log("Step 3");
                 float timeRemaining = 5.0f;
                 //phone ring sound effect
                 FindObjectOfType<AudioManager>().Play("PhoneRing");
@@ -54,8 +45,15 @@ public class Phone : MonoBehaviour
                 isRinging = true;
                 hit.transform.GetComponent<Animator>().SetBool("isRinging", true);
                 hit.transform.GetComponent<Animator>().SetBool("isNormal", false);
-
-                currGoal.GetComponent<NewGoalPoint>().SetGoalPointSpecific(connectedTask.transform);
+                
+                if(currGoal.GetComponent<NewGoalPoint>().isSetting == false)
+                {
+                    if(hit.transform.GetComponent<Phone>().connectedTask != null)
+                    {
+                        Debug.Log("starting here with " + hit.transform.GetComponent<Phone>().connectedTask);
+                        currGoal.GetComponent<NewGoalPoint>().SetGoalPointSpecific(hit.transform.GetComponent<Phone>().connectedTask);
+                    }
+                }
             }
         }
 

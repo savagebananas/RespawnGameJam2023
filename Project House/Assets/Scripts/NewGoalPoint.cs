@@ -29,6 +29,7 @@ public class NewGoalPoint : MonoBehaviour
 
     //Bool to check if builder is already fixing something
     public bool isFixing;
+    public bool isSetting;
 
 
     /**
@@ -38,6 +39,7 @@ public class NewGoalPoint : MonoBehaviour
     void Start()
     {
         isFixing = false;
+        isSetting = false;
         numOfGoals = goalArray.Length;
 
         SetGoalPointRandom();
@@ -77,10 +79,13 @@ public class NewGoalPoint : MonoBehaviour
 
         for(int i = 0; i < numOfGoals; i++)
         {
-            if(goalArray[i].position == currGoal.position)
+            if(goalArray[i] != null)
             {
-                goalArray[i].gameObject.GetComponent<Task>().fixTask(); //Fixed task
-                goalArray[i] = null;
+                if(goalArray[i].position == currGoal.position)
+                {
+                    goalArray[i].gameObject.GetComponent<Task>().fixTask(); //Fixed task
+                    goalArray[i] = null;
+                }
             }
         }
 
@@ -97,12 +102,14 @@ public class NewGoalPoint : MonoBehaviour
     void SetGoalPointRandom()
     {
         isFixing = false;
+        isSetting = true;
 
         int randomNum = Random.Range(0, numOfGoals -1);
         if(goalArray[randomNum] != null)
         {
             currGoal.position = goalArray[randomNum].position;
             player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
+            isSetting = false;
         }
         else SetGoalPointRandom(); 
     }
@@ -112,19 +119,29 @@ public class NewGoalPoint : MonoBehaviour
     *   It chooses the goal set to the specific phone and sets the builder on that new path
     *   It also checks to make sure the goal selected is not already done, and if it is builder ignores
     **/
-    public void SetGoalPointSpecific(Transform goalGiven)
+    public void SetGoalPointSpecific(GameObject goalGiven)
     {
-        isFixing = false;
-        for(int i = 0; i < numOfGoals; i++)
-        {
-            if(goalArray[i] != null)
-            {
-                if(goalGiven.position == goalArray[i].position)
-                {
-                    currGoal.position = goalArray[i].position;
-                }
-            }
+        Debug.Log("here with " + goalGiven);
+        if(goalGiven != null){
+            Debug.Log("Entered succesfully with " + goalGiven);
+            isFixing = false;
+            isSetting = true;
+            Debug.Log("setting here with " + goalGiven);
+            currGoal.position = goalGiven.transform.position;
+            StartCoroutine(setPointWait());
         }
+        else Debug.Log("problem at end");
+        
+        
+    }
+
+    /** 
+    *   This prevents a glitch in double clicking a phone too quickly
+    **/
+    private IEnumerator setPointWait()
+    {
+        yield return new WaitForSeconds(2f);
+        isSetting = false;
     }
 
     /** 
