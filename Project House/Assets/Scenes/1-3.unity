@@ -1552,6 +1552,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7093773013594731912, guid: 3f82404c01e9d8f419f44d5e38447382, type: 3}
   m_PrefabInstance: {fileID: 380539692}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &608615118 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6322339495526695293, guid: 3f82404c01e9d8f419f44d5e38447382, type: 3}
+  m_PrefabInstance: {fileID: 380539692}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367887064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09805dc6062f5bd46a0f93a15f12e5b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &619490273
 GameObject:
   m_ObjectHideFlags: 0
@@ -12405,7 +12416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 477e810177eed78468fd5422bebfd0b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  builder: {fileID: 0}
+  builder: {fileID: 608615118}
   wolf: {fileID: 1829535598}
   wolfRenderer: {fileID: 1584624440}
   wolfFire: {fileID: 1649992567}
