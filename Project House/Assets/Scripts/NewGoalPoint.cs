@@ -31,6 +31,9 @@ public class NewGoalPoint : MonoBehaviour
     public bool isFixing;
     public bool isSetting;
 
+    //Checks if level is completed
+    private bool isWon;
+
 
     /**
     *   Start sets all needed bools to false and the gameState to the right thing
@@ -111,7 +114,7 @@ public class NewGoalPoint : MonoBehaviour
             player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
             isSetting = false;
         }
-        else SetGoalPointRandom(); 
+        else if(!isWon) SetGoalPointRandom(); 
     }
 
     /** 
@@ -146,6 +149,7 @@ public class NewGoalPoint : MonoBehaviour
     **/
     void checkIfWon()
     {
+        isWon = false;
         int numDone = 0;
         for(int i = 0; i < numOfGoals; i++)
         {
@@ -158,6 +162,7 @@ public class NewGoalPoint : MonoBehaviour
         if(numDone == numOfGoals)
         {
             YouWin();
+            isWon = true;
         }
         else numDone = 0;
     }

@@ -731,6 +731,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5161726136366557643, guid: 53657718ec2c1054c84ad93a54d1b5e1, type: 3}
   m_PrefabInstance: {fileID: 142544698}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &166151642 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7870891418696556899, guid: 34d9356621a357547bbd810966cc2f77, type: 3}
+  m_PrefabInstance: {fileID: 449649203}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &183235356
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,13 +996,32 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7870891418696556899, guid: 34d9356621a357547bbd810966cc2f77, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 449649205}
   m_SourcePrefab: {fileID: 100100000, guid: 34d9356621a357547bbd810966cc2f77, type: 3}
 --- !u!4 &449649204 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5631050401080133235, guid: 34d9356621a357547bbd810966cc2f77, type: 3}
   m_PrefabInstance: {fileID: 449649203}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &449649205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166151642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62031e2491868e442ad5ae5e9ebf681f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedTask: {fileID: 1242445274}
+  currGoal: {fileID: 1987901555}
+  timeRemaining: 5
+  isRinging: 0
 --- !u!1 &457546464
 GameObject:
   m_ObjectHideFlags: 0
@@ -4466,6 +4490,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1075779500 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7870891418696556899, guid: 34d9356621a357547bbd810966cc2f77, type: 3}
+  m_PrefabInstance: {fileID: 1235589221}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1169754769
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4808,13 +4837,32 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7870891418696556899, guid: 34d9356621a357547bbd810966cc2f77, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1235589223}
   m_SourcePrefab: {fileID: 100100000, guid: 34d9356621a357547bbd810966cc2f77, type: 3}
 --- !u!4 &1235589222 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5631050401080133235, guid: 34d9356621a357547bbd810966cc2f77, type: 3}
   m_PrefabInstance: {fileID: 1235589221}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1235589223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075779500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62031e2491868e442ad5ae5e9ebf681f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedTask: {fileID: 1434456716}
+  currGoal: {fileID: 1987901555}
+  timeRemaining: 5
+  isRinging: 0
 --- !u!1 &1239384745
 GameObject:
   m_ObjectHideFlags: 0
@@ -4915,6 +4963,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1242445274 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3956243157947116253, guid: d057160f0d0d9714fa1d93ccad8957fa, type: 3}
+  m_PrefabInstance: {fileID: 1193361773}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1265779917
 GameObject:
   m_ObjectHideFlags: 0
@@ -5172,6 +5225,11 @@ Transform:
   - {fileID: 501266628}
   m_Father: {fileID: 1792228869}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1434456716 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6868677391058334414, guid: e3a9cf03f8d186c439227f0ee84b3c34, type: 3}
+  m_PrefabInstance: {fileID: 783134924}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1444793671
 GameObject:
   m_ObjectHideFlags: 0
@@ -13155,7 +13213,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 6.71875
+  orthographic size: 7.796875
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
