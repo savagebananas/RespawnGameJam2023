@@ -32,6 +32,9 @@ public class Phone : MonoBehaviour
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+            if(hit.transform == null){
+                return;
+            }
             
             if(hit.transform.tag.Equals("phone") == true && isRinging == false)
             {

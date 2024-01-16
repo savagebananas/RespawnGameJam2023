@@ -13024,7 +13024,7 @@ MonoBehaviour:
   pointerTransform: {fileID: 0}
   width: 0
   height: 0
-  targetObject: {fileID: 0}
+  targetObject: {fileID: 367887064}
 --- !u!212 &2050741939
 SpriteRenderer:
   m_ObjectHideFlags: 0
