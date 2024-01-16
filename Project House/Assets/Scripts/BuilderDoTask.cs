@@ -42,14 +42,16 @@ public class BuilderDoTask : MonoBehaviour
     **/
     void Start()
     {
+        gameState = GameObject.Find("General").GetComponent<GameState>();
         isFixing = false;
         isSetting = false;
-        numOfGoals = goals.Count;
 
-        SetGoalPointRandom();
+        Random.seed = System.DateTime.Now.Millisecond; // to prevent the same random index on start function
+        SetGoalPointRandom(); // set first goal
+
         player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
 
-        gameState = GameObject.Find("General").GetComponent<GameState>();
+        
     }
 
     // Update is called once per frame
@@ -101,7 +103,10 @@ public class BuilderDoTask : MonoBehaviour
         isFixing = false;
         isSetting = true;
 
-        currGoal = goals[Random.Range(0, goals.Count - 1)];
+        int randIndex = Random.Range(0, goals.Count - 1);
+        currGoal = goals[randIndex];
+        Debug.Log("INDEX: " + randIndex);
+
         player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
         isSetting = false;
     }

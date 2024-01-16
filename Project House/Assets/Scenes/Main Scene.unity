@@ -41167,6 +41167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1987901556}
+  - component: {fileID: 1987901559}
   - component: {fileID: 1987901558}
   m_Layer: 0
   m_Name: GoalPoint
@@ -41197,7 +41198,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987901555}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 68b5c821e2e31e1458fd7556da92a2e3, type: 3}
   m_Name: 
@@ -41211,6 +41212,29 @@ MonoBehaviour:
   - {fileID: 605167522}
   - {fileID: 1080809416}
   - {fileID: 91542902}
+  isFixing: 0
+  isSetting: 0
+--- !u!114 &1987901559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987901555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79c5f7fd3a47e747a5c00f86c524861, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currGoal: {fileID: 0}
+  player: {fileID: 787033300}
+  goals:
+  - {fileID: 2123819806}
+  - {fileID: 331904843}
+  - {fileID: 1674503798}
+  - {fileID: 1738746673}
+  - {fileID: 832886699}
+  - {fileID: 110549222}
   isFixing: 0
   isSetting: 0
 --- !u!4 &1997699456 stripped
@@ -42295,7 +42319,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 7.5
+  orthographic size: 6.734375
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
