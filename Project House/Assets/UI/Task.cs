@@ -21,14 +21,17 @@ public class Task : MonoBehaviour
         gameObject.transform.GetChild(2).gameObject.GetComponent<Animator>().SetTrigger("out"); // exclamation mark
 
         //spawn particles
+
         //play sound
         audioManager.Play("TaskDone");
+
         //update ui text
         taskText.GetComponent<Animator>().SetTrigger("fadeOut");
 
-        if (this.name.Equals("Power Box")) // change light levels if task fixed power box
+        // Increase light levels if task fixed power box
+        if (this.name.Equals("Power Box")) 
         {
-            globalLight.intensity = 0.35f;
+            globalLight.intensity += 0.1f;
         }
     }
 }
