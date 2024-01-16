@@ -90,7 +90,7 @@ public class BuilderDoTask : MonoBehaviour
 
         player.GetComponent<Builder>().isFixing = false;
         checkIfWon();
-        SetGoalPointRandom();
+        if(!isWon) SetGoalPointRandom();
     }
 
     /** 
