@@ -13,7 +13,7 @@ public class Phone : MonoBehaviour
 {
 
     public  GameObject connectedTask;
-    [SerializeField] GameObject currGoal;
+    [SerializeField] GameObject goalPoint;
 
     RaycastHit2D hit;
 
@@ -28,7 +28,7 @@ public class Phone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0) && currGoal.GetComponent<NewGoalPoint>().isSetting == false)
+        if(Input.GetMouseButtonDown(0) && goalPoint.GetComponent<NewGoalPoint>().isSetting == false)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
@@ -49,12 +49,12 @@ public class Phone : MonoBehaviour
                 hit.transform.GetComponent<Animator>().SetBool("isRinging", true);
                 hit.transform.GetComponent<Animator>().SetBool("isNormal", false);
                 
-                if(currGoal.GetComponent<NewGoalPoint>().isSetting == false)
+                if(goalPoint.GetComponent<NewGoalPoint>().isSetting == false)
                 {
                     if(hit.transform.GetComponent<Phone>().connectedTask != null)
                     {
                         Debug.Log("starting here with " + hit.transform.GetComponent<Phone>().connectedTask);
-                        currGoal.GetComponent<NewGoalPoint>().SetGoalPointSpecific(hit.transform.GetComponent<Phone>().connectedTask);
+                        goalPoint.GetComponent<NewGoalPoint>().SetGoalPointSpecific(hit.transform.GetComponent<Phone>().connectedTask);
                     }
                 }
             }
