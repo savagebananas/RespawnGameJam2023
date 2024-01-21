@@ -35,6 +35,8 @@ public class BuilderDoTask : MonoBehaviour
     //Checks if level is completed
     private bool isWon;
 
+    private AudioManager audioManager;
+
 
     /**
     *   Start sets all needed bools to false and the gameState to the right thing
@@ -50,8 +52,9 @@ public class BuilderDoTask : MonoBehaviour
         SetGoalPointRandom(); // set first goal
 
         player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
+        audioManager = FindObjectOfType<AudioManager>();
 
-        
+
     }
 
     // Update is called once per frame
@@ -74,7 +77,7 @@ public class BuilderDoTask : MonoBehaviour
     public void Fix()
     {
         isFixing = true;
-        FindObjectOfType<AudioManager>().Play("Wrench");
+        audioManager.Play("Wrench");
         player.GetComponent<Builder>().isFixing = true;
 
         StartCoroutine(Fixing());

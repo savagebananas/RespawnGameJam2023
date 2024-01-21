@@ -1152,6 +1152,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5892403108338035687, guid: 86e27564a39325b498df1e5d3d0ee7fc, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892403108338035687, guid: 86e27564a39325b498df1e5d3d0ee7fc, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1359992917
+      objectReference: {fileID: 0}
     - target: {fileID: 9027712662718998352, guid: 86e27564a39325b498df1e5d3d0ee7fc, type: 3}
       propertyPath: m_Name
       value: BasicGhost (2)
@@ -1261,7 +1269,7 @@ Transform:
   m_GameObject: {fileID: 317752094}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.08, y: -7.12, z: -0.9209175}
+  m_LocalPosition: {x: 8.017, y: -7.15, z: -0.9209175}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12578,7 +12586,7 @@ Transform:
   m_GameObject: {fileID: 1664559454}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 8.4, y: -7.1, z: 0}
+  m_LocalPosition: {x: 8.347, y: -7.145, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12662,8 +12670,8 @@ Transform:
   m_GameObject: {fileID: 1669592888}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.07, y: -7.4299994, z: 0}
-  m_LocalScale: {x: 2.1597307, y: 2.1597307, z: 2.1597307}
+  m_LocalPosition: {x: 8.031, y: -7.4299994, z: 0}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1361871893}
@@ -12770,7 +12778,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -16159,7 +16167,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 8.84375
+  orthographic size: 6.90625
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
