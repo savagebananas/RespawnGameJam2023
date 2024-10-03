@@ -37,6 +37,8 @@ public class Wolf : MonoBehaviour
 
     void Start()
     {
+        builder = GameObject.Find("Builder").GetComponent<Builder>();
+
         lastPos = transform.position;
         rb = GetComponent<Rigidbody2D>();
         anim = transform.GetChild(0).GetComponent<Animator> ();
@@ -147,23 +149,6 @@ public class Wolf : MonoBehaviour
             breakable = collision.collider;
             //bool shouldBreak = false;
             if (!isBreaking) StartCoroutine(WolfBreak(collision));
-
-            // RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, builder.transform.position-transform.position);
-            // foreach (RaycastHit2D hit in hits) {
-            //     if (hit.collider==collision.collider) {
-            //         shouldBreak = true;
-            //         break;
-            //     }
-            // }
-            
-            // if (!shouldBreak) {
-            //     float angle = Vector3.Angle(collision.gameObject.transform.position-transform.position, builder.transform.position-transform.position);
-            //     if (angle<110) {
-            //         shouldBreak = true;
-            //     }
-            //}
-            //if (!shouldBreak) StartCoroutine(stopBreaking(collision));
-
         }
     }
     

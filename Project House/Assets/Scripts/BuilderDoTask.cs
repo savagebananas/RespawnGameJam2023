@@ -3,32 +3,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using Unity.VisualScripting;
+using UnityEngine.XR;
 
 /**
-*   Charles Caton
-*   New Version of GoalPoint_Script.cs
-*   Made 1/6/2024
-*   Revised in 1/16/2024 by Bruno
+*   Charles Caton and Bruno Wu
+*   1/16/2024
 */
 
 public class BuilderDoTask : MonoBehaviour
 {
-    //standard gameState to tell endings and such
+    // standard gameState to tell endings and such
     private GameState gameState;
 
-    //current goal for builder to go to. rapidly changing. this must be what houses this NewGoalPoint script
+    // current goal for builder to go to
     [SerializeField] private GameObject currGoal;
 
-    //player game object. In unity set this to the players own self
+    // player game object. In unity set this to the players own self
     [SerializeField] GameObject player;
 
-    //Total number of goals for the level. This must be set in unity 
-    [SerializeField] public static int numOfGoals;
+    // List of all goals for this specific level
+    public List<GameObject> goals;
 
-    //Array of all goals for this specific level
-    public List<GameObject> goals = new List<GameObject>();
-
-    //Bool to check if builder is already fixing something
     public bool isFixing;
     public bool isSetting;
 
@@ -57,7 +53,6 @@ public class BuilderDoTask : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         float x = Mathf.Abs(currGoal.transform.position.x - player.transform.position.x);
@@ -65,35 +60,32 @@ public class BuilderDoTask : MonoBehaviour
         float distPlayerToGoal = Mathf.Sqrt(x * x + y * y);
 
         // Fix task when player arrives
-        if (distPlayerToGoal < 0.5 && isFixing == false) Fix();
+        if (distPlayerToGoal < 0.5 && isFixing == false) StartCoroutine(Fixing());
     }
 
-
-    /** 
-    *   When the builder is in range of the task, the animation and sounds play.
-    *   The builder then repairs the task until it is done or is interupted/killed
-    *   Once completed it checks for victory and assigns the next task
-    **/
-    public void Fix()
-    {
-        isFixing = true;
-        audioManager.Play("Wrench");
-        player.GetComponent<Builder>().isFixing = true;
-
-        StartCoroutine(Fixing());
-    }
-
-    //Just finishes fix with the waiting 5 seconds
+    
+    /// <summary>
+    /// When the builder is in range of the task, the animation and sounds play.
+    /// The builder then repairs the task until it is done or is interupted/killed
+    /// Once completed it checks for victory and assigns the next task
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator Fixing()
     {
+        isFixing = true;
+        audioManager.Play("Wrench"); // sfx
+        player.GetComponent<Builder>().isFixing = true; // builder animation
+
         yield return new WaitForSeconds(5);
 
         currGoal.GetComponent<Task>().fixTask();
         goals.Remove(currGoal);
 
-        player.GetComponent<Builder>().isFixing = false;
-        checkIfWon();
-        if(!isWon) SetGoalPointRandom();
+        isFixing = false;
+        player.GetComponent<Builder>().isFixing = false; // builder animation
+
+        checkIfWon(); 
+        if(!isWon) SetGoalPointRandom(); // set new point
     }
 
     /** 
@@ -103,15 +95,8 @@ public class BuilderDoTask : MonoBehaviour
     **/
     void SetGoalPointRandom()
     {
-        isFixing = false;
-        isSetting = true;
-
-        int randIndex = Random.Range(0, goals.Count - 1);
-        currGoal = goals[randIndex];
-        Debug.Log("INDEX: " + randIndex);
-
+        currGoal = goals[Random.Range(0, goals.Count)];
         player.GetComponent<AIDestinationSetter>().target = currGoal.transform;
-        isSetting = false;
     }
 
     /** 
@@ -121,7 +106,7 @@ public class BuilderDoTask : MonoBehaviour
     **/
     public void SetGoalPointSpecific(GameObject goalGiven)
     {
-        if (goalGiven != null)
+        if (goalGiven != null && !isSetting)
         {
             isFixing = false;
             isSetting = true;
@@ -149,18 +134,8 @@ public class BuilderDoTask : MonoBehaviour
     {
         if (goals.Count <= 0 && !isWon)
         {
-            YouWin();
+            gameState.WinGame();
             isWon = true;
         }
-    }
-
-    /** 
-    *   This is only called when all tasks are complete. If more states are added in the gameState feel free to change THIS HERE ONLY
-    **/
-    public void YouWin()
-    {
-        Debug.Log("last task done");
-        Debug.Log("You win");
-        gameState.WinGame();
     }
 }
