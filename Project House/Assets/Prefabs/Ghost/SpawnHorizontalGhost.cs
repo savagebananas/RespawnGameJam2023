@@ -8,31 +8,37 @@ public class SpawnHorizontalGhost : MonoBehaviour
     public GameObject ghost;
     private int length = 3;
     GameObject obj;
-    private int numGhosts = 3;
-    private int numLocations = 9;
+    private int numGhosts = 6;
+    private int numLocations = 18;
     //public GameObject pointer;
     //GameObject pnt;
     private static string baseName = "GhostLocation";
-    private static string tag = "horizontal";
+    public List<Transform> locations;
 
     void Start()
     {
         
         int locationsPerGhost = (numLocations)/numGhosts;
-        for (int j = 0; j<numGhosts; j++) {
-            List<Transform> locations = new List<Transform>();
-            for (int i = 0; i<locationsPerGhost;i++) {
-                string name = baseName;
-                int num = (1+locationsPerGhost*(j)+i);
-                name =name + num;
-                locations.Add(GameObject.Find(name).transform);
-                Debug.Log(name);
+        if (locations == null) {
+            foreach (Transform child in transform) {
+                locations.Add(child);
             }
-            Debug.Log("Ghost Spawn");
-            obj = Instantiate(ghost, locations[0].position, Quaternion.identity);  
-            obj.GetComponent<GhostMovement>().setLocations(locations);
-            obj.tag = tag;
         }
+        GhostMovement.setLocations(locations);
+        //for (int j = 0; j<numGhosts; j++) {
+            //for (int i = 0; i<locationsPerGhost;i++) {
+                //string name = baseName;
+                //int num = (1+locationsPerGhost*(j)+i);
+                //name =name + num;
+                //locations.Add(GameObject.Find(name).transform);
+                //Debug.Log(name);
+            //}
+            Debug.Log("Ghost Spawn");
+            for (int i = 0; i<numGhosts; i++) {
+                obj = Instantiate(ghost, locations[i*numGhosts].position, Quaternion.identity); 
+                locations[i*numGhosts].gameObject.GetComponent<GhostLocationRadius>().setShouldSpawn(false); 
+            }
+        
             //pnt = Instantiate(pointer);
             //pnt.GetComponent<Pointer>().setTarget(obj);
   

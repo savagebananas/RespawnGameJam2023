@@ -29,7 +29,7 @@ public class SpawnVerticalGhost : MonoBehaviour
             }
             Debug.Log("Ghost Spawn");
             obj = Instantiate(ghost, locations[0].position, Quaternion.identity);  
-            obj.GetComponent<GhostMovement>().setLocations(locations);
+            //obj.GetComponent<GhostMovement>().setLocations(locations);
             obj.tag = tag;
         }
             //pnt = Instantiate(pointer);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GhostLocationRadius : MonoBehaviour
 {
-    public bool shouldSpawn = true;
+    private bool shouldSpawn = true;
     private static string builder = "builder";
     // Start is called before the first frame update
     void Start()
@@ -25,5 +25,8 @@ public class GhostLocationRadius : MonoBehaviour
     }
     public bool getShouldSpawn() {
         return shouldSpawn;
+    }
+    public void setShouldSpawn(bool val) {
+        shouldSpawn = false;
     }
 }

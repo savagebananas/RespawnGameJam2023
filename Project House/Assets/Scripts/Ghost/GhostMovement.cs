@@ -7,19 +7,21 @@ public class GhostMovement : MonoBehaviour
     // Start is called before the first frame update
     private Rigidbody2D rb;
     private Vector3[] movePositions = new Vector3[3];
-    private List<Transform> locations = new List<Transform>();
+    private static List<Transform> locations = new List<Transform>();
     private int ind = 1;
     private int index = 0;
     private Vector2 vel;
     private float velocity = 0.4f;
     private float timeOffset = 0f;
     public static float dist = 5;
-    private int length;
+    private static int numLocations;
     private bool hasMoved = true;
     private SpriteRenderer sprite;
     private Animator animator;
+    private Transform currentLocation;
     void Start()
     {
+        
         timeOffset = Time.time;
         updatePositions();
         rb = GetComponent<Rigidbody2D>();
@@ -77,10 +79,10 @@ public class GhostMovement : MonoBehaviour
     }
     public void updatePositions() {
         movePositions[0] = transform.position;
-        if (gameObject.tag.Equals("horizontal")) {
+        if (currentLocation.gameObject.tag.Equals("horizontal")) {
             movePositions[1] = transform.position+new Vector3(dist, 0, 0);
             movePositions[2] = transform.position-new Vector3(dist, 0, 0);
-        }  else if (gameObject.tag.Equals("vertical")) {
+        }  else if (currentLocation.gameObject.tag.Equals("vertical")) {
             movePositions[1] = transform.position+new Vector3(0, dist, 0);
             movePositions[2] = transform.position-new Vector3(0, dist, 0);
         }
@@ -91,13 +93,13 @@ public class GhostMovement : MonoBehaviour
         if (rb.velocity.x > 0||rb.velocity.y>0) sprite.flipX = true;
         else sprite.flipX = false;
     }
-    public void setLocations(List<Transform> locations) {
-        this.locations = locations;
-        length = locations.Count;
+    public static void setLocations(List<Transform> t) {
+        locations = t;
+        numLocations = locations.Count;
     }
     private Vector3 getRandomPosition() {
         if (index==-1) {
-            index = Random.Range(0, length);
+            index = Random.Range(0, numLocations);
             return locations[index].position;
         }
         int temp = index;
@@ -120,6 +122,13 @@ public class GhostMovement : MonoBehaviour
         
 
     }
+    public Transform getCurrentLocation() {
+        return currentLocation;
+    }
+    public void setCurrentLocation(Transform t) {
+        currentLocation = t;
+    }
+   
 
 
 }
